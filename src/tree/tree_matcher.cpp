@@ -56,7 +56,11 @@ rna_tree& matcher::run(
     
     compute_sizes();
     
+    INFO("sizes");
+    
     merge();
+    
+    INFO("merge");
     
     if (!t1.correct_pairing() || !t2.correct_pairing())
     {
