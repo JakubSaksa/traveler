@@ -56,21 +56,15 @@ rna_tree& matcher::run(
     
     compute_sizes();
     
-    INFO("sizes");
-    
     merge();
-    
-    INFO("merge");
     
     if (!t1.correct_pairing() || !t2.correct_pairing())
     {
         throw illegal_state_exception("Uncorrect tree pairing after transforming template to target tree");
     }
     
-    INFO("pairing");
-    
     update_ends_in_rna(t1);
-    INFO("update");
+
     t1.set_postorder_ids();
     
     INFO("END: Transforming trees with mapping function");

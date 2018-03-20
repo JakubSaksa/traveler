@@ -149,6 +149,8 @@ void update_ends_in_rna(
     point pf, pl;
     iterator f, l;
     
+    if(rna.size() == 1) return;
+    
     f = rna_tree::first_child(root);
     l = rna_tree::last_child(root);
     
