@@ -220,4 +220,11 @@ inline iter plusplus(
     return it;
 }
 
+template <typename label_type>
+tree_base<label_type>::tree_base(const base_iterator& other)
+{
+    _tree = tree_type(other);
+    _size = _tree.size();
+}
+
 #endif /* !TREE_BASE_UTILS_HPP */

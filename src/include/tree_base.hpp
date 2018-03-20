@@ -58,6 +58,7 @@ public:
     tree_base(
               const std::string& brackets,
               const labels_array& labels);
+    tree_base(const base_iterator& other);
     inline bool operator==(
                            const tree_base<label_type>& other) const;
     

@@ -42,6 +42,8 @@ public:
              const std::vector<point>& _points,
              const std::string& _name = "");
     
+    rna_tree(const base_iterator& other);
+    
     /**
      * update postorder points
      */
@@ -181,5 +183,7 @@ size_t child_index(
  */
 rna_tree::sibling_iterator get_onlyone_branch(
                                               rna_tree::sibling_iterator it);
+
+std::vector<rna_tree> to_branches();
 
 #endif /* !RNA_TREE_HPP */

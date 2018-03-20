@@ -58,6 +58,30 @@ rna_tree::rna_tree(
     compute_distances();
 }
 
+rna_tree::rna_tree(const base_iterator& other): tree_base<rna_pair_label>(other){}
+
+vector<rna_tree> rna_tree::to_branches()
+{
+    vector<rna_tree> forrest;
+    rna_tree::iterator root = begin();
+    rna_tree::base_iterator node = first_child(root);
+    rna_tree::base_iterator last = last_child(root);
+    
+    while(node -> id() != last -> id())
+    {
+        rna_tree t(node);
+        t.set_postorder_ids();
+        forrest.push_back(t);
+        node = next_sibling(node);
+    }
+    
+    rna_tree t(last);
+    t.set_postorder_ids();
+    forrest.push_back(t);
+    
+    return forrest;
+}
+
 void rna_tree::set_name(
                         const std::string& name)
 {

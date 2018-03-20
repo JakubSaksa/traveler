@@ -145,14 +145,20 @@ mapping app::run_ted(
         
         if (run)
         {
+            //experiment
             
-           
-            rted r(templated, matched); //Gets a strategy for decomposing a tree
+            vector<rna_tree> t = templated.to_branches();
+            vector<rna_tree> m = matched.to_branches();
+            
+            //experiment
+            
+            //rted r(templated, matched); //Gets a strategy for decomposing a tree
+            rted r(t[3],m[3]);
             r.run();
             
             gted g(templated, matched); //Computes mapping and ditstanve based on RTED's strategy (faster than using GTED itself)
             g.run(r.get_strategies());
-    
+            
             mapping = g.get_mapping();
             
             if (!mapping_file.empty())
