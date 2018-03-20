@@ -101,7 +101,7 @@ void app::run(
 }
 
 
-void app::run(
+/*void app::run(
               arguments args)
 {
     
@@ -129,6 +129,53 @@ void app::run(
     run_drawing(args.templated, args.matched, map, draw, overlaps, img_out);
     
     INFO("END: APP");
+}*/
+
+void app::run(
+              arguments args)
+{
+    
+    
+    APP_DEBUG_FNAME;
+    
+    INFO("BEG: APP");
+    
+    print(args);
+    bool rted = args.all.run || args.ted.run;
+    bool draw = args.all.run || args.draw.run;
+    bool overlaps = args.all.overlap_checks || args.draw.overlap_checks;
+    mapping map;
+    string img_out = args.all.file;
+    
+    vector<rna_tree> templated_branches = args.templated.to_branches();
+    vector<rna_tree> matched_branches = args.matched.to_branches();
+    vector<mapping> mappings;
+    
+    size_t limit = min(templated_branches.size(), matched_branches.size());
+    
+    
+    //decomposition & pairing of subtrees -> only demo
+    //problem with different sizes of forrests -> porbably match leftovers with their copies
+    //pairing -> now by order in original tree -> by size?, by mapping cost?, more decompositions?
+    
+    for(size_t i = 0; i < limit; ++i)
+    {
+        mappings.push_back(run_ted(templated_branches[i], matched_branches[i], rted, args.ted.mapping));
+    }
+    
+    map = run_ted(args.templated, args.matched, rted, args.ted.mapping);
+    
+    if (args.draw.run)
+    {
+        assert(!args.draw.mapping.empty());
+        map = load_mapping_table(args.draw.mapping);
+        img_out = args.draw.file;
+    }
+    
+    //run_drawing(args.templated, args.matched, map, draw, overlaps, img_out);
+    run_drawing(templated_branches, matched_branches, mappings, draw, overlaps, img_out);
+    
+    INFO("END: APP");
 }
 
 mapping app::run_ted(
@@ -145,13 +192,6 @@ mapping app::run_ted(
         
         if (run)
         {
-            //experiment
-            
-            templated = templated.to_branches()[3];
-            matched = matched.to_branches()[3];
-            
-            //experiment
-            
             rted r(templated, matched); //Gets a strategy for decomposing a tree
             r.run();
             
@@ -177,10 +217,42 @@ mapping app::run_ted(
     
 }
 
+/*void app::run_drawing(
+ rna_tree& templated,
+ rna_tree& matched,
+ const mapping& mapping,
+ bool run,
+ bool run_overlaps,
+ const std::string& file)
+ {
+ APP_DEBUG_FNAME;
+ 
+ try
+ {
+ if (!run)
+ {
+ INFO("skipping draw run");
+ return;
+ }
+ 
+ //Based on a mapping, matcher returns structure with deleted and inserted nodes
+ // which correspond to the target structure
+ templated = matcher(templated, matched).run(mapping);
+ //Compact goes through the structure and computes new coordinates where necessary
+ compact(templated).run();
+ 
+ save(file, templated, run_overlaps);
+ }
+ catch (const my_exception& e)
+ {
+ throw aplication_error("Drawing structure failed: %s", e).with(ERROR_DRAW);
+ }
+ }*/
+
 void app::run_drawing(
-                      rna_tree& templated,
-                      rna_tree& matched,
-                      const mapping& mapping,
+                      vector<rna_tree>& templated,
+                      vector<rna_tree>& matched,
+                      const vector<mapping>& mapping,
                       bool run,
                       bool run_overlaps,
                       const std::string& file)
@@ -195,13 +267,19 @@ void app::run_drawing(
             return;
         }
         
-        //Based on a mapping, matcher returns structure with deleted and inserted nodes
-        // which correspond to the target structure
-        templated = matcher(templated, matched).run(mapping);
-        //Compact goes through the structure and computes new coordinates where necessary
-        compact(templated).run();
+        for(size_t i = 0; i < mapping.size(); ++i)
+        {
+            //Based on a mapping, matcher returns structure with deleted and inserted nodes
+            // which correspond to the target structure
+            templated[i] = matcher(templated[i], matched[i]).run(mapping[i]);
+            //Compact goes through the structure and computes new coordinates where necessary
+            compact(templated[i]).run();
+        }
         
-        save(file, templated, run_overlaps);
+        rna_tree composed(templated);
+        composed.set_postorder_ids();
+        
+        save(file, composed, run_overlaps);
     }
     catch (const my_exception& e)
     {

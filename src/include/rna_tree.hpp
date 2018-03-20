@@ -43,6 +43,7 @@ public:
              const std::string& _name = "");
     
     rna_tree(const base_iterator& other);
+    rna_tree(const std::vector<rna_tree>& branches);
     
     /**
      * update postorder points

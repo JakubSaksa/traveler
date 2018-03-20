@@ -60,6 +60,20 @@ rna_tree::rna_tree(
 
 rna_tree::rna_tree(const base_iterator& other): tree_base<rna_pair_label>(other){}
 
+rna_tree::rna_tree(const vector<rna_tree>& branches)
+{
+    rna_pair_label root = rna_pair_label("ROOT_" + std::to_string(_id)) + rna_pair_label("");
+    
+    _tree.set_head(root);
+    _size = 1;
+    
+    for(auto&& branch: branches)
+    {
+        _tree.append_child(begin(), branch.begin());
+        _size += branch.size();
+    }
+}
+
 vector<rna_tree> rna_tree::to_branches()
 {
     vector<rna_tree> forrest;

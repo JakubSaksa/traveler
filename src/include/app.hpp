@@ -71,12 +71,20 @@ private:
      * run drawing algorithm, visualized molecule will be saved
      */
     void run_drawing(
-                     rna_tree& templated,
-                     rna_tree& matched,
-                     const mapping& mapping,
+                     std::vector<rna_tree>& templated,
+                     std::vector<rna_tree>& matched,
+                     const std::vector<mapping>& mapping,
                      bool run,
                      bool run_overlaps,
                      const std::string& file);
+    
+    /*void run_drawing(
+     rna_tree& templated,
+     rna_tree& matched,
+     const mapping& mapping,
+     bool run,
+     bool run_overlaps,
+     const std::string& file);*/
     
     /**
      * save both, colored and not colored documents
