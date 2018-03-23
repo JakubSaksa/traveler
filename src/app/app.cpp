@@ -276,7 +276,7 @@ void app::run_drawing(
             //Based on a mapping, matcher returns structure with deleted and inserted nodes
             // which correspond to the target structure
             if(templated[i].size() == 1 && matched[i].size() != 1);
-            //else if(templated[i].size() != 1 && matched[i].size() == 1) templated[i] = matched[i];
+            else if(templated[i].size() != 1 && matched[i].size() == 1);
             else templated[i] = matcher(templated[i], matched[i]).run(mapping[i]);
             //Compact goes through the structure and computes new coordinates where necessary
             compact(templated[i]).run();
