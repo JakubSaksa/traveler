@@ -195,6 +195,7 @@ void compact::init()
         iterator par = rna_tree::parent(it);
         point p = par->center();
         
+        INFO("%s", par -> initiated_points());
         INFO("%s %s", p.x, p.y);
         
         assert(!p.bad());
