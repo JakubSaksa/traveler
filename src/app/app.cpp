@@ -284,7 +284,7 @@ void app::run_drawing(
             // which correspond to the target structure
             templated[i] = matcher(templated[i], matched[i]).run(mapping[i]);
             //Compact goes through the structure and computes new coordinates where necessary
-            compact(templated[i]).run();
+            //compact(templated[i]).run();
         }
         
         rna_tree composed(templated);
