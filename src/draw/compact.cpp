@@ -195,6 +195,8 @@ void compact::init()
         iterator par = rna_tree::parent(it);
         point p = par->center();
         
+        INFO("% %s", p.x, p.y);
+        
         assert(!p.bad());
         
         if (rna_tree::is_root(par))
