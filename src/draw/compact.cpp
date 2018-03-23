@@ -44,8 +44,11 @@ void compact::run()
     INFO("BEG: Computing RNA layout for:\n%s", rna.print_tree(false));
     
     init();
+    INFO("init");
     make();
+    INFO("make");
     update_ends_in_rna(rna);
+    INFO("update");
     //    try_reposition_new_root_branches();
     checks();
     
