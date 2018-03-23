@@ -130,7 +130,9 @@ private:
     tree_type t1, t2;
     strategy_table_type STR;
     strategy actual_str;
+public:
     tree_distance_table_type tdist;
 };
 
 #endif /* !GTED_HPP */
+

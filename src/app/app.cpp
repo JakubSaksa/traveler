@@ -74,10 +74,6 @@ struct app::arguments
         string mapping;
         string file;
     } draw;
-    struct
-    {
-        bool run = false;
-    } traveler;
     
 public:
     /**
@@ -101,36 +97,6 @@ void app::run(
 }
 
 
-/*void app::run(
-              arguments args)
-{
-    
-    
-    APP_DEBUG_FNAME;
-    
-    INFO("BEG: APP");
-    
-    print(args);
-    bool rted = args.all.run || args.ted.run || args.traveler.run;
-    bool draw = args.all.run || args.draw.run;
-    bool overlaps = args.all.overlap_checks || args.draw.overlap_checks;
-    mapping map;
-    string img_out = args.all.file;
-    
-    map = run_ted(args.templated, args.matched, rted, args.ted.mapping);
-    
-    if (args.draw.run)
-    {
-        assert(!args.draw.mapping.empty());
-        map = load_mapping_table(args.draw.mapping);
-        img_out = args.draw.file;
-    }
-    
-    run_drawing(args.templated, args.matched, map, draw, overlaps, img_out);
-    
-    INFO("END: APP");
-}*/
-
 void app::run(
               arguments args)
 {
@@ -151,19 +117,7 @@ void app::run(
     vector<rna_tree> matched_branches = args.matched.to_branches();
     vector<mapping> mappings;
     
-    size_t limit = min(templated_branches.size(), matched_branches.size());
-    
-    
-    //decomposition & pairing of subtrees -> only demo
-    //problem with different sizes of forrests -> porbably match leftovers with their copies
-    //pairing -> now by order in original tree -> by size?, by mapping cost?, more decompositions?
-    
-    for(size_t i = 0; i < limit; ++i)
-    {
-        mappings.push_back(run_ted(templated_branches[i], matched_branches[i], rted, args.ted.mapping));
-    }
-    
-    map = run_ted(args.templated, args.matched, rted, args.ted.mapping);
+    match_branches(templated_branches, matched_branches, mappings);
     
     if (args.draw.run)
     {
@@ -176,6 +130,61 @@ void app::run(
     run_drawing(templated_branches, matched_branches, mappings, draw, overlaps, img_out);
     
     INFO("END: APP");
+}
+
+void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched, vector<mapping>& mappings)
+{
+    vector<rna_tree> tmp, mtc;
+    
+    for(auto&& t: templated)
+    {
+        size_t min = numeric_limits<size_t>::max();
+        mapping min_map;
+        vector<rna_tree>::iterator it, min_it;
+        
+        if(matched.empty()) break;
+        
+        for(it = matched.begin(); it != matched.end(); ++it)
+        {
+            mapping map;
+            size_t dist = distance(t, *it, map);
+            
+            if(dist < min)
+            {
+                min = dist;
+                min_map = map;
+                min_it = it;
+            }
+        }
+        
+        tmp.push_back(t);
+        
+        mtc.push_back(*min_it);
+        matched.erase(min_it);
+        mappings.push_back(min_map);
+    }
+    
+    templated = tmp;
+    matched = mtc;
+}
+
+size_t app::distance(rna_tree& templated, rna_tree& matched, mapping& map)
+{
+    try
+    {
+        rted r(templated, matched); //Gets a strategy for decomposing a tree
+        r.run();
+        
+        gted g(templated, matched); //Computes mapping and ditstanve based on RTED's strategy (faster than using GTED itself)
+        g.run(r.get_strategies());
+        
+        map = g.get_mapping();
+        return g.tdist[id(templated.begin())][id(matched.begin())];
+    }
+    catch (const my_exception& e)
+    {
+        throw aplication_error("Tree-edit-distance computation failed: %s", e).with(ERROR_TED);
+    }
 }
 
 mapping app::run_ted(
@@ -192,7 +201,9 @@ mapping app::run_ted(
         
         if (run)
         {
+            
             rted r(templated, matched); //Gets a strategy for decomposing a tree
+            
             r.run();
             
             gted g(templated, matched); //Computes mapping and ditstanve based on RTED's strategy (faster than using GTED itself)
@@ -269,15 +280,9 @@ void app::run_drawing(
         
         for(size_t i = 0; i < mapping.size(); ++i)
         {
-            
-            INFO("templated: %s", templated[i].print_tree(false));
-            INFO("matched: %s", matched[i].print_tree(false));
-            
             //Based on a mapping, matcher returns structure with deleted and inserted nodes
             // which correspond to the target structure
-            if(templated[i].size() == 1 && matched[i].size() != 1);
-            else if(templated[i].size() != 1 && matched[i].size() == 1);
-            else templated[i] = matcher(templated[i], matched[i]).run(mapping[i]);
+            templated[i] = matcher(templated[i], matched[i]).run(mapping[i]);
             //Compact goes through the structure and computes new coordinates where necessary
             compact(templated[i]).run();
         }
@@ -326,9 +331,6 @@ void app::save(
         INFO("Overlaps computation was skipped for %s", rna.name());
     }
 }
-
-
-
 
 rna_tree app::create_matched(
                              const std::string& fastafile)
@@ -590,3 +592,4 @@ void app::print(
         throw aplication_error("Error while parsing arguments: %s", e).with(ERROR_ARGUMENTS);
     }
 }
+

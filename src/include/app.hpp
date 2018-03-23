@@ -23,6 +23,7 @@
 #define APP_HPP
 
 #include "types.hpp"
+#include "gted.hpp"
 
 class rna_tree;
 class mapping;
@@ -70,6 +71,7 @@ private:
     /**
      * run drawing algorithm, visualized molecule will be saved
      */
+    
     void run_drawing(
                      std::vector<rna_tree>& templated,
                      std::vector<rna_tree>& matched,
@@ -85,7 +87,6 @@ private:
      bool run,
      bool run_overlaps,
      const std::string& file);*/
-    
     /**
      * save both, colored and not colored documents
      */
@@ -116,7 +117,12 @@ private:
     void print(
                const arguments& args);
     
+    void match_branches(std::vector<rna_tree>& templated, std::vector<rna_tree>& matched, std::vector<mapping>& mappings);
+    
+    size_t distance(rna_tree& templated, rna_tree& matched, mapping& map);
+    
 };
+
 
 
 #define ERROR_SIGNAL            99
@@ -146,3 +152,4 @@ private:
 
 
 #endif /* !APP_HPP */
+
