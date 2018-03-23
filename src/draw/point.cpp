@@ -181,6 +181,7 @@ point normalize(const point& p)
 {
     UNARY(p);
     
+    if(size(p) == 0) return p;
     assert(size(p) != 0);
     return p / size(p);
 }
