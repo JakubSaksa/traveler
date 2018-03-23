@@ -227,7 +227,7 @@ void rna_pair_label::set_label_strings(
     }
     else if (paired() != other.paired())
     {
-        //throw illegal_state_exception("Setting bases failed, not compatible nodes: %s-%s", *this, other);
+        throw illegal_state_exception("Setting bases failed, not compatible nodes: %s-%s", *this, other);
     }
     
     if (to_string(*this) != to_string(other))
