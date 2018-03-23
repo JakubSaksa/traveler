@@ -301,7 +301,7 @@ point compact::init_branch_recursive(
     
     if (it->initiated_points())
     {
-        INFO("normalize: %s, distance: %s", normalize(it->center() - from), SES_DISTANCE);
+        INFO("normalize: %s, distance: %s", normalize(it->center() - from), BASES_DISTANCE);
         
         p = normalize(it->center() - from) * BASES_DISTANCE;
         return p;
