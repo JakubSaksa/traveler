@@ -185,7 +185,7 @@ void matcher::merge()
     }
     
     assert(it1 == t1.end() && it2 == t2.end());
-    t1 = t2; //hotfix
+    
     assert(t1 == t2);
 }
 
