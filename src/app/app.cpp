@@ -269,6 +269,10 @@ void app::run_drawing(
         
         for(size_t i = 0; i < mapping.size(); ++i)
         {
+            
+            INFO("templated: %s", templated[i].print_tree(false));
+            INFO("matched: %s", matched[i].print_tree(false));
+            
             //Based on a mapping, matcher returns structure with deleted and inserted nodes
             // which correspond to the target structure
             if(templated[i].size() == 1 && matched[i].size() != 1) templated[i] = matched[i];
