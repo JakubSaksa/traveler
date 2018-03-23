@@ -145,6 +145,8 @@ bool point::bad() const
 {
     //UNARY(*this); // !!!
     
+    INFO("%s %s" std::isnan(x), std::isnan(y));
+    
     return *this == bad_point() ||
     std::isnan(x) || std::isnan(y);
 }
