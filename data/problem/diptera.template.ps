@@ -1,0 +1,2967 @@
+%!
+/lwline {newpath moveto lineto stroke} def
+/lwbox {newpath /boxy exch def /boxx exch def
+	boxx boxy moveto lineto lineto lineto boxx boxy lineto stroke} def
+/lwfbox {newpath /boxy exch def /boxx exch def
+	boxx boxy moveto lineto lineto lineto boxx boxy lineto fill} def
+/lwgrayline {setgray newpath moveto lineto stroke} def
+/m4showpage {showpage} def
+/lwarc {newpath gsave translate scale /rad exch def /ang1 exch def /ang2 exch def
+  0.0 0.0 rad ang1 ang2 arc stroke grestore} def
+/lwfarc {newpath gsave translate scale /rad exch def /ang1 exch def /ang2 exch def
+  0.0 0.0 rad ang1 ang2 arc fill grestore} def
+/lwenclosegrayarc {/cypos exch def /cxpos exch def /cscale exch def /crad exch def /clinewidth exch def /cgrayval exch def newpath gsave cgrayval cgrayval cgrayval setrgbcolor cxpos cypos translate cscale cscale scale 0.0 0.0 crad 0.0 360.0 arc fill grestore newpath gsave 0.0 0.0 0.0 setrgbcolor clinewidth setlinewidth cxpos cypos translate cscale cscale scale 0.0 0.0 crad 0.0 360.0 arc stroke grestore} def
+/lwarcbox {newpath gsave translate scale /rad0 exch def
+  /rad1 exch def /ang0 exch def /ang1 exch def /grayval exch def
+  grayval setgray newpath 0.0 0.0 rad1 ang1 ang0 arcn 0.0 0.0 rad0 ang0 ang1 arc closepath fill
+  0.0 setgray newpath 0.0 0.0 rad1 ang1 ang0 arcn
+  0.0 0.0 rad0 ang0 ang1 arc closepath stroke grestore} def
+/lwcircle {newpath gsave translate scale /rad exch def
+  0.0 0.0 rad 0.0 360.0 arc stroke grestore} def
+/lwfcircle {newpath gsave translate scale /rad exch def
+  0.0 0.0 rad 0.0 360.0 arc fill grestore} def
+/lwfgcircle {newpath gsave setgray translate scale /rad exch def
+  0.0 0.0 rad 0.0 360.0 arc fill grestore} def
+/lwtriangle {newpath gsave translate scale rotate moveto lineto lineto lineto stroke grestore} def
+/lwftriangle {newpath gsave translate scale rotate moveto lineto lineto lineto fill grestore} def
+/lwfrect {1.0 setgray newpath moveto lineto lineto lineto lineto fill} def
+/lwflinerect {setrgbcolor /r0x exch def /r0y exch def /r1x exch def /r1y exch def /r2x exch def /r2y exch def /r3x exch def /r3y exch def newpath r0x r0y moveto r1x r1y lineto r2x r2y lineto r3x r3y lineto r0x r0y lineto fill 0.0 setgray newpath r0x r0y moveto r1x r1y lineto stroke r2x r2y moveto r3x r3y lineto stroke} def
+/lwflinetriangle {setrgbcolor /t0x exch def /t0y exch def /t1x exch def /t1y exch def /t2x exch def /t2y exch def newpath t0x t0y moveto t1x t1y lineto t2x t2y lineto t0x t0y lineto fill 0.0 setgray newpath t1x t1y moveto t2x t2y lineto stroke} def
+/lwstring {moveto show} def
+/lwlabel {gsave translate rotate 0.0 0.0 moveto show grestore} def
+/lwarrow {gsave translate scale rotate moveto lineto lineto lineto stroke 0.0 0.0 lwline grestore} def
+/lwfarrow {gsave translate scale rotate moveto lineto lineto lineto
+  fill lwline grestore} def
+/lwgraystring {setgray moveto show} def
+/getboxshow {false charpath flattenpath pathbbox stroke} def
+/getbox {false charpath flattenpath pathbbox} def
+/drawbox {newpath moveto getboxshow newpath
+	/ury exch def /urx exch def /lly exch def /llx exch def
+	llx lly moveto llx ury lineto urx ury lineto urx lly lineto
+	llx lly lineto stroke} def
+/getstrmidpt {
+	/cury exch def /curx exch def curx cury moveto getbox
+	/ury exch def /urx exch def /lly exch def /llx exch def
+	2.0 curx mul llx urx add 2.0 div sub 2.0 cury
+  mul lly ury add 2.0 div sub translate
+	} def
+[] 0 setdash
+0.00 0.00 0.00 setrgbcolor
+/Helvetica-Bold findfont 80.00 scalefont setfont
+1 setlinejoin
+0.05 setlinewidth
+0 setlinecap
+newpath
+gsave
+296.00 396.00 translate
+%m4rotate
+0.54 0.54 scale
+%m4scale
+-177.00 753.00 translate
+%m4translate
+1.00 setlinewidth
+1 setlinecap
+360.00 0.00 5.00 1.00 1.00 390.00 -177.00 lwarc
+0.50 setlinewidth
+0 setlinecap
+390.00 -122.00 390.00 -172.00 lwline
+199.00 -121.00 390.00 -121.00 lwline
+199.00 -122.00 199.00 -444.00 lwline
+224.00 -482.00 285.00 -548.00 lwline
+285.00 -548.00 285.00 -600.00 lwline
+2.00 setlinewidth
+-35.00 -728.00 -35.00 -760.00 lwline
+1.00 setlinewidth
+newpath
+283.50 -628.00 moveto
+292.50 -628.00 lineto
+292.50 -600.00 lineto
+283.50 -600.00 lineto
+283.50 -628.00 lineto
+stroke
+2.00 setlinewidth
+365.00 -580.00 380.00 -570.00 lwline
+0.50 setlinewidth
+232.00 -522.00 225.00 -529.00 lwline
+1.00 setlinewidth
+1 setlinecap
+360.00 0.00 5.00 1.00 1.00 235.00 -518.00 lwarc
+2.00 setlinewidth
+0 setlinecap
+16.00 -489.00 15.00 -495.00 lwline
+-18.00 -358.00 -8.00 -358.00 lwline
+-18.00 -430.00 -18.00 -358.00 lwline
+-59.00 -430.00 -18.00 -430.00 lwline
+-155.00 -367.00 -161.00 -378.00 lwline
+4.00 -446.00 -149.00 -446.00 lwline
+5.00 -421.00 5.00 -446.00 lwline
+123.00 -537.00 134.00 -548.00 lwline
+16.00 -592.00 16.00 -584.00 lwline
+1.00 setlinewidth
+126.00 -499.00 136.00 -505.00 lwline
+73.00 -466.00 121.00 -466.00 lwline
+240.00 -650.00 240.00 -671.00 lwline
+198.00 -649.00 240.00 -649.00 lwline
+107.00 -491.00 115.00 -496.00 lwline
+120.00 -494.00 120.00 -466.00 lwline
+0.50 setlinewidth
+newpath
+-10.50 -489.50 moveto
+16.50 -489.50 lineto
+16.50 -474.50 lineto
+-10.50 -474.50 lineto
+-10.50 -489.50 lineto
+stroke
+newpath
+-32.50 -604.00 moveto
+-11.50 -604.00 lineto
+-11.50 -590.00 lineto
+-32.50 -590.00 lineto
+-32.50 -604.00 lineto
+stroke
+newpath
+214.00 -540.00 moveto
+230.00 -540.00 lineto
+230.00 -530.00 lineto
+214.00 -530.00 lineto
+214.00 -540.00 lineto
+stroke
+newpath
+89.00 -503.50 moveto
+107.00 -503.50 lineto
+107.00 -490.50 lineto
+89.00 -490.50 lineto
+89.00 -503.50 lineto
+stroke
+1.00 setlinewidth
+157.00 -515.00 213.00 -539.00 lwline
+-10.00 -483.00 -31.00 -483.00 lwline
+-32.00 -483.00 -32.00 -591.00 lwline
+0.00 setlinewidth
+104.00 -668.00 104.00 -676.00 lwline
+2.00 setlinewidth
+682.00 -213.00 682.00 -234.00 lwline
+682.00 -188.00 682.00 -203.00 lwline
+571.00 -234.00 681.00 -234.00 lwline
+718.00 -209.00 718.00 -297.00 lwline
+592.00 -298.00 718.00 -298.00 lwline
+661.00 -209.00 717.00 -209.00 lwline
+662.00 -187.00 682.00 -187.00 lwline
+0.00 setlinewidth
+240.00 -800.00 240.00 -808.00 lwline
+2.00 setlinewidth
+571.00 -235.00 571.00 -242.00 lwline
+/Helvetica-Bold findfont 12.00 scalefont setfont
+(5') 100.00 -687.00 lwstring
+(3') 237.00 -821.00 lwstring
+/Helvetica findfont 24.00 scalefont setfont
+(Secondary Structure: small subunit ribosomal RNA) -126.00 -114.00 lwstring
+/Helvetica-Oblique findfont 24.00 scalefont setfont
+(Drosophila melanogaster) 240.00 -1019.00 lwstring
+/Helvetica findfont 17.00 scalefont setfont
+((M21017)) 240.00 -1039.00 lwstring
+1.00 0.00 0.00 setrgbcolor
+(1. Eukaryota 2. eukaryote crown group 3. Fungi/Metazoa group) 240.00 -1059.00 lwstring
+0.00 0.00 0.00 setrgbcolor
+(4. Metazoa 5. Eumetazoa 6. Bilateria 7. Coelomata) 240.00 -1079.00 lwstring
+(8. Protostomia 9. Panarthropoda 10. Arthropoda) 240.00 -1099.00 lwstring
+(11. Tracheata 12. Hexapoda 13. Insecta 14. Dicondylia) 240.00 -1119.00 lwstring
+(15. Pterygota 16. Neoptera 17. Endopterygota 18. Diptera) 240.00 -1139.00 lwstring
+(19. Brachycera 20. Muscomorpha 21. Schizophora) 240.00 -1159.00 lwstring
+(22. Acalyptratae 23. Ephydroidea 24. Drosophilidae) 240.00 -1179.00 lwstring
+(25. Drosophilinae 26. Drosophilini 27. Drosophilina) 240.00 -1199.00 lwstring
+(28. Drosophila 29. Sonophora 30. melanogaster group) 240.00 -1219.00 lwstring
+(31. melanogaster subgroup) 240.00 -1239.00 lwstring
+(June 2004) 240.00 -1259.00 lwstring
+/Helvetica-Bold findfont 12.00 scalefont setfont
+(Citation and related information available at http://www.rna.ccbb.utexas.edu) -74.00 -1363.00 lwstring
+1.00 setlinewidth
+101.17 -625.77 102.83 -632.23 lwline
+108.91 -623.77 110.58 -630.23 lwline
+116.66 -621.77 118.32 -628.23 lwline
+124.41 -619.78 126.07 -626.23 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 132.99 -621.01 lwfarc
+1.00 setlinewidth
+0 setlinecap
+166.05 -605.84 163.95 -612.16 lwline
+158.46 -603.31 156.36 -609.63 lwline
+150.87 -600.78 148.77 -607.10 lwline
+77.87 -614.44 82.13 -619.56 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 73.85 -622.12 lwfarc
+1.00 setlinewidth
+0 setlinecap
+65.58 -624.68 69.84 -629.81 lwline
+58.98 -629.35 63.02 -634.65 lwline
+52.62 -634.20 56.66 -639.50 lwline
+46.26 -639.06 50.30 -644.36 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 41.92 -646.56 lwfarc
+1.00 setlinewidth
+0 setlinecap
+33.54 -648.76 37.58 -654.06 lwline
+27.18 -653.62 31.23 -658.92 lwline
+20.82 -658.47 24.87 -663.77 lwline
+-5.20 -677.49 -0.80 -682.51 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -9.02 -685.27 lwfarc
+0 setlinecap
+-17.24 -688.03 -12.85 -693.04 lwline
+-23.26 -693.30 -18.87 -698.31 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -27.08 -701.07 lwfarc
+360.00 0.00 2.40 1.00 1.00 -37.00 -709.00 lwarc
+0 setlinecap
+-45.28 -711.56 -41.01 -716.68 lwline
+-48.33 -766.00 -41.67 -766.00 lwline
+-48.33 -792.00 -41.67 -792.00 lwline
+-48.33 -800.00 -41.67 -800.00 lwline
+-48.33 -808.00 -41.67 -808.00 lwline
+-48.33 -816.00 -41.67 -816.00 lwline
+-48.33 -824.00 -41.67 -824.00 lwline
+-48.33 -832.00 -41.67 -832.00 lwline
+-12.00 -883.33 -12.00 -876.67 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -4.00 -880.00 lwfarc
+1.00 setlinewidth
+360.00 0.00 2.40 1.00 1.00 11.00 -880.00 lwfarc
+0 setlinecap
+19.00 -883.33 19.00 -876.67 lwline
+27.00 -883.33 27.00 -876.67 lwline
+53.00 -883.33 53.00 -876.67 lwline
+61.00 -883.33 61.00 -876.67 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 69.00 -880.00 lwarc
+0 setlinecap
+-97.36 -916.64 -92.64 -921.36 lwline
+-103.02 -922.30 -98.30 -927.02 lwline
+-108.67 -927.95 -103.95 -932.67 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -121.00 -978.00 lwfarc
+0 setlinecap
+-124.33 -986.00 -117.67 -986.00 lwline
+-124.33 -994.00 -117.67 -994.00 lwline
+-124.33 -1002.00 -117.67 -1002.00 lwline
+-124.33 -1025.00 -117.67 -1025.00 lwline
+-124.33 -1033.00 -117.67 -1033.00 lwline
+-124.33 -1047.00 -117.67 -1047.00 lwline
+-124.33 -1055.00 -117.67 -1055.00 lwline
+-124.33 -1089.00 -117.67 -1089.00 lwline
+-124.33 -1097.00 -117.67 -1097.00 lwline
+-124.33 -1105.00 -117.67 -1105.00 lwline
+-124.83 -1113.00 -118.17 -1113.00 lwline
+-100.00 -1158.33 -100.00 -1151.67 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -92.00 -1155.00 lwfarc
+0 setlinecap
+-84.00 -1158.33 -84.00 -1151.67 lwline
+-76.00 -1158.33 -76.00 -1151.67 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -33.00 -1155.00 lwfarc
+0 setlinecap
+-25.00 -1158.33 -25.00 -1151.67 lwline
+-17.00 -1158.33 -17.00 -1151.67 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -9.00 -1155.00 lwfarc
+0 setlinecap
+-1.00 -1158.33 -1.00 -1151.67 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 7.00 -1155.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+15.00 -1158.33 15.00 -1151.67 lwline
+-95.36 -1260.36 -90.64 -1255.64 lwline
+-89.70 -1266.02 -84.98 -1261.30 lwline
+-84.05 -1271.67 -79.33 -1266.95 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -76.03 -1274.97 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-72.73 -1282.99 -68.01 -1278.27 lwline
+-56.24 -1299.47 -51.53 -1294.76 lwline
+-50.59 -1305.13 -45.87 -1300.41 lwline
+-159.88 -1256.16 -155.16 -1260.88 lwline
+-165.53 -1261.81 -160.81 -1266.53 lwline
+-171.19 -1267.47 -166.47 -1272.19 lwline
+-176.85 -1273.13 -172.13 -1277.85 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -180.14 -1281.14 lwfarc
+1.00 setlinewidth
+360.00 0.00 2.40 1.00 1.00 -185.80 -1286.80 lwfarc
+0 setlinecap
+-236.86 -1333.14 -232.14 -1337.86 lwline
+-242.52 -1338.80 -237.80 -1343.52 lwline
+-248.17 -1344.46 -243.46 -1349.17 lwline
+-253.83 -1350.11 -249.11 -1354.83 lwline
+-259.49 -1355.77 -254.77 -1360.49 lwline
+-277.58 -1373.72 -272.87 -1378.44 lwline
+-283.24 -1379.38 -278.52 -1384.10 lwline
+-288.90 -1385.04 -284.18 -1389.75 lwline
+-294.55 -1390.69 -289.84 -1395.41 lwline
+-300.21 -1396.35 -295.49 -1401.07 lwline
+-151.00 -1146.67 -151.00 -1153.33 lwline
+-159.00 -1146.67 -159.00 -1153.33 lwline
+-167.00 -1146.67 -167.00 -1153.33 lwline
+-175.00 -1146.67 -175.00 -1153.33 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -185.00 -1150.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-193.00 -1146.67 -193.00 -1153.33 lwline
+-201.00 -1146.67 -201.00 -1153.33 lwline
+-209.00 -1146.67 -209.00 -1153.33 lwline
+-150.36 -967.64 -145.64 -972.36 lwline
+-156.02 -973.30 -151.30 -978.02 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -159.31 -981.31 lwfarc
+1.00 setlinewidth
+360.00 0.00 2.40 1.00 1.00 -169.50 -991.65 lwfarc
+0 setlinecap
+-192.37 -1008.65 -187.65 -1013.37 lwline
+-198.03 -1014.31 -193.31 -1019.03 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -201.32 -1022.33 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-214.38 -1030.66 -209.66 -1035.38 lwline
+-220.04 -1036.32 -215.32 -1041.04 lwline
+-225.70 -1041.98 -220.98 -1046.70 lwline
+-231.35 -1047.63 -226.63 -1052.35 lwline
+-237.01 -1053.29 -232.29 -1058.01 lwline
+-242.67 -1058.95 -237.95 -1063.67 lwline
+-248.32 -1064.60 -243.60 -1069.32 lwline
+-253.98 -1070.26 -249.26 -1074.98 lwline
+-128.62 -931.97 -131.38 -938.03 lwline
+-135.90 -928.66 -138.66 -934.72 lwline
+-143.19 -925.35 -145.94 -931.41 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -151.85 -925.07 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-162.62 -915.97 -165.38 -922.03 lwline
+-169.90 -912.66 -172.66 -918.72 lwline
+-177.19 -909.35 -179.94 -915.41 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -185.85 -909.07 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-111.41 -880.72 -112.59 -887.28 lwline
+-119.29 -879.30 -120.46 -885.87 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -127.74 -881.18 lwarc
+0 setlinecap
+-135.04 -876.48 -136.21 -883.04 lwline
+-142.91 -875.06 -144.08 -881.63 lwline
+-150.78 -873.65 -151.96 -880.22 lwline
+-96.64 -846.64 -101.36 -851.36 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -104.66 -843.34 lwfarc
+0 setlinecap
+-107.95 -835.33 -112.67 -840.05 lwline
+-113.61 -829.67 -118.33 -834.39 lwline
+-66.00 -715.67 -66.00 -722.33 lwline
+-75.00 -715.67 -75.00 -722.33 lwline
+-83.00 -715.67 -83.00 -722.33 lwline
+-91.00 -715.67 -91.00 -722.33 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -111.00 -719.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-119.00 -715.67 -119.00 -722.33 lwline
+-127.00 -715.67 -127.00 -722.33 lwline
+-135.00 -715.67 -135.00 -722.33 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -143.00 -719.00 lwfarc
+0 setlinecap
+-46.00 -652.67 -46.00 -659.33 lwline
+-54.00 -652.67 -54.00 -659.33 lwline
+-62.00 -652.67 -62.00 -659.33 lwline
+-74.00 -652.67 -74.00 -659.33 lwline
+-82.00 -652.67 -82.00 -659.33 lwline
+-90.00 -652.67 -90.00 -659.33 lwline
+-98.00 -652.67 -98.00 -659.33 lwline
+-106.00 -652.67 -106.00 -659.33 lwline
+-114.00 -652.67 -114.00 -659.33 lwline
+-135.00 -652.67 -135.00 -659.33 lwline
+-143.00 -652.67 -143.00 -659.33 lwline
+-151.00 -652.67 -151.00 -659.33 lwline
+-74.95 -579.33 -79.67 -584.05 lwline
+-80.61 -573.67 -85.33 -578.39 lwline
+-88.64 -567.64 -93.36 -572.36 lwline
+-94.64 -559.64 -99.36 -564.36 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -102.66 -556.34 lwfarc
+360.00 0.00 2.40 1.00 1.00 -108.31 -550.69 lwfarc
+0 setlinecap
+9.33 -636.00 2.67 -636.00 lwline
+9.33 -628.00 2.67 -628.00 lwline
+9.33 -620.00 2.67 -620.00 lwline
+9.33 -612.00 2.67 -612.00 lwline
+9.33 -604.00 2.67 -604.00 lwline
+9.33 -596.00 2.67 -596.00 lwline
+9.33 -579.00 2.67 -579.00 lwline
+9.33 -571.00 2.67 -571.00 lwline
+9.33 -563.00 2.67 -563.00 lwline
+9.33 -555.00 2.67 -555.00 lwline
+9.33 -508.00 2.67 -508.00 lwline
+9.33 -500.00 2.67 -500.00 lwline
+114.33 -525.00 107.67 -525.00 lwline
+114.33 -517.00 107.67 -517.00 lwline
+114.33 -509.00 107.67 -509.00 lwline
+67.91 -443.27 64.09 -448.73 lwline
+61.36 -438.68 57.53 -444.14 lwline
+54.81 -434.09 50.98 -439.56 lwline
+48.25 -429.50 44.42 -434.97 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 25.00 -417.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+20.36 -409.68 16.53 -415.14 lwline
+13.81 -405.09 9.98 -410.56 lwline
+-216.33 -465.00 -209.67 -465.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -213.00 -473.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-216.33 -481.00 -209.67 -481.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 -213.00 -489.00 lwfarc
+0 setlinecap
+-216.33 -497.00 -209.67 -497.00 lwline
+-216.33 -507.00 -209.67 -507.00 lwline
+-216.33 -515.00 -209.67 -515.00 lwline
+-216.33 -523.00 -209.67 -523.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -213.00 -541.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-216.33 -549.00 -209.67 -549.00 lwline
+-216.33 -557.00 -209.67 -557.00 lwline
+-216.33 -565.00 -209.67 -565.00 lwline
+-216.33 -573.00 -209.67 -573.00 lwline
+-216.33 -587.89 -209.67 -587.89 lwline
+-216.33 -595.89 -209.67 -595.89 lwline
+-216.33 -603.89 -209.67 -603.89 lwline
+-216.33 -611.89 -209.67 -611.89 lwline
+-216.33 -621.95 -209.67 -621.95 lwline
+-216.33 -629.95 -209.67 -629.95 lwline
+-216.33 -637.95 -209.67 -637.95 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -213.00 -645.95 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-243.27 -348.09 -248.73 -351.91 lwline
+-247.86 -341.54 -253.32 -345.36 lwline
+-252.45 -334.99 -257.91 -338.81 lwline
+-257.05 -328.44 -262.50 -332.26 lwline
+-275.27 -303.09 -280.73 -306.91 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -282.59 -298.45 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-284.45 -289.99 -289.91 -293.81 lwline
+-289.05 -283.44 -294.50 -287.26 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -296.36 -278.79 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-298.23 -270.33 -303.69 -274.15 lwline
+-302.82 -263.78 -308.28 -267.60 lwline
+-307.41 -257.23 -312.87 -261.05 lwline
+-317.27 -243.09 -322.73 -246.91 lwline
+-321.86 -236.54 -327.32 -240.36 lwline
+-326.45 -229.99 -331.91 -233.81 lwline
+-331.05 -223.44 -336.50 -227.26 lwline
+-335.64 -216.88 -341.09 -220.71 lwline
+-157.45 -359.14 -162.55 -354.86 lwline
+-152.31 -353.01 -157.41 -348.73 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -149.71 -344.74 lwfarc
+360.00 0.00 1.00 1.00 1.00 -144.57 -338.62 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-136.88 -334.63 -141.98 -330.35 lwline
+-131.73 -328.50 -136.83 -324.22 lwline
+-123.37 -318.55 -128.47 -314.27 lwline
+-118.23 -312.42 -123.33 -308.14 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -115.63 -304.16 lwfarc
+360.00 0.00 1.00 1.00 1.00 -110.49 -298.03 lwfarc
+360.00 0.00 1.00 1.00 1.00 -105.35 -291.90 lwfarc
+1.00 setlinewidth
+0 setlinecap
+-97.65 -287.91 -102.75 -283.63 lwline
+-92.51 -281.79 -97.61 -277.51 lwline
+-87.36 -275.66 -92.46 -271.38 lwline
+10.33 -359.00 3.67 -359.00 lwline
+10.33 -351.00 3.67 -351.00 lwline
+10.33 -343.00 3.67 -343.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 7.00 -335.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+10.33 -326.00 3.67 -326.00 lwline
+10.33 -318.00 3.67 -318.00 lwline
+10.33 -309.34 3.67 -309.34 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 7.00 -301.34 lwfarc
+1.00 setlinewidth
+0 setlinecap
+10.33 -293.34 3.67 -293.34 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 7.00 -272.00 lwarc
+0 setlinecap
+10.33 -264.00 3.67 -264.00 lwline
+10.33 -256.00 3.67 -256.00 lwline
+10.33 -248.00 3.67 -248.00 lwline
+10.33 -240.00 3.67 -240.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 7.00 -232.00 lwfarc
+360.00 0.00 2.40 1.00 1.00 7.00 -224.00 lwfarc
+0 setlinecap
+-11.00 -204.67 -11.00 -211.33 lwline
+-19.00 -204.67 -19.00 -211.33 lwline
+-43.00 -204.67 -43.00 -211.33 lwline
+-51.00 -204.67 -51.00 -211.33 lwline
+-59.00 -204.67 -59.00 -211.33 lwline
+-67.00 -204.67 -67.00 -211.33 lwline
+-75.00 -204.67 -75.00 -211.33 lwline
+-83.00 -204.67 -83.00 -211.33 lwline
+-91.00 -204.67 -91.00 -211.33 lwline
+-99.00 -204.67 -99.00 -211.33 lwline
+-133.00 -204.67 -133.00 -211.33 lwline
+-141.00 -204.67 -141.00 -211.33 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 -149.00 -208.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+25.30 -211.33 25.30 -204.67 lwline
+42.00 -211.33 42.00 -204.67 lwline
+50.00 -211.33 50.00 -204.67 lwline
+108.33 -411.00 101.67 -411.00 lwline
+108.33 -403.00 101.67 -403.00 lwline
+108.33 -395.00 101.67 -395.00 lwline
+108.33 -387.00 101.67 -387.00 lwline
+108.33 -379.00 101.67 -379.00 lwline
+108.33 -371.00 101.67 -371.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 106.00 -357.00 lwfarc
+0 setlinecap
+109.33 -349.00 102.67 -349.00 lwline
+109.33 -319.00 102.67 -319.00 lwline
+109.33 -311.00 102.67 -311.00 lwline
+109.33 -303.00 102.67 -303.00 lwline
+109.33 -295.00 102.67 -295.00 lwline
+129.00 -487.33 129.00 -480.67 lwline
+137.00 -487.33 137.00 -480.67 lwline
+145.00 -487.33 145.00 -480.67 lwline
+157.00 -487.33 157.00 -480.67 lwline
+165.00 -487.33 165.00 -480.67 lwline
+173.00 -487.33 173.00 -480.67 lwline
+202.09 -477.63 197.37 -472.91 lwline
+207.75 -471.97 203.03 -467.25 lwline
+213.41 -466.31 208.69 -461.59 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 226.00 -449.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+234.02 -445.70 229.30 -440.98 lwline
+239.67 -440.05 234.95 -435.33 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 242.97 -432.03 lwfarc
+1.00 setlinewidth
+0 setlinecap
+250.99 -428.73 246.27 -424.01 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 254.29 -420.72 lwfarc
+0 setlinecap
+262.30 -417.42 257.58 -412.70 lwline
+268.30 -410.41 263.70 -405.59 lwline
+274.08 -404.88 269.48 -400.06 lwline
+279.86 -399.35 275.26 -394.53 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 283.35 -391.41 lwfarc
+1.00 setlinewidth
+0 setlinecap
+291.43 -388.29 286.82 -383.47 lwline
+211.64 -516.36 216.36 -511.64 lwline
+217.30 -522.02 222.02 -517.30 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 138.00 -562.00 lwfarc
+360.00 0.00 1.00 1.00 1.00 146.00 -562.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+154.00 -565.33 154.00 -558.67 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 183.00 -562.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+191.00 -565.33 191.00 -558.67 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 199.00 -562.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+207.00 -565.33 207.00 -558.67 lwline
+196.00 -617.33 196.00 -610.67 lwline
+204.00 -617.33 204.00 -610.67 lwline
+214.00 -617.33 214.00 -610.67 lwline
+222.00 -617.33 222.00 -610.67 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 230.00 -614.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+240.00 -617.33 240.00 -610.67 lwline
+248.00 -617.33 248.00 -610.67 lwline
+256.00 -617.33 256.00 -610.67 lwline
+264.00 -617.33 264.00 -610.67 lwline
+272.00 -617.33 272.00 -610.67 lwline
+280.00 -617.33 280.00 -610.67 lwline
+288.00 -617.33 288.00 -610.67 lwline
+301.03 -617.33 301.03 -610.67 lwline
+309.03 -617.33 309.03 -610.67 lwline
+339.56 -610.63 336.05 -604.96 lwline
+346.37 -606.43 342.86 -600.75 lwline
+353.17 -602.23 349.66 -596.55 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 358.23 -595.18 lwfarc
+1.00 setlinewidth
+0 setlinecap
+366.79 -593.82 363.28 -588.14 lwline
+399.33 -567.00 392.67 -567.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 396.00 -559.00 lwarc
+0 setlinecap
+399.33 -551.00 392.67 -551.00 lwline
+399.33 -543.00 392.67 -543.00 lwline
+399.33 -535.00 392.67 -535.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 396.00 -527.00 lwfarc
+0.00 setlinewidth
+360.00 0.00 1.00 1.00 1.00 396.00 -519.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+399.33 -511.00 392.67 -511.00 lwline
+399.33 -503.00 392.67 -503.00 lwline
+399.33 -495.00 392.67 -495.00 lwline
+399.33 -485.00 392.67 -485.00 lwline
+399.33 -477.00 392.67 -477.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 343.00 -475.00 lwfarc
+360.00 0.00 1.00 1.00 1.00 337.34 -480.66 lwfarc
+360.00 0.00 1.00 1.00 1.00 331.69 -486.31 lwfarc
+1.00 setlinewidth
+0 setlinecap
+323.67 -489.61 328.39 -494.33 lwline
+399.33 -445.00 392.67 -445.00 lwline
+399.33 -437.00 392.67 -437.00 lwline
+399.33 -429.00 392.67 -429.00 lwline
+399.33 -421.00 392.67 -421.00 lwline
+399.33 -413.00 392.67 -413.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 396.00 -405.00 lwfarc
+0 setlinecap
+399.33 -397.00 392.67 -397.00 lwline
+356.20 -371.49 351.80 -376.51 lwline
+350.17 -366.23 345.78 -371.24 lwline
+344.15 -360.96 339.76 -365.97 lwline
+338.13 -355.69 333.74 -360.70 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 329.91 -352.92 lwfarc
+0 setlinecap
+274.09 -294.41 269.91 -299.59 lwline
+267.87 -289.38 263.68 -294.57 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 259.55 -286.96 lwfarc
+0 setlinecap
+255.41 -279.34 251.23 -284.53 lwline
+249.18 -274.32 245.00 -279.51 lwline
+242.96 -269.30 238.77 -274.48 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 396.00 -369.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+399.33 -361.00 392.67 -361.00 lwline
+399.33 -351.00 392.67 -351.00 lwline
+399.33 -343.00 392.67 -343.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 396.00 -335.00 lwfarc
+360.00 0.00 1.00 1.00 1.00 396.00 -327.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+399.33 -315.00 392.67 -315.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 396.00 -307.00 lwfarc
+360.00 0.00 1.00 1.00 1.00 396.00 -293.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+399.33 -285.00 392.67 -285.00 lwline
+399.33 -277.00 392.67 -277.00 lwline
+399.33 -267.00 392.67 -267.00 lwline
+399.33 -259.00 392.67 -259.00 lwline
+399.33 -251.00 392.67 -251.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 396.00 -243.00 lwfarc
+0 setlinecap
+378.00 -195.67 378.00 -202.33 lwline
+370.00 -195.67 370.00 -202.33 lwline
+362.00 -195.67 362.00 -202.33 lwline
+354.00 -195.67 354.00 -202.33 lwline
+346.00 -195.67 346.00 -202.33 lwline
+338.00 -195.67 338.00 -202.33 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 317.00 -211.00 lwfarc
+360.00 0.00 1.00 1.00 1.00 317.00 -219.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+313.67 -227.00 320.33 -227.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 318.00 -176.00 lwfarc
+0.00 setlinewidth
+360.00 0.00 1.00 1.00 1.00 318.00 -168.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+321.33 -160.00 314.67 -160.00 lwline
+321.33 -152.00 314.67 -152.00 lwline
+414.00 -203.33 414.00 -196.67 lwline
+422.00 -203.33 422.00 -196.67 lwline
+430.00 -203.33 430.00 -196.67 lwline
+438.00 -203.33 438.00 -196.67 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 464.00 -200.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+472.00 -203.33 472.00 -196.67 lwline
+480.00 -203.33 480.00 -196.67 lwline
+491.00 -203.33 491.00 -196.67 lwline
+499.00 -203.33 499.00 -196.67 lwline
+507.00 -203.33 507.00 -196.67 lwline
+515.00 -203.33 515.00 -196.67 lwline
+538.00 -203.33 538.00 -196.67 lwline
+546.00 -203.33 546.00 -196.67 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 554.00 -200.00 lwarc
+0 setlinecap
+562.00 -203.33 562.00 -196.67 lwline
+570.00 -203.33 570.00 -196.67 lwline
+593.00 -202.33 593.00 -195.67 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 601.00 -199.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+609.00 -202.33 609.00 -195.67 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 617.00 -199.00 lwfarc
+0 setlinecap
+625.00 -202.33 625.00 -195.67 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 633.00 -199.00 lwarc
+0.00 setlinewidth
+360.00 0.00 1.00 1.00 1.00 641.00 -199.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+649.00 -202.33 649.00 -195.67 lwline
+657.00 -202.33 657.00 -195.67 lwline
+452.66 -264.01 459.34 -263.99 lwline
+452.68 -272.01 459.34 -271.99 lwline
+452.70 -280.01 459.36 -280.00 lwline
+452.72 -288.01 459.38 -288.00 lwline
+452.74 -296.01 459.40 -296.00 lwline
+442.02 -585.65 437.98 -580.35 lwline
+448.38 -580.80 444.34 -575.50 lwline
+454.74 -575.94 450.70 -570.64 lwline
+461.10 -571.09 457.06 -565.79 lwline
+467.46 -566.24 463.42 -560.94 lwline
+473.82 -561.38 469.77 -556.08 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 478.15 -553.88 lwfarc
+0 setlinecap
+517.03 -528.64 512.97 -523.36 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 521.34 -521.12 lwfarc
+1.00 setlinewidth
+0 setlinecap
+529.71 -518.89 525.65 -513.60 lwline
+563.98 -492.68 560.02 -487.32 lwline
+570.42 -487.94 566.46 -482.57 lwline
+591.91 -472.73 588.09 -467.27 lwline
+598.47 -468.14 594.64 -462.68 lwline
+605.02 -463.56 601.19 -458.09 lwline
+611.58 -458.97 607.75 -453.50 lwline
+412.79 -643.91 419.21 -642.09 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 425.00 -674.00 lwfarc
+0 setlinecap
+423.99 -682.61 430.40 -680.78 lwline
+427.80 -693.93 434.20 -692.07 lwline
+430.03 -701.61 436.43 -699.75 lwline
+432.26 -709.29 438.66 -707.44 lwline
+434.49 -716.98 440.89 -715.12 lwline
+436.72 -724.66 443.13 -722.80 lwline
+344.12 -664.68 349.88 -661.32 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 351.03 -669.91 lwfarc
+1.00 setlinewidth
+0 setlinecap
+352.18 -678.50 357.94 -675.14 lwline
+356.22 -685.41 361.97 -682.05 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 363.12 -690.64 lwfarc
+1.00 setlinewidth
+0 setlinecap
+364.28 -699.23 370.03 -695.87 lwline
+368.31 -706.14 374.06 -702.78 lwline
+372.34 -713.05 378.09 -709.69 lwline
+206.33 -667.00 199.67 -667.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 203.00 -675.00 lwfarc
+0 setlinecap
+206.33 -694.99 199.67 -694.99 lwline
+206.33 -702.99 199.67 -702.99 lwline
+206.33 -722.00 199.67 -722.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 203.00 -740.00 lwfarc
+0 setlinecap
+206.33 -748.00 199.67 -748.00 lwline
+206.33 -756.00 199.67 -756.00 lwline
+206.33 -764.00 199.67 -764.00 lwline
+206.33 -772.00 199.67 -772.00 lwline
+206.33 -790.00 199.67 -790.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 203.00 -814.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+206.33 -822.00 199.67 -822.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 203.00 -830.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+206.33 -838.00 199.67 -838.00 lwline
+206.33 -846.00 199.67 -846.00 lwline
+206.33 -854.00 199.67 -854.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 203.00 -862.00 lwfarc
+0 setlinecap
+206.33 -870.00 199.67 -870.00 lwline
+206.33 -878.00 199.67 -878.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 203.00 -886.00 lwfarc
+1.00 setlinewidth
+360.00 0.00 2.40 1.00 1.00 203.00 -894.00 lwfarc
+0 setlinecap
+206.33 -902.00 199.67 -902.00 lwline
+206.33 -910.00 199.67 -910.00 lwline
+206.33 -918.00 199.67 -918.00 lwline
+206.33 -943.00 199.67 -943.00 lwline
+206.33 -951.00 199.67 -951.00 lwline
+206.33 -959.00 199.67 -959.00 lwline
+206.33 -967.00 199.67 -967.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 203.00 -975.00 lwfarc
+360.00 0.00 2.40 1.00 1.00 203.00 -983.00 lwfarc
+0 setlinecap
+206.33 -991.00 199.67 -991.00 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 203.00 -999.00 lwarc
+360.00 0.00 2.40 1.00 1.00 203.00 -1007.00 lwarc
+360.00 0.00 2.40 1.00 1.00 203.00 -1015.00 lwfarc
+360.00 0.00 2.40 1.00 1.00 203.00 -1023.00 lwfarc
+0 setlinecap
+206.33 -1031.00 199.67 -1031.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 203.00 -1039.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+206.33 -1047.00 199.67 -1047.00 lwline
+206.33 -1056.36 199.67 -1056.36 lwline
+1 setlinecap
+360.00 0.00 2.40 1.00 1.00 203.00 -1064.36 lwfarc
+0 setlinecap
+206.33 -1072.36 199.67 -1072.36 lwline
+206.33 -1080.36 199.67 -1080.36 lwline
+207.33 -1089.00 200.67 -1089.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 204.00 -1097.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+207.33 -1105.00 200.67 -1105.00 lwline
+207.33 -1113.00 200.67 -1113.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 204.00 -1121.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+207.33 -1129.00 200.67 -1129.00 lwline
+207.33 -1137.00 200.67 -1137.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 204.00 -1145.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+207.33 -1153.00 200.67 -1153.00 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 240.00 -724.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+248.00 -727.33 248.00 -720.67 lwline
+256.00 -727.33 256.00 -720.67 lwline
+264.00 -727.33 264.00 -720.67 lwline
+272.00 -727.33 272.00 -720.67 lwline
+280.00 -727.33 280.00 -720.67 lwline
+0.00 setlinewidth
+1 setlinecap
+360.00 0.00 1.00 1.00 1.00 288.00 -724.00 lwfarc
+1.00 setlinewidth
+0 setlinecap
+296.00 -727.33 296.00 -720.67 lwline
+304.00 -727.33 304.00 -720.67 lwline
+312.00 -727.33 312.00 -720.67 lwline
+/Helvetica findfont 8.00 scalefont setfont
+%BEGIN Sequence
+(A) 100.6414870370362 -666.6542941111105 lwstring
+(U) 100.6414870370362 -658.6537200370365 lwstring
+(U) 100.6414870370362 -650.6538681851846 lwstring
+(C) 100.90552037036956 -642.3899792962957 lwstring
+(U) 108.6413351851844 -640.3898311481476 lwstring
+(G) 116.37714999999925 -638.3904052222216 lwstring
+(G) 124.11296481481409 -636.3902570740734 lwstring
+(U) 132.89696481481408 -635.9663570740734 lwstring
+(U) 141.0255759259252 -640.2538200370363 lwstring
+(G) 149.72131666666593 -639.8537904074067 lwstring
+(A) 157.05711296296218 -632.6539941111104 lwstring
+(U) 158.25719999999924 -622.2539570740734 lwstring
+(C) 150.65736666666595 -619.7177904074066 lwstring
+(C) 143.05753333333263 -617.1823459629621 lwstring
+(U) 135.6334962962956 -614.526086703703 lwstring
+(G) 126.92110740740665 -615.0461959629622 lwstring
+(C) 119.18529259259181 -617.0456218888883 lwstring
+(C) 111.32144074073992 -619.0457700370364 lwstring
+(A) 103.58562592592507 -621.0459181851845 lwstring
+(G) 95.84908888888805 -623.0460663333328 lwstring
+(U) 88.5212555555547 -623.7260441111105 lwstring
+(A) 82.77762592592507 -628.3737663333327 lwstring
+(G) 76.64119999999915 -633.4381552222217 lwstring
+(U) 70.50549629629545 -638.6378033703699 lwstring
+(U) 70.50549629629545 -646.5262663333328 lwstring
+(A) 63.44097777777693 -643.7021922592588 lwstring
+(U) 57.04123703703618 -648.5018218888883 lwstring
+(A) 50.77749629629545 -653.3021737407403 lwstring
+(U) 44.37703333333247 -658.2377848518514 lwstring
+(G) 37.97729259259172 -663.0381367037032 lwstring
+(C) 31.713551851850994 -667.9737478148144 lwstring
+(U) 25.08160740740653 -675.43830337037 lwstring
+(U) 17.713255555554653 -681.5740070740737 lwstring
+(G) 10.073644444443524 -687.054340407407 lwstring
+(U) -0.022559259260198677 -691.1660255925922 lwstring
+(C) -4.478577777778717 -698.2377848518515 lwstring
+(U) -12.022707407408321 -701.6940996666663 lwstring
+(C) -18.15841111111201 -707.0297478148145 lwstring
+(A) -22.13483703703792 -716.3577292962959 lwstring
+(A) -29.590707407408303 -722.0941367037034 lwstring
+(A) -40.42259629629719 -725.4303589259256 lwstring
+(G) -38.55844814814904 -769.6938774444442 lwstring
+(A) -31.694300000000904 -770.8382644814812 lwstring
+(U) -25.694596296297227 -774.5101348518515 lwstring
+(U) -23.390633333334286 -781.662190407407 lwstring
+(A) -25.694596296297227 -789.73365337037 lwstring
+(A) -31.694300000000904 -793.0619311481478 lwstring
+(G) -38.55844814814904 -795.6943015185182 lwstring
+(C) -38.55844814814904 -803.69415337037 lwstring
+(C) -38.55844814814904 -811.6940052222219 lwstring
+(A) -31.494651851852755 -814.7582459629626 lwstring
+(U) -38.55844814814904 -819.6938570740738 lwstring
+(G) -38.55844814814904 -827.6937089259258 lwstring
+(C) -38.55844814814904 -835.6935607777776 lwstring
+(A) -27.358355555556468 -846.6296163333332 lwstring
+(U) -19.494503703704634 -860.0931533703701 lwstring
+(G) -15.630929629630552 -873.6934126296294 lwstring
+(U) -7.639033629630552 -873.6934126296294 lwstring
+(C) -6.830300000000917 -866.229579296296 lwstring
+(U) -0.16652222222311952 -862.6293200370368 lwstring
+(A) 6.497255555554677 -862.5569820740739 lwstring
+(A) 12.361699999999113 -866.3576117037035 lwstring
+(G) 14.025474074073184 -873.7013709629628 lwstring
+(U) 22.017370074073185 -873.7013709629628 lwstring
+(A) 24.02547407407319 -865.7015191111108 lwstring
+(C) 30.96123333333243 -861.7012228148145 lwstring
+(A) 38.96108133333242 -861.7012228148145 lwstring
+(C) 46.02562222222132 -865.7015191111108 lwstring
+(A) 48.02577037036949 -873.7013709629628 lwstring
+(C) 56.01765837036951 -873.7013709629628 lwstring
+(G) 62.9773074074065 -868.9813154074071 lwstring
+(A) 70.71312222222129 -867.3334561481479 lwstring
+(A) 78.20951111111016 -869.8291228148146 lwstring
+(U) 85.0172333333324 -874.901456148148 lwstring
+(U) 87.81743703703611 -883.7013635555554 lwstring
+(A) 85.0172333333324 -892.5012709629628 lwstring
+(A) 78.34551111111017 -898.1016783703702 lwstring
+(A) 70.72108518518425 -900.0772339259258 lwstring
+(A) 62.98527037036946 -898.9494857777777 lwstring
+(G) 56.0335851851843 -893.7013746666665 lwstring
+(U) 48.02574518518427 -893.7013746666665 lwstring
+(G) 42.96934444444357 -899.7010783703703 lwstring
+(A) 34.96949259259173 -901.7012265185184 lwstring
+(A) 26.969640740739884 -899.7010783703703 lwstring
+(A) 22.033307407406568 -893.7013746666665 lwstring
+(C) 14.025467407406545 -893.7013746666665 lwstring
+(C) 3.433862962962124 -896.3250783703703 lwstring
+(G) -7.630229629630491 -893.7013746666665 lwstring
+(C) -15.638069629630515 -893.7013746666665 lwstring
+(A) -21.230488888889766 -907.8376524444444 lwstring
+(A) -29.36634074074162 -918.5009857777777 lwstring
+(A) -39.90235925926012 -926.9015968888888 lwstring
+(A) -52.1665444444453 -932.365282074074 lwstring
+(G) -65.36676666666752 -934.7654487407407 lwstring
+(G) -78.83030370370454 -933.829395037037 lwstring
+(C) -91.49450740740826 -929.8290987407406 lwstring
+(U) -97.23019259259345 -935.4295061481481 lwstring
+(C) -102.83060000000089 -941.0291913333332 lwstring
+(A) -95.87819259259348 -945.9575802222222 lwstring
+(U) -89.35837777777866 -953.0373024444443 lwstring
+(U) -87.89425740740828 -962.1012468888888 lwstring
+(A) -90.43042407407493 -971.0371542962962 lwstring
+(U) -96.69416481481568 -977.9736357777778 lwstring
+(A) -103.78255370370456 -981.4371728148149 lwstring
+(U) -112.46238703703789 -981.7012061481481 lwstring
+(C) -114.5587388888897 -989.7010579999998 lwstring
+(A) -114.5587388888897 -997.7009098518516 lwstring
+(G) -114.5587388888897 -1005.7007617037035 lwstring
+(U) -111.09447962963044 -1013.0365579999998 lwstring
+(U) -114.76635000000081 -1021.3084098518517 lwstring
+(A) -114.55874074074156 -1028.6449283703703 lwstring
+(U) -114.55874074074156 -1036.6447802222222 lwstring
+(G) -107.49422222222303 -1039.7082987407407 lwstring
+(G) -107.49422222222303 -1047.5728728148147 lwstring
+(U) -114.55874074074156 -1050.6363913333332 lwstring
+(U) -114.55874074074156 -1058.6369654074074 lwstring
+(C) -107.89424074074157 -1063.8366135555555 lwstring
+(C) -104.15870370370453 -1071.436446888889 lwstring
+(U) -104.15870370370453 -1079.8363357777778 lwstring
+(U) -107.89424074074157 -1087.5728728148147 lwstring
+(A) -114.55874074074156 -1092.6365394814813 lwstring
+(G) -114.55874074074156 -1100.6363913333332 lwstring
+(A) -114.55874074074156 -1108.636243185185 lwstring
+(U) -115.09476481481565 -1116.636095037037 lwstring
+(C) -108.84620925926008 -1122.4441135555555 lwstring
+(G) -101.01417222222305 -1119.732169111111 lwstring
+(U) -96.69415370370454 -1111.9717617037036 lwstring
+(U) -91.49450555555642 -1105.3636876296296 lwstring
+(A) -84.39815370370455 -1100.635669111111 lwstring
+(A) -77.22222777777863 -1101.1000783703703 lwstring
+(C) -70.83045000000085 -1104.3082635555554 lwstring
+(A) -67.58246851851939 -1113.451782074074 lwstring
+(G) -71.87861666666753 -1121.8921709629626 lwstring
+(U) -71.87861666666753 -1130.8042079999998 lwstring
+(U) -65.88613518518605 -1137.2039487407405 lwstring
+(A) -58.66246851851939 -1138.1400024444442 lwstring
+(C) -56.206598148149034 -1130.4121320740737 lwstring
+(U) -49.25492614814904 -1130.4121320740737 lwstring
+(U) -46.38237592592681 -1138.1400024444442 lwstring
+(G) -38.382527925926816 -1138.1400024444442 lwstring
+(G) -29.870505555556413 -1132.0042987407405 lwstring
+(A) -20.806561111111964 -1128.6680765185183 lwstring
+(U) -13.174190740741611 -1127.0918320740739 lwstring
+(A) -4.502320370371261 -1128.8518154074072 lwstring
+(A) 3.097512962962096 -1132.3638154074072 lwstring
+(C) 10.569309259258407 -1138.1400005925923 lwstring
+(U) 18.569157259258397 -1138.1400005925923 lwstring
+(G) 26.569735185184335 -1135.5162968888887 lwstring
+(U) 34.56958703703618 -1138.1400005925923 lwstring
+(G) 42.56943503703617 -1138.1400005925923 lwstring
+(G) 50.56133103703617 -1138.1400005925923 lwstring
+(U) 59.10514259259174 -1136.1398524444442 lwstring
+(A) 67.24171666666584 -1139.0919635555554 lwstring
+(A) 71.09732777777695 -1147.4918524444442 lwstring
+(U) 67.36975370370287 -1156.9399079999998 lwstring
+(U) 59.23317962962878 -1161.0761857777775 lwstring
+(C) 50.56925370370287 -1158.1399820740737 lwstring
+(U) 42.569413703702864 -1158.1399820740737 lwstring
+(A) 34.56957370370285 -1158.1399820740737 lwstring
+(G) 26.569624074073243 -1160.7636857777775 lwstring
+(A) 18.56904999999916 -1158.1399820740737 lwstring
+(G) 10.561209999999134 -1158.1399820740737 lwstring
+(C) 4.673642592591736 -1164.4362783703702 lwstring
+(U) -3.0383018518526854 -1168.339630222222 lwstring
+(A) -10.374820370371229 -1170.4996487407407 lwstring
+(A) -18.510672222223082 -1170.2602098518516 lwstring
+(U) -25.726375925926778 -1167.8759505925923 lwstring
+(A) -33.06289444444532 -1164.139691333333 lwstring
+(C) -38.40650555555642 -1158.1399876296296 lwstring
+(A) -46.406345555556435 -1158.1399876296296 lwstring
+(U) -54.48650555555642 -1159.1881654074073 lwstring
+(G) -59.24633888888977 -1166.5883320740738 lwstring
+(C) -60.318387037037894 -1174.8442579999999 lwstring
+(A) -61.85484629629716 -1183.2441468888887 lwstring
+(A) -65.64680925926014 -1190.843980222222 lwstring
+(U) -72.39882777777864 -1197.2437209629627 lwstring
+(U) -79.67095740740827 -1201.8516468888886 lwstring
+(A) -88.36669814814898 -1203.3721913333331 lwstring
+(A) -97.65493814814897 -1203.3721913333331 lwstring
+(A) -105.78279074074156 -1200.5322098518516 lwstring
+(A) -114.88613333333416 -1199.4968503148145 lwstring
+(C) -114.89405333333418 -1207.1364614259257 lwstring
+(A) -114.88613333333416 -1215.1363132777776 lwstring
+(U) -114.88613333333416 -1223.1361651296293 lwstring
+(G) -114.88613333333416 -1231.2409984629626 lwstring
+(A) -112.26242962963046 -1239.2408503148145 lwstring
+(A) -112.26242962963046 -1247.2407021666663 lwstring
+(C) -114.88613333333416 -1255.2405540185184 lwstring
+(C) -114.88613333333416 -1263.2404058703703 lwstring
+(U) -113.77428148148235 -1272.6884614259257 lwstring
+(U) -120.3020694814823 -1280.2644243888885 lwstring
+(A) -129.67778148148233 -1280.2644243888885 lwstring
+(U) -135.69413333333418 -1272.6248132777775 lwstring
+(G) -134.8861333333342 -1263.2404058703703 lwstring
+(G) -134.8861333333342 -1255.2405540185184 lwstring
+(G) -137.50983703703787 -1247.2407021666663 lwstring
+(A) -137.50983703703787 -1239.2408503148145 lwstring
+(C) -134.8861333333342 -1231.2409984629626 lwstring
+(G) -134.8861333333342 -1223.1368873518516 lwstring
+(U) -134.8861333333342 -1215.1363132777776 lwstring
+(G) -134.8861333333342 -1207.1364614259257 lwstring
+(U) -134.8861333333342 -1199.4968503148145 lwstring
+(G) -139.56697592592667 -1190.171956148148 lwstring
+(C) -145.30266111111186 -1195.7723635555553 lwstring
+(U) -152.17477222222294 -1202.7797339259257 lwstring
+(U) -155.80686481481555 -1211.0038450370369 lwstring
+(U) -164.03873518518597 -1214.6518635555553 lwstring
+(U) -169.77442037037116 -1220.2522709629627 lwstring
+(A) -175.37482777777856 -1225.9879561481478 lwstring
+(U) -181.11051296296372 -1231.5883635555554 lwstring
+(U) -186.71092037037116 -1237.3240487407404 lwstring
+(A) -181.11051296296372 -1244.0681228148146 lwstring
+(G) -178.31240740740728 -1252.7432499999998 lwstring
+(G) -175.37692592592578 -1260.9514351851851 lwstring
+(C) -173.81659629629615 -1269.6797314814812 lwstring
+(U) -172.9044148148147 -1278.6952129629628 lwstring
+(A) -173.64081481481466 -1289.359268518518 lwstring
+(A) -175.93681481481468 -1297.22312037037 lwstring
+(A) -178.62488888888873 -1305.3596944444444 lwstring
+(A) -182.7047592592591 -1313.223546296296 lwstring
+(C) -188.04040740740726 -1319.9835277777775 lwstring
+(C) -193.64081481481466 -1325.9514166666663 lwstring
+(A) -199.2889629629628 -1330.1752314814812 lwstring
+(A) -206.72892592592575 -1332.6875277777776 lwstring
+(G) -217.3763518518517 -1332.423494444444 lwstring
+(C) -225.79834962963045 -1331.5615169814812 lwstring
+(G) -225.79042962963047 -1339.561368833333 lwstring
+(A) -225.79042962963047 -1347.561220685185 lwstring
+(U) -225.79042962963047 -1355.5610725370368 lwstring
+(C) -225.79042962963047 -1363.5609243888887 lwstring
+(G) -224.67931851851935 -1373.0120725370361 lwstring
+(C) -231.20709051851935 -1380.5880354999993 lwstring
+(A) -240.58281851851936 -1380.5880354999993 lwstring
+(A) -246.5991703703712 -1372.947702166666 lwstring
+(G) -245.79042962963044 -1363.561646611111 lwstring
+(A) -245.79042962963044 -1355.5617947592589 lwstring
+(U) -245.79042962963044 -1347.561220685185 lwstring
+(C) -245.79042962963044 -1339.561368833333 lwstring
+(G) -245.79042962963044 -1331.5615169814812 lwstring
+(U) -250.73653703703684 -1320.7112537037033 lwstring
+(U) -254.15305555555537 -1309.215309259259 lwstring
+(A) -255.30467592592578 -1297.2231240740737 lwstring
+(U) -256.7044148148147 -1286.4230685185182 lwstring
+(A) -255.30467592592578 -1273.2235685185183 lwstring
+(U) -254.15305555555537 -1260.2396240740738 lwstring
+(U) -250.6967407407406 -1248.0796055555552 lwstring
+(G) -246.44684629629708 -1237.635804296296 lwstring
+(G) -254.15084629629706 -1235.4519154074071 lwstring
+(U) -260.74299444444523 -1230.3556913333332 lwstring
+(U) -262.8863648148156 -1221.8603209629628 lwstring
+(G) -261.19873518518597 -1213.4922857777776 lwstring
+(A) -254.94293888888964 -1208.1797654074073 lwstring
+(A) -247.2469018518526 -1206.884193185185 lwstring
+(C) -240.0948277777786 -1209.7082839259256 lwstring
+(U) -234.87060555555632 -1215.6443228148146 lwstring
+(C) -232.3264574074082 -1223.5081913333331 lwstring
+(U) -221.35062407407486 -1219.6916357777775 lwstring
+(A) -211.00643888888965 -1219.692382074074 lwstring
+(G) -200.8465685185193 -1223.1877524444442 lwstring
+(A) -195.2468833333341 -1217.452067259259 lwstring
+(U) -189.5104759259267 -1211.8523820740738 lwstring
+(A) -183.9107907407415 -1206.1159746666665 lwstring
+(A) -178.17438333333408 -1200.5162894814812 lwstring
+(C) -174.1431055555563 -1192.676345037037 lwstring
+(A) -166.31106851851928 -1188.6521783703702 lwstring
+(U) -166.2069018518526 -1180.6356968888886 lwstring
+(G) -159.43895740740817 -1181.652030222222 lwstring
+(C) -153.70255000000077 -1176.0523450370367 lwstring
+(A) -152.44676296296373 -1165.4439746666665 lwstring
+(G) -159.65457777777857 -1158.3317024444443 lwstring
+(A) -164.47874444444523 -1163.8040728148146 lwstring
+(U) -170.19055925926003 -1158.3317024444443 lwstring
+(C) -178.19039925926003 -1158.3317024444443 lwstring
+(G) -186.19023925926004 -1158.3317024444443 lwstring
+(U) -194.19807925926006 -1158.3317024444443 lwstring
+(A) -198.73518888888967 -1163.8040728148146 lwstring
+(U) -204.1909111111119 -1158.3317024444443 lwstring
+(G) -212.1907511111119 -1158.3317024444443 lwstring
+(G) -220.19859111111188 -1158.3317024444443 lwstring
+(U) -228.2064311111119 -1158.3317024444443 lwstring
+(C) -236.19109629629708 -1160.3318505925922 lwstring
+(U) -243.25489259259336 -1156.3322765185183 lwstring
+(U) -246.19109629629702 -1148.3317024444443 lwstring
+(G) -243.25489259259336 -1140.3318505925924 lwstring
+(U) -236.19109629629708 -1136.3322765185183 lwstring
+(A) -228.19124444444523 -1138.331702444444 lwstring
+(C) -220.19934044444523 -1138.331702444444 lwstring
+(C) -212.19949244444524 -1138.331702444444 lwstring
+(G) -204.19964444444525 -1138.331702444444 lwstring
+(A) -194.20760444444525 -1138.331702444444 lwstring
+(C) -186.21571644444526 -1138.331702444444 lwstring
+(G) -178.21586844444528 -1138.331702444444 lwstring
+(A) -170.22397244444525 -1138.331702444444 lwstring
+(C) -159.65457777777857 -1138.331702444444 lwstring
+(A) -152.30287407407485 -1131.4603135555553 lwstring
+(G) -147.1032259259267 -1123.940054296296 lwstring
+(A) -134.038985185186 -1116.6519987407405 lwstring
+(U) -134.55909444444524 -1108.6521468888886 lwstring
+(C) -134.55909444444524 -1100.6522950370368 lwstring
+(U) -134.55909444444524 -1092.6517209629626 lwstring
+(U) -140.5587981481489 -1085.1878876296294 lwstring
+(U) -142.55894629629708 -1075.723906148148 lwstring
+(C) -140.5587981481489 -1066.3879617037035 lwstring
+(A) -134.55909444444524 -1058.6521468888886 lwstring
+(A) -134.55909444444524 -1050.6515728148145 lwstring
+(A) -134.55909444444524 -1036.6519987407403 lwstring
+(U) -134.55909444444524 -1028.6521468888886 lwstring
+(G) -135.00686666666743 -1021.3156283703702 lwstring
+(U) -138.1586259259267 -1013.1797765185182 lwstring
+(C) -134.55908888888968 -1005.7159431851849 lwstring
+(U) -134.55908888888968 -997.7160913333329 lwstring
+(G) -134.55908888888968 -989.715517259259 lwstring
+(C) -136.1346092592601 -981.7156654074071 lwstring
+(C) -144.55909074074157 -980.7796117037035 lwstring
+(C) -150.15877592592676 -986.3800191111109 lwstring
+(U) -155.89518333333416 -992.115704296296 lwstring
+(A) -158.15864629629712 -1002.0520376296295 lwstring
+(U) -161.2308314814823 -1012.5960191111108 lwstring
+(C) -168.30259074074155 -1018.7317228148146 lwstring
+(A) -176.42325740740822 -1021.835741333333 lwstring
+(A) -186.5592574074082 -1021.8516556851849 lwstring
+(C) -192.1589425925934 -1027.4520630925924 lwstring
+(U) -197.89462777777857 -1033.0517482777775 lwstring
+(U) -191.63088703703784 -1037.5801001296293 lwstring
+(U) -191.0948629629638 -1045.1799334629627 lwstring
+(U) -196.55927037037117 -1050.6436186481478 lwstring
+(G) -204.15910370370452 -1049.979555685185 lwstring
+(A) -208.55869629629711 -1043.8438519814813 lwstring
+(U) -214.29510370370454 -1049.4435371666666 lwstring
+(G) -219.89478888888974 -1055.179944574074 lwstring
+(G) -225.49519629629714 -1060.779629759259 lwstring
+(U) -231.2308814814823 -1066.3800371666664 lwstring
+(A) -236.8312888888897 -1072.1157223518517 lwstring
+(G) -242.5669740740749 -1077.716129759259 lwstring
+(U) -248.16738148148227 -1083.4518149444443 lwstring
+(A) -249.90276851851934 -1091.5876667962962 lwstring
+(U) -256.70326851851934 -1097.9881297592592 lwstring
+(C) -266.1672500000008 -1099.1874927222223 lwstring
+(U) -274.4311388888897 -1094.9239001296294 lwstring
+(A) -278.8307314814823 -1086.6600112407407 lwstring
+(G) -277.6313685185193 -1077.196029759259 lwstring
+(G) -271.23090555555643 -1070.395529759259 lwstring
+(A) -262.294998148149 -1069.3321612407406 lwstring
+(C) -256.6953129629638 -1063.5957538333332 lwstring
+(U) -250.95890555555636 -1057.9960686481481 lwstring
+(A) -245.3592203703712 -1052.2596612407406 lwstring
+(C) -239.6228129629638 -1046.6599760555555 lwstring
+(C) -234.02312777777857 -1041.0595686481481 lwstring
+(A) -228.42272037037117 -1035.3238834629628 lwstring
+(U) -222.68703518518598 -1029.7234760555555 lwstring
+(G) -212.02297962963044 -1018.9234204999998 lwstring
+(G) -206.42329444444525 -1013.3237353148147 lwstring
+(U) -200.68688703703782 -1007.7240501296295 lwstring
+(U) -202.50329259259337 -999.5238279074073 lwstring
+(G) -200.79105370370448 -991.7959575370369 lwstring
+(C) -196.70323888888967 -985.1560501296295 lwstring
+(A) -190.3671648148156 -980.0916612407406 lwstring
+(A) -183.4711833333341 -977.6357908703703 lwstring
+(C) -177.20672037037113 -976.5398704999999 lwstring
+(G) -170.0148870370378 -977.9960334629628 lwstring
+(G) -164.27920185185263 -972.2596260555554 lwstring
+(G) -158.6787944444452 -966.6599408703703 lwstring
+(U) -152.5430907407415 -962.6596445740739 lwstring
+(A) -146.55060925926003 -956.8038853148147 lwstring
+(A) -141.84720185185262 -952.7479038333332 lwstring
+(C) -137.74273888888968 -947.8600334629627 lwstring
+(G) -145.0792574074082 -944.5238112407405 lwstring
+(G) -152.27905370370448 -941.1875890185183 lwstring
+(G) -162.80712777777853 -939.0037001296295 lwstring
+(G) -171.7509981481489 -931.8516445740739 lwstring
+(A) -179.08679444444522 -928.5154223518517 lwstring
+(A) -186.2873129629637 -925.1799223518517 lwstring
+(U) -193.62310925926002 -921.8437001296295 lwstring
+(C) -201.62296111111186 -918.6434779074073 lwstring
+(A) -204.55916481481557 -910.6436260555554 lwstring
+(G) -200.55886851851926 -902.6437742037035 lwstring
+(G) -192.55901666666742 -899.7075704999997 lwstring
+(G) -185.35922037037113 -903.7078667962961 lwstring
+(U) -178.02270185185262 -907.0433667962961 lwstring
+(U) -170.8229055555563 -910.2435890185184 lwstring
+(C) -163.48710925926 -913.5798112407406 lwstring
+(G) -159.42316481481555 -907.659681611111 lwstring
+(A) -152.52718333333408 -906.0675223518517 lwstring
+(U) -145.91910925926 -908.1957075370369 lwstring
+(U) -143.80683148148222 -915.4193742037036 lwstring
+(C) -144.01516481481553 -923.0438001296295 lwstring
+(C) -136.814646296297 -926.2433001296295 lwstring
+(G) -129.4788500000007 -929.5795223518518 lwstring
+(G) -116.94268333333405 -926.9153186481481 lwstring
+(A) -111.34299814814885 -921.3156334629629 lwstring
+(G) -105.74331296296366 -915.5799482777777 lwstring
+(A) -110.94296111111179 -907.1793371666665 lwstring
+(G) -117.34270185185252 -897.5793742037035 lwstring
+(G) -125.20729444444513 -896.1159779074073 lwstring
+(G) -133.07114629629697 -896.3554167962961 lwstring
+(A) -140.9349981481488 -893.315768648148 lwstring
+(G) -148.79885000000067 -891.8516482777777 lwstring
+(C) -156.7987018518525 -890.5155667962963 lwstring
+(C) -163.63897962963026 -894.7719371666667 lwstring
+(U) -171.6388314814821 -895.5719945740741 lwstring
+(G) -179.23866481481545 -892.6357908703703 lwstring
+(A) -184.70307222222283 -886.7713464259259 lwstring
+(G) -186.96725740740803 -879.0355316111111 lwstring
+(A) -185.50313703703765 -871.0356797592591 lwstring
+(A) -180.7027851851858 -864.6359390185185 lwstring
+(A) -173.5029888888895 -860.8996797592591 lwstring
+(C) -165.3751008888895 -860.8996797592591 lwstring
+(G) -158.16734074074137 -864.3639390185184 lwstring
+(G) -153.23100740740801 -870.7636797592592 lwstring
+(C) -145.36715555555617 -872.2278001296295 lwstring
+(U) -137.5033037037043 -873.5638816111109 lwstring
+(A) -129.11065555555615 -873.4517577222219 lwstring
+(C) -121.76689629629689 -876.4914058703702 lwstring
+(C) -113.90304444444506 -877.8274873518516 lwstring
+(A) -110.56682222222285 -868.6275429074071 lwstring
+(C) -109.76676481481545 -859.8276354999997 lwstring
+(A) -115.89524629629695 -854.6200243888885 lwstring
+(U) -120.96685740740807 -848.4915429074072 lwstring
+(C) -126.70326481481547 -842.755857722222 lwstring
+(U) -133.36704259259326 -836.491394759259 lwstring
+(A) -133.90306666666734 -827.0274132777776 lwstring
+(A) -127.23928888888956 -820.4916725370368 lwstring
+(G) -117.77530740740809 -821.0276966111109 lwstring
+(G) -112.57493703703773 -828.6275299444442 lwstring
+(A) -106.83925185185252 -834.3639373518516 lwstring
+(A) -100.19067777777846 -838.9154373518517 lwstring
+(G) -95.51114074074144 -845.5632892037034 lwstring
+(G) -87.64728888888959 -840.6276780925923 lwstring
+(C) -78.58262222222291 -836.6273817962959 lwstring
+(A) -68.58334444444515 -835.6913280925922 lwstring
+(G) -58.59131244444513 -835.6913280925922 lwstring
+(C) -58.58334444444513 -827.6914762407404 lwstring
+(A) -58.58334444444513 -819.6916243888885 lwstring
+(G) -58.58334444444513 -811.6917725370365 lwstring
+(G) -58.58334444444513 -803.6919206851846 lwstring
+(C) -58.58334444444513 -795.6913466111106 lwstring
+(G) -61.85519629629696 -782.2278095740736 lwstring
+(C) -58.58334444444513 -769.691642907407 lwstring
+(G) -59.11864629629698 -762.4918466111106 lwstring
+(U) -58.719340740741444 -754.6272540185181 lwstring
+(A) -58.719340740741444 -746.6274021666661 lwstring
+(A) -58.982651851852566 -738.7635503148142 lwstring
+(A) -62.27113333333404 -731.699754018518 lwstring
+(U) -69.64670740740812 -732.6358077222217 lwstring
+(U) -73.24696666666738 -739.699604018518 lwstring
+(A) -78.58333703703777 -732.6358077222217 lwstring
+(C) -86.59117703703778 -732.6358077222217 lwstring
+(C) -94.5910170370378 -732.6358077222217 lwstring
+(C) -96.59911481481554 -740.1155484629624 lwstring
+(A) -100.91118888888961 -744.7553077222217 lwstring
+(C) -107.9749851851859 -744.3154929074068 lwstring
+(U) -113.53487407407479 -739.9875114259254 lwstring
+(C) -116.80672592592661 -732.6437521666661 lwstring
+(C) -124.80656592592663 -732.6437521666661 lwstring
+(C) -132.80640592592664 -732.6437521666661 lwstring
+(A) -140.81424592592666 -732.6437521666661 lwstring
+(G) -149.8709851851859 -730.643604018518 lwstring
+(C) -154.80731851851922 -722.6437521666661 lwstring
+(U) -149.8709851851859 -714.6439003148141 lwstring
+(C) -140.80704074074146 -712.643752166666 lwstring
+(G) -132.80719274074144 -712.643752166666 lwstring
+(G) -124.81529674074146 -712.643752166666 lwstring
+(G) -116.82340074074145 -712.643752166666 lwstring
+(G) -109.3350037037044 -708.9718817962957 lwstring
+(A) -100.91124444444513 -708.6434669814809 lwstring
+(G) -94.58311481481549 -712.6437632777772 lwstring
+(G) -86.59121881481549 -712.6437632777772 lwstring
+(U) -78.5993228148155 -712.6437632777772 lwstring
+(A) -69.66341881481551 -712.6437632777772 lwstring
+(G) -61.67153081481549 -712.6437632777772 lwstring
+(U) -53.247003703704415 -710.1075966111106 lwstring
+(G) -48.591337037037746 -703.0915410555549 lwstring
+(A) -45.64718888888958 -694.707578092592 lwstring
+(C) -38.99137407407475 -695.3557262407402 lwstring
+(G) -31.246874074074753 -691.9717632777772 lwstring
+(A) -25.247170370371073 -686.7713929074068 lwstring
+(A) -19.9751888888896 -680.115578092592 lwstring
+(A) -13.247040740741475 -676.2353743888884 lwstring
+(A) -8.134911111111856 -670.9076892037032 lwstring
+(A) -16.62304074074146 -669.7076021666661 lwstring
+(U) -25.438880740741475 -669.7076021666661 lwstring
+(A) -32.87888074074145 -669.7076021666661 lwstring
+(A) -40.07072074074147 -669.7076021666661 lwstring
+(C) -49.662720740741456 -669.7076021666661 lwstring
+(A) -57.66256074074146 -669.7076021666661 lwstring
+(A) -65.47144814814892 -669.7155817962959 lwstring
+(U) -75.5350777777785 -672.3313058703699 lwstring
+(A) -85.63924444444518 -669.7076021666661 lwstring
+(C) -93.6470844444452 -669.7076021666661 lwstring
+(A) -101.64692444444522 -669.7076021666661 lwstring
+(G) -109.65476444444523 -669.7076021666661 lwstring
+(G) -117.66260444444526 -669.7076021666661 lwstring
+(A) -123.80683703703777 -671.7077503148143 lwstring
+(C) -131.1831333333341 -669.7076021666661 lwstring
+(U) -139.1829733333341 -669.7076021666661 lwstring
+(C) -147.1828133333341 -669.7076021666661 lwstring
+(A) -154.91868888888965 -670.1315021666661 lwstring
+(U) -161.9991333333341 -669.5954780925921 lwstring
+(A) -168.11892962963037 -663.9798854999995 lwstring
+(U) -168.11892962963037 -655.5792743888884 lwstring
+(C) -161.9991333333341 -649.9636817962958 lwstring
+(C) -155.0467259259267 -648.2275706851847 lwstring
+(G) -147.18287407407482 -649.7155632777773 lwstring
+(A) -139.19097807407482 -649.7155632777773 lwstring
+(G) -131.1990900740748 -649.7155632777773 lwstring
+(G) -124.2467629629637 -647.859378092592 lwstring
+(C) -117.63072592592668 -649.7076188333328 lwstring
+(C) -113.51904074074149 -642.9874151296291 lwstring
+(C) -109.6308779259267 -649.7076188333328 lwstring
+(U) -101.63102992592671 -649.7076188333328 lwstring
+(G) -93.63913392592671 -649.7076188333328 lwstring
+(U) -85.63927792592669 -649.7076188333328 lwstring
+(A) -78.67887407407486 -646.5478966111106 lwstring
+(A) -71.94277007407483 -646.5478966111106 lwstring
+(U) -65.47144814814892 -649.7155817962959 lwstring
+(U) -57.63146666666745 -649.7155817962959 lwstring
+(G) -49.63160814814891 -649.7155817962959 lwstring
+(G) -51.63102222222301 -640.6516373518514 lwstring
+(A) -58.03076296296375 -632.5157854999997 lwstring
+(A) -64.43122592592674 -624.2518966111107 lwstring
+(U) -70.83096666666748 -616.1153225370367 lwstring
+(G) -77.23070740740822 -607.8514336481478 lwstring
+(A) -83.63117037037121 -599.7155817962961 lwstring
+(G) -88.03076296296378 -592.5157854999997 lwstring
+(U) -93.63117037037121 -586.7793780925922 lwstring
+(A) -101.76702222222306 -580.7796743888885 lwstring
+(C) -109.74300370370455 -581.4596521666663 lwstring
+(A) -107.76672592592674 -572.7798188333329 lwstring
+(C) -113.36713333333418 -567.1794114259254 lwstring
+(U) -121.42268888888972 -563.6594484629625 lwstring
+(U) -128.2948000000008 -559.4435966111106 lwstring
+(U) -134.6952629629638 -552.5078373518513 lwstring
+(A) -136.0313444444453 -543.1718929074069 lwstring
+(A) -131.63102962963046 -534.772004018518 lwstring
+(A) -123.23114074074157 -530.3716892037032 lwstring
+(U) -113.7671592592601 -531.5717762407403 lwstring
+(C) -106.83067777777862 -538.107516981481 lwstring
+(C) -103.78308518518602 -546.2599984629625 lwstring
+(U) -99.2308629629638 -553.0438503148143 lwstring
+(U) -93.4951777777786 -558.6435354999994 lwstring
+(U) -87.49475185185267 -566.6433873518513 lwstring
+(A) -78.55884444444527 -564.6439614259253 lwstring
+(A) -79.49489814814898 -572.6438132777772 lwstring
+(C) -73.89521296296378 -578.3794984629624 lwstring
+(A) -66.55869444444525 -585.716016981481 lwstring
+(A) -60.294953703704515 -591.9797577222217 lwstring
+(G) -53.89521296296377 -598.2514614259255 lwstring
+(G) -47.494750000000785 -604.5159243888885 lwstring
+(A) -41.095009259260046 -610.6516280925922 lwstring
+(C) -34.6952685185193 -616.923331796296 lwstring
+(C) -28.430805555556326 -623.187794759259 lwstring
+(A) -22.031064814815586 -629.4515354999997 lwstring
+(A) -15.631324074074843 -635.7159984629627 lwstring
+(U) -7.6307500000007575 -639.7155725370367 lwstring
+(U) -7.6307500000007575 -631.7157206851848 lwstring
+(G) -7.6307500000007575 -623.7158688333329 lwstring
+(G) -7.6307500000007575 -615.7160169814811 lwstring
+(A) -7.6307500000007575 -607.7154429074069 lwstring
+(G) -9.727101851852584 -599.715591055555 lwstring
+(G) -17.55913888888961 -602.9476466111106 lwstring
+(G) -26.01473148148222 -602.7393132777772 lwstring
+(C) -31.69471296296372 -597.2032947592588 lwstring
+(A) -32.47885740740817 -588.7397577222217 lwstring
+(A) -27.622801851852643 -581.7157392037032 lwstring
+(G) -21.623098148148966 -579.715591055555 lwstring
+(U) -13.631202148148963 -579.715591055555 lwstring
+(C) -7.622801851852676 -582.6517947592588 lwstring
+(U) -7.622801851852676 -574.6519429074068 lwstring
+(G) -7.622801851852676 -566.6513688333328 lwstring
+(G) -7.622801851852676 -558.6515169814809 lwstring
+(U) -16.022690740741584 -553.3158688333327 lwstring
+(G) -21.623098148149015 -545.0519799444438 lwstring
+(C) -23.623246296297182 -535.1879799444439 lwstring
+(C) -21.759098148149025 -525.4512947592586 lwstring
+(A) -16.022690740741638 -517.0514058703699 lwstring
+(G) -7.622801851852729 -511.71575772222167 lwstring
+(C) -7.622801851852729 -503.71590587036974 lwstring
+(A) -5.943114814815712 -495.4592577222216 lwstring
+(G) -2.0151703703712505 -488.53940587036976 lwstring
+(C) 5.78502962962875 -488.53940587036976 lwstring
+(C) 10.728607407406534 -495.52362809259193 lwstring
+(G) 12.378088888888044 -503.7157762407401 lwstring
+(C) 12.378088888888044 -511.71562809259206 lwstring
+(G) 18.51379259259173 -515.715202166666 lwstring
+(G) 23.31414444444356 -521.3156095740735 lwstring
+(U) 26.37766296296209 -527.9793873518513 lwstring
+(A) 27.313716666665805 -535.1791836481476 lwstring
+(A) 26.249625925925045 -542.5157021666662 lwstring
+(U) 23.31414444444356 -549.1794799444439 lwstring
+(U) 18.51379259259173 -554.6431651296291 lwstring
+(C) 12.378088888888044 -558.6434614259255 lwstring
+(C) 12.378088888888044 -566.6433132777773 lwstring
+(A) 12.378088888888044 -574.6431651296292 lwstring
+(G) 12.378088888888044 -582.6430169814811 lwstring
+(C) 14.041862962962115 -594.6431651296292 lwstring
+(U) 12.378088888888044 -607.7066836481478 lwstring
+(C) 12.378088888888044 -615.7065354999997 lwstring
+(C) 12.378088888888044 -623.7063873518516 lwstring
+(A) 12.378088888888044 -631.7062392037035 lwstring
+(A) 12.378088888888044 -639.7060910555554 lwstring
+(U) 11.442014814814012 -647.5843132777776 lwstring
+(A) 13.978181481480675 -654.9765354999998 lwstring
+(G) 19.577866666665866 -651.9687206851851 lwstring
+(C) 25.8416074074066 -647.1683688333331 lwstring
+(G) 32.24207037036958 -642.3687392037035 lwstring
+(U) 38.64181111111032 -637.4324058703703 lwstring
+(A) 44.90555185185106 -632.6327762407407 lwstring
+(U) 51.30601481481404 -627.7043873518518 lwstring
+(A) 57.70575555555478 -623.3047947592592 lwstring
+(U) 63.842181481480715 -618.1044243888888 lwstring
+(U) 69.9778851851844 -613.0407577222221 lwstring
+(A) 76.6416629629622 -608.5203503148148 lwstring
+(A) 68.45010740740665 -601.9687021666666 lwstring
+(A) 60.37792222222146 -592.4642206851851 lwstring
+(G) 55.041551851851075 -582.520646611111 lwstring
+(U) 54.18579444444367 -571.7046651296296 lwstring
+(U) 55.64991481481405 -560.8004429074073 lwstring
+(G) 59.122137037036275 -548.9847577222221 lwstring
+(U) 66.89774814814736 -538.3763873518517 lwstring
+(U) 76.23369259259182 -532.7767021666666 lwstring
+(G) 86.49772962962884 -529.4404799444444 lwstring
+(C) 97.4337851851844 -528.640422537037 lwstring
+(G) 97.4337851851844 -520.6405706851851 lwstring
+(G) 97.4337851851844 -512.6407188333332 lwstring
+(U) 97.83381481481409 -504.10410772222207 lwstring
+(U) 89.16988888888818 -501.1606817962961 lwstring
+(A) 81.03403703703633 -495.04016327777765 lwstring
+(A) 74.23353703703633 -488.2403854999999 lwstring
+(A) 68.89788888888819 -480.376533648148 lwstring
+(A) 65.03359259259187 -471.57662624074055 lwstring
+(C) 62.98570370370297 -463.60064475925896 lwstring
+(G) 56.63370370370296 -457.8403669814812 lwstring
+(U) 50.09796296296221 -453.3040521666664 lwstring
+(U) 43.56149999999927 -448.7764225370367 lwstring
+(C) 37.025759259258514 -444.11207068518496 lwstring
+(G) 29.025907407406674 -445.4481521666665 lwstring
+(U) 21.426074074073316 -442.9206706851851 lwstring
+(A) 16.489740740740004 -436.64824475925917 lwstring
+(G) 15.689683333332605 -428.9124299444444 lwstring
+(U) 9.025905555554807 -424.24807809259266 lwstring
+(U) 2.490164814814056 -419.7124855000001 lwstring
+(G) -22.03404814814823 -403.18321481481473 lwstring
+(A) -29.73050000000012 -401.41127407407413 lwstring
+(A) -37.46631481481491 -403.4114222222222 lwstring
+(C) -57.71404814814823 -409.74354814814814 lwstring
+(U) -74.03421481481492 -420.0553259259259 lwstring
+(U) -90.88173333333341 -433.2873814814814 lwstring
+(G) -104.95364074074081 -446.92741851851855 lwstring
+(U) -115.40502222222227 -460.1154962962966 lwstring
+(G) -119.66933703703708 -466.9152740740744 lwstring
+(C) -123.80489259259265 -473.71577407407443 lwstring
+(U) -128.06920740740748 -480.51555185185214 lwstring
+(U) -132.30370370370366 -487.1129629629629 lwstring
+(C) -130.73632592592594 -495.76640740740737 lwstring
+(A) -134.14851111111113 -502.01640740740737 lwstring
+(U) -142.23205555555552 -505.753 lwstring
+(A) -146.49564814814812 -512.5527777777777 lwstring
+(C) -150.72777777777776 -519.1462962962962 lwstring
+(G) -156.26655555555553 -530.1401851851851 lwstring
+(G) -161.83440740740738 -540.4765555555555 lwstring
+(G) -167.79444444444442 -549.9074074074073 lwstring
+(U) -171.8562037037037 -557.5136111111111 lwstring
+(A) -176.08148148148146 -564.1055555555555 lwstring
+(G) -182.91379629629628 -575.7931944444445 lwstring
+(U) -187.13888888888889 -582.3888888888888 lwstring
+(A) -191.459 -589.1886481481481 lwstring
+(C) -195.69074074074072 -595.7796296296295 lwstring
+(A) -200.16629629629628 -603.9425925925925 lwstring
+(A) -204.48638888888888 -610.7423518518518 lwstring
+(C) -208.7174074074074 -617.3314814814813 lwstring
+(U) -205.66116666666665 -625.2455185185185 lwstring
+(U) -213.31518518518516 -625.9407407407406 lwstring
+(A) -217.6352962962963 -632.7404999999999 lwstring
+(C) -221.86703703703702 -639.3333333333333 lwstring
+(A) -226.06674018518535 -645.9002462962961 lwstring
+(A) -234.8427772222224 -650.5638759259257 lwstring
+(U) -242.13083277777795 -647.0439129629627 lwstring
+(U) -243.40253462962977 -637.116246296296 lwstring
+(G) -238.93370370370369 -628.7962962962962 lwstring
+(U) -234.6998148148148 -622.2044814814814 lwstring
+(G) -230.3833333333333 -615.4037037037036 lwstring
+(G) -225.78481481481478 -606.7944444444444 lwstring
+(U) -221.55018518518517 -600.2063333333333 lwstring
+(U) -217.23444444444442 -593.4055555555556 lwstring
+(A) -219.76234388888912 -586.1247351851848 lwstring
+(G) -212.7583333333333 -585.2407407407406 lwstring
+(U) -208.52351851851853 -578.6526296296296 lwstring
+(A) -204.20648148148146 -571.8518518518518 lwstring
+(C) -199.97759259259257 -565.2571759259258 lwstring
+(U) -204.02488148148146 -559.3579259259259 lwstring
+(A) -200.6322333333333 -552.4879814814815 lwstring
+(U) -193.14999999999998 -553.5685185185185 lwstring
+(A) -188.92 -546.9775925925926 lwstring
+(C) -184.8611111111111 -539.3703703703703 lwstring
+(C) -185.28501232589997 -531.5687222222222 lwstring
+(U) -178.89820370370367 -529.9398148148148 lwstring
+(U) -178.89820370370367 -522.5324074074074 lwstring
+(U) -173.33035185185182 -519.6041666666666 lwstring
+(A) -177.59760370370367 -513.2931666666666 lwstring
+(U) -174.13984444444444 -508.0450555555555 lwstring
+(G) -167.79444444444442 -508.6074074074074 lwstring
+(U) -163.5594444444444 -502.0167592592592 lwstring
+(A) -159.2958518518518 -495.2169814814814 lwstring
+(U) -162.29954814814818 -488.84512222222224 lwstring
+(G) -162.77771481481486 -481.31112222222225 lwstring
+(U) -156.2998444444445 -478.7575851851852 lwstring
+(A) -149.37037037037035 -476.5740740740741 lwstring
+(A) -145.12215185185187 -469.9816814814818 lwstring
+(G) -140.8578370370371 -463.18190370370394 lwstring
+(C) -136.72155925925932 -456.3821259259262 lwstring
+(G) -132.47098518518524 -449.5830888888892 lwstring
+(U) -130.07494203703726 -442.1643944444442 lwstring
+(A) -131.61067722222242 -433.1966537037035 lwstring
+(U) -138.54643648148166 -431.91627222222195 lwstring
+(U) -146.37824074074075 -432.22723703703736 lwstring
+(A) -154.1147777777778 -434.22738518518537 lwstring
+(C) -161.85059259259262 -436.22753333333344 lwstring
+(C) -169.58640740740742 -438.2276814814815 lwstring
+(G) -177.32222222222225 -440.2278296296296 lwstring
+(G) -185.2822037037037 -442.1031518518519 lwstring
+(U) -190.06587037037036 -456.7914851851852 lwstring
+(G) -198.85103703703712 -469.2997555555554 lwstring
+(G) -203.11462962962972 -476.09953333333317 lwstring
+(A) -207.2509074074075 -482.89931111111093 lwstring
+(G) -211.51450000000008 -489.699811111111 lwstring
+(U) -205.722037037037 -495.5237037037036 lwstring
+(U) -203.13016666666664 -503.27544444444436 lwstring
+(C) -206.66605555555554 -509.9399444444444 lwstring
+(U) -212.82635185185183 -514.8119074074074 lwstring
+(U) -219.36209259259257 -515.6199222222222 lwstring
+(A) -225.53029629629629 -512.103188888889 lwstring
+(U) -229.79388888888886 -518.9029666666668 lwstring
+(A) -233.93016666666665 -525.7034666666668 lwstring
+(U) -238.19375925925928 -532.5032444444445 lwstring
+(G) -242.4342407407407 -539.095374074074 lwstring
+(U) -246.23488888888883 -546.0789296296297 lwstring
+(G) -250.49920370370364 -552.8794296296296 lwstring
+(A) -254.63475925925923 -559.6792074074074 lwstring
+(U) -251.73327777777774 -568.330837037037 lwstring
+(U) -255.9628703703703 -574.9274074074074 lwstring
+(A) -263.2089814814815 -575.8671481481482 lwstring
+(A) -267.47329629629627 -582.666925925926 lwstring
+(A) -271.6088518518518 -589.4667037037036 lwstring
+(U) -275.87316666666663 -596.2664814814814 lwstring
+(A) -280.107037037037 -602.8629629629629 lwstring
+(C) -285.20170740740747 -611.3820481481484 lwstring
+(U) -294.06600370370376 -614.0296259259262 lwstring
+(U) -300.5380777777778 -610.3657000000003 lwstring
+(G) -301.4177074074075 -601.1896444444448 lwstring
+(U) -297.17518518518517 -592.324074074074 lwstring
+(A) -292.942037037037 -585.7333333333332 lwstring
+(U) -288.67772222222214 -578.9335555555555 lwstring
+(U) -284.5414444444444 -572.1337777777777 lwstring
+(U) -280.2742222222222 -565.3347407407407 lwstring
+(U) -283.02731481481476 -557.0953703703703 lwstring
+(U) -278.7949074074074 -550.4951851851852 lwstring
+(U) -271.69927777777775 -549.1431888888889 lwstring
+(C) -267.56299999999993 -542.3434111111111 lwstring
+(A) -263.2994074074074 -535.542911111111 lwstring
+(U) -259.498037037037 -528.5593555555555 lwstring
+(A) -255.25827777777775 -521.967225925926 lwstring
+(U) -250.99396296296294 -515.1674481481482 lwstring
+(G) -246.85768518518518 -508.3669481481482 lwstring
+(U) -242.59409259259257 -501.56717037037043 lwstring
+(U) -241.31449999999998 -492.16360740740737 lwstring
+(C) -236.49824074074073 -484.11529259259254 lwstring
+(C) -228.57901851851858 -479.1637925925924 lwstring
+(U) -224.31470370370377 -472.36329259259236 lwstring
+(C) -220.17914814814822 -465.5635148148146 lwstring
+(C) -215.9148333333334 -458.7637370370369 lwstring
+(U) -220.2819888888889 -452.4944537037038 lwstring
+(A) -226.8575074074074 -453.3907203703704 lwstring
+(U) -235.66610000000003 -457.12697962962955 lwstring
+(U) -244.01752592592595 -455.9189351851852 lwstring
+(U) -250.4259518518519 -449.31086111111114 lwstring
+(A) -250.32178518518518 -439.9344166666668 lwstring
+(A) -243.63413703703705 -433.0709907407409 lwstring
+(A) -234.85013703703706 -431.9345611111114 lwstring
+(A) -226.07410000000004 -434.9025796296298 lwstring
+(A) -217.71400740740745 -435.9507574074076 lwstring
+(C) -215.14657407407418 -428.10762592592573 lwstring
+(C) -220.7469814814816 -422.5072185185183 lwstring
+(U) -226.5390740740742 -416.57110740740717 lwstring
+(G) -233.00212962962962 -409.32364444444437 lwstring
+(C) -238.60253703703702 -403.72395925925923 lwstring
+(A) -244.39462962962963 -397.7878296296296 lwstring
+(U) -251.80185185185184 -396.46300925925937 lwstring
+(U) -253.00989629629623 -387.54300925925946 lwstring
+(A) -258.80198888888884 -380.5507500000001 lwstring
+(G) -265.24150740740737 -374.350601851852 lwstring
+(U) -270.8419148148148 -368.75019444444456 lwstring
+(G) -276.63400740740735 -362.81480555555567 lwstring
+(C) -282.60187777777776 -355.4942685185187 lwstring
+(U) -289.0421185185185 -348.2467129629631 lwstring
+(C) -294.6418037037037 -342.64630555555567 lwstring
+(U) -300.4579074074074 -336.7104851851854 lwstring
+(U) -307.0738222222223 -330.0703870370373 lwstring
+(A) -308.5299851851852 -320.54275740740775 lwstring
+(A) -302.57005925925927 -314.08659074074114 lwstring
+(A) -292.64167037037043 -315.72649259259293 lwstring
+(C) -286.19431481481485 -322.58287407407425 lwstring
+(G) -280.5142111111111 -328.51075000000014 lwstring
+(A) -274.7778037037037 -334.1104351851853 lwstring
+(G) -268.3375629629629 -341.36665740740756 lwstring
+(U) -262.36969259259257 -348.67852777777784 lwstring
+(G) -256.71359999999993 -354.61463888888903 lwstring
+(U) -250.9779148148148 -360.21432407407417 lwstring
+(U) -244.53767407407403 -367.470601851852 lwstring
+(A) -238.87364814814813 -373.4147444444446 lwstring
+(U) -232.04999999999998 -375.2463425925927 lwstring
+(U) -230.13031481481482 -383.65155185185176 lwstring
+(G) -224.4742222222222 -389.5876814814814 lwstring
+(U) -218.73853703703702 -395.18736666666655 lwstring
+(G) -212.27475925925938 -402.4355518518516 lwstring
+(G) -206.61866666666677 -408.3716629629628 lwstring
+(G) -200.88298148148158 -413.9713481481479 lwstring
+(C) -190.34587037037036 -422.7672259259259 lwstring
+(C) -182.38679629629635 -420.8832370370369 lwstring
+(G) -174.65098148148155 -418.88308888888884 lwstring
+(G) -166.91424074074078 -416.89160740740743 lwstring
+(U) -159.0503888888889 -414.89145925925936 lwstring
+(A) -151.3145740740741 -412.89131111111135 lwstring
+(C) -149.16161111111109 -402.12704074074065 lwstring
+(U) -151.7864364814817 -391.77966111111107 lwstring
+(A) -155.4185290740743 -380.9636796296295 lwstring
+(U) -159.36239944444466 -374.02001296296277 lwstring
+(U) -163.36269574074097 -367.0842537037035 lwstring
+(A) -166.80308462962986 -360.0117722222219 lwstring
+(C) -173.1631475925928 -349.1232648148148 lwstring
+(U) -177.16272166666684 -342.1875055555555 lwstring
+(U) -183.20288833333353 -336.2840240740739 lwstring
+(U) -185.098869814815 -328.2993574074072 lwstring
+(G) -188.53853648148166 -321.2275981481479 lwstring
+(A) -194.9866846296298 -321.2275981481479 lwstring
+(A) -203.0986661111113 -318.9713759259257 lwstring
+(C) -209.58666611111127 -314.6274870370369 lwstring
+(A) -214.40296240740759 -307.70765370370356 lwstring
+(A) -217.71456240740756 -300.0036999999997 lwstring
+(A) -218.72295314814832 -291.31518148148126 lwstring
+(U) -217.85850870370388 -282.7792925925924 lwstring
+(U) -213.9465272222224 -275.35525555555523 lwstring
+(A) -217.85847166666684 -268.091798148148 lwstring
+(G) -225.65867537037056 -266.6515499999998 lwstring
+(A) -232.9865087037039 -261.9553648148147 lwstring
+(G) -236.890462962963 -255.72331111111134 lwstring
+(U) -244.62627777777783 -257.7234592592594 lwstring
+(G) -250.97050685185198 -262.55577407407367 lwstring
+(C) -257.771006851852 -265.35525555555506 lwstring
+(U) -266.3784629629631 -262.55577407407384 lwstring
+(U) -271.6750555555557 -255.71549629629604 lwstring
+(A) -271.5868031481483 -246.00340370370336 lwstring
+(A) -265.22685185185196 -238.3875888888886 lwstring
+(A) -257.76301851851866 -236.38744074074054 lwstring
+(G) -249.56261111111115 -238.38753333333338 lwstring
+(C) -241.8267962962963 -236.38738518518534 lwstring
+(A) -235.06096944444434 -228.39596698148222 lwstring
+(G) -235.06096944444434 -220.39611512963032 lwstring
+(G) -235.06096944444434 -212.39626327777844 lwstring
+(C) -235.06096944444434 -204.39641142592654 lwstring
+(U) -237.68467314814802 -197.49248550000064 lwstring
+(U) -236.58079537037028 -190.4120410555562 lwstring
+(C) -232.06894351851844 -184.0925966111117 lwstring
+(A) -224.49298055555548 -182.47656698148205 lwstring
+(A) -217.9008138888888 -184.29225031481533 lwstring
+(A) -212.30909166666657 -190.0206947592597 lwstring
+(U) -211.91709166666658 -197.8440410555562 lwstring
+(G) -215.0608324074073 -204.39641698148188 lwstring
+(C) -215.0608324074073 -212.39626883333378 lwstring
+(C) -215.0608324074073 -220.39612068518565 lwstring
+(U) -215.0608324074073 -228.39597253703755 lwstring
+(G) -206.85884388888906 -233.0440499999998 lwstring
+(A) -199.73859203703722 -239.2513648148148 lwstring
+(A) -198.04299018518537 -248.26756851851846 lwstring
+(U) -200.52276796296314 -257.96375555555534 lwstring
+(A) -196.6107309259261 -265.3552555555553 lwstring
+(U) -188.53847166666685 -266.90762592592574 lwstring
+(U) -180.67461981481497 -270.6438851851849 lwstring
+(C) -174.6431383333335 -275.7154962962962 lwstring
+(U) -169.58674759259273 -282.76338518518475 lwstring
+(G) -167.36308092592608 -289.6354962962959 lwstring
+(U) -166.2749994444446 -296.763635185185 lwstring
+(G) -167.786869814815 -304.57178333333303 lwstring
+(C) -171.20274018518538 -311.22759814814793 lwstring
+(A) -167.77109203703722 -318.3073203703703 lwstring
+(U) -162.1945550000002 -324.5797462962962 lwstring
+(G) -159.82692537037056 -332.1954388888889 lwstring
+(G) -155.82662907407425 -338.9952166666666 lwstring
+(G) -149.13898092592612 -337.86746851851854 lwstring
+(A) -143.81851796296314 -342.63526481481483 lwstring
+(U) -149.46656611111132 -350.0117722222219 lwstring
+(A) -146.0268994444447 -357.08423518518504 lwstring
+(A) -142.02660314814838 -363.8840129629628 lwstring
+(U) -138.08273277777798 -370.9716425925924 lwstring
+(G) -134.08243648148172 -377.77214259259244 lwstring
+(A) -129.11121481481558 -384.83788448148084 lwstring
+(A) -122.59934444444521 -388.877958555555 lwstring
+(A) -115.51962222222299 -388.6942200370364 lwstring
+(U) -109.80708518518597 -386.66223855555495 lwstring
+(A) -103.67934444444525 -380.99818299999947 lwstring
+(A) -99.30362222222304 -373.5423126296291 lwstring
+(G) -98.34369814814896 -365.35799781481427 lwstring
+(A) -96.66466666666663 -357.24751851851835 lwstring
+(C) -96.66466666666663 -349.75181481481485 lwstring
+(C) -96.66466666666663 -341.7201296296296 lwstring
+(U) -96.66466666666663 -333.9517592592591 lwstring
+(C) -96.66466666666663 -325.92007407407385 lwstring
+(U) -96.66466666666663 -318.2717777777775 lwstring
+(G) -102.84088888888886 -313.1437592592594 lwstring
+(U) -96.66466666666663 -309.3438518518519 lwstring
+(U) -98.98356666666669 -301.0577148148149 lwstring
+(C) -98.98356666666669 -293.0571407407409 lwstring
+(U) -96.67152962962969 -285.057288888889 lwstring
+(G) -103.27102962962968 -279.06549259259265 lwstring
+(C) -107.8090555555555 -271.9515925925925 lwstring
+(U) -110.68883333333329 -265.2639444444444 lwstring
+(U) -112.07265925925921 -256.8481481481481 lwstring
+(U) -112.07265925925921 -247.71981481481473 lwstring
+(C) -109.816437037037 -239.2555555555555 lwstring
+(A) -104.95243703703699 -230.8238518518517 lwstring
+(U) -97.40108518518512 -224.2635185185183 lwstring
+(U) -90.52102962962958 -221.89588888888875 lwstring
+(G) -83.12880740740734 -221.7280648148146 lwstring
+(G) -75.12895555555549 -224.54345370370348 lwstring
+(U) -68.06443703703698 -230.49541666666647 lwstring
+(U) -63.40080740740734 -238.26378703703688 lwstring
+(U) -61.384751851851775 -246.67162037037014 lwstring
+(U) -60.97676481481473 -255.27187962962938 lwstring
+(C) -62.73674814814805 -265.83176851851834 lwstring
+(A) -66.72962962962961 -273.2722222222222 lwstring
+(G) -72.0407407407407 -280.5518518518519 lwstring
+(A) -76.66459259259257 -285.05561111111126 lwstring
+(U) -73.91115925925929 -293.0571407407409 lwstring
+(C) -73.91115925925929 -301.0577148148149 lwstring
+(A) -76.66466666666662 -309.3438518518519 lwstring
+(A) -76.66466666666662 -318.2717777777775 lwstring
+(G) -76.66466666666662 -325.92007407407385 lwstring
+(A) -76.66466666666662 -333.9517592592591 lwstring
+(G) -76.66466666666662 -341.7201296296296 lwstring
+(G) -76.66466666666662 -349.75181481481485 lwstring
+(U) -76.67266666666663 -357.24751851851835 lwstring
+(A) -73.90610370370372 -365.35122222222225 lwstring
+(A) -70.8259555555556 -373.4074999999999 lwstring
+(U) -63.97771481481487 -378.5275740740741 lwstring
+(G) -57.44197407407411 -382.0793703703703 lwstring
+(A) -49.87397407407414 -383.5912333333333 lwstring
+(U) -42.402648148148224 -384.0754962962962 lwstring
+(U) -34.666833333333436 -382.0753481481481 lwstring
+(A) -24.529714814814877 -374.2473444444444 lwstring
+(A) -16.03362222222231 -364.31895555555565 lwstring
+(U) -10.122159259259327 -354.0795111111111 lwstring
+(A) -6.021709259260097 -342.1509734629637 lwstring
+(G) -6.038483333334085 -328.62452253703714 lwstring
+(A) -6.038483333334085 -320.62467068518527 lwstring
+(A) -6.038483333334085 -312.62409661111127 lwstring
+(G) -6.021727777778622 -303.5673438333341 lwstring
+(C) -6.038483333334085 -295.68833735185206 lwstring
+(A) -11.526038888889635 -290.3924669814816 lwstring
+(G) -6.038483333334085 -286.64030031481497 lwstring
+(U) -6.038483333334085 -279.02455957407415 lwstring
+(U) -6.038483333334085 -271.02398550000015 lwstring
+(U) -6.038483333334085 -263.0241336481482 lwstring
+(G) -12.038187037037764 -256.76039290740744 lwstring
+(G) -14.038335185185929 -247.96048550000012 lwstring
+(G) -12.038187037037764 -239.7204669814816 lwstring
+(G) -6.038483333334085 -233.69617068518536 lwstring
+(G) -6.038483333334085 -225.69631883333346 lwstring
+(C) -6.038483333334085 -217.69646698148156 lwstring
+(A) -6.038483333334085 -209.69661512962966 lwstring
+(U) -7.08593703703781 -201.6960410555557 lwstring
+(U) -8.13411481481557 -193.6961892037038 lwstring
+(A) -14.038337037037776 -187.69648550000016 lwstring
+(G) -22.0461770370378 -187.69648550000016 lwstring
+(U) -30.038040740741465 -191.6960595740742 lwstring
+(A) -38.03788074074148 -191.6960595740742 lwstring
+(U) -46.0384666666674 -187.69648550000016 lwstring
+(U) -54.0383066666674 -187.69648550000016 lwstring
+(A) -62.038146666667416 -187.69648550000016 lwstring
+(C) -70.04598666666745 -187.69648550000016 lwstring
+(G) -78.04582666666745 -187.69648550000016 lwstring
+(A) -86.05366666666748 -187.69648550000016 lwstring
+(C) -94.0383066666675 -187.69648550000016 lwstring
+(G) -102.0381466666675 -187.69648550000016 lwstring
+(C) -106.47828148148218 -194.63224475925946 lwstring
+(G) -111.35024444444517 -187.20024475925945 lwstring
+(A) -123.36630000000075 -189.72050401851874 lwstring
+(G) -136.03050370370445 -187.69648550000016 lwstring
+(A) -144.03834370370447 -187.69648550000016 lwstring
+(G) -152.03020740740814 -188.74393920370377 lwstring
+(G) -160.03005925925999 -190.35996883333343 lwstring
+(U) -168.16591111111185 -188.22382068518536 lwstring
+(G) -173.23030000000074 -181.4240429074076 lwstring
+(A) -173.23030000000074 -173.02415401851874 lwstring
+(A) -168.16591111111185 -166.360376240741 lwstring
+(A) -160.03005925925999 -164.22422809259294 lwstring
+(U) -152.03020740740814 -166.64032068518563 lwstring
+(U) -144.0303555555563 -167.68777438888924 lwstring
+(C) -136.0305075555563 -167.68777438888924 lwstring
+(U) -135.3664296296304 -159.41592253703732 lwstring
+(U) -130.83011481481557 -152.2161262407411 lwstring
+(G) -124.41446666666742 -149.792089203704 lwstring
+(G) -117.3658555555563 -152.2161262407411 lwstring
+(A) -112.47002222222295 -158.84010772222257 lwstring
+(C) -111.20628740740814 -167.68775587037075 lwstring
+(C) -102.03020740740816 -167.68775587037075 lwstring
+(G) -94.03036740740814 -167.68775587037075 lwstring
+(U) -86.03847140740814 -167.68775587037075 lwstring
+(C) -78.03862340740815 -167.68775587037075 lwstring
+(G) -70.04672740740816 -167.68775587037075 lwstring
+(U) -62.04687140740813 -167.68775587037075 lwstring
+(A) -54.054975407408136 -167.68775587037075 lwstring
+(A) -46.05512740740814 -167.68775587037075 lwstring
+(G) -38.02983703703777 -163.68818179629673 lwstring
+(A) -30.037941037037776 -163.68818179629673 lwstring
+(C) -22.03013333333409 -167.68775587037075 lwstring
+(U) -14.030285333334097 -167.68775587037075 lwstring
+(A) -6.829762962963709 -162.88812624074106 lwstring
+(A) -0.8300592592600305 -157.42371883333365 lwstring
+(C) 6.505737037036272 -157.28772346296336 lwstring
+(U) 13.706255555554806 -162.48809383333383 lwstring
+(U) 22.24214444444367 -167.68774198148202 lwstring
+(A) 27.569829629628842 -160.60801975925986 lwstring
+(A) 33.84152562962883 -160.60801975925986 lwstring
+(G) 38.9059037037029 -167.68774198148202 lwstring
+(C) 46.8977997037029 -167.68774198148202 lwstring
+(G) 57.305792592591764 -166.2236216111117 lwstring
+(A) 65.0423296296288 -172.62408457407457 lwstring
+(A) 65.0423296296288 -182.89608457407454 lwstring
+(A) 57.305792592591764 -189.43182531481534 lwstring
+(G) 46.90575555555474 -187.69571420370423 lwstring
+(C) 38.89791555555472 -187.69571420370423 lwstring
+(A) 22.23415555555474 -187.69571420370423 lwstring
+(U) 16.073903703702882 -193.69614012963015 lwstring
+(U) 15.025725925925121 -201.69599198148205 lwstring
+(U) 13.978272222221397 -209.69584383333395 lwstring
+(G) 13.978272222221397 -217.69569568518585 lwstring
+(C) 13.978272222221397 -225.69554753703773 lwstring
+(C) 13.978272222221397 -233.69539938888963 lwstring
+(A) 17.441809259258413 -242.41501050000068 lwstring
+(A) 17.441809259258413 -253.41543642592669 lwstring
+(A) 13.978272222221397 -263.0313253148156 lwstring
+(G) 13.978272222221397 -271.0311771666675 lwstring
+(A) 13.978272222221397 -279.0310290185194 lwstring
+(U) 13.978272222221397 -286.64676975926005 lwstring
+(G) 13.978272222221397 -295.6948067962971 lwstring
+(U) 13.970352222221372 -303.5673438333341 lwstring
+(U) 21.178087037036214 -307.46275124074157 lwstring
+(U) 13.97829074073992 -312.62334383333405 lwstring
+(U) 13.97829074073992 -320.6231956851859 lwstring
+(C) 13.97829074073992 -328.62304753703785 lwstring
+(A) 20.935103703703813 -331.5117685185184 lwstring
+(U) 20.615370370370503 -338.68769444444433 lwstring
+(U) 13.970290740739909 -342.1509734629637 lwstring
+(A) 13.97829074073992 -403.31134383333415 lwstring
+(A) 20.51403148148067 -407.9749734629638 lwstring
+(U) 27.049772222221424 -412.51128827777865 lwstring
+(C) 34.78630925925845 -410.7751771666675 lwstring
+(A) 42.2501425925918 -413.4393808703712 lwstring
+(A) 47.18575370370293 -419.5750845740749 lwstring
+(G) 48.521835185184415 -427.7109364259268 lwstring
+(A) 55.05829814814736 -432.37528827777857 lwstring
+(A) 61.59403888888811 -436.9108808703711 lwstring
+(C) 68.12977962962886 -441.57523272222284 lwstring
+(G) 75.20226111111035 -443.6072142037043 lwstring
+(A) 77.47366851851777 -435.79110309259323 lwstring
+(A) 80.67389074073996 -427.2870475370378 lwstring
+(A) 85.54585370370296 -420.0387882777786 lwstring
+(G) 91.46598333333257 -414.63875124074156 lwstring
+(U) 91.46598333333257 -406.6388993888897 lwstring
+(U) 91.46598333333257 -398.63904753703775 lwstring
+(A) 91.46598333333257 -390.6391956851859 lwstring
+(G) 91.46598333333257 -382.63934383333395 lwstring
+(A) 91.46598333333257 -374.63876975926 lwstring
+(G) 84.65826111111032 -372.2226771666673 lwstring
+(G) 78.8661685185177 -367.82308457407476 lwstring
+(U) 79.53023148148068 -361.02330679629705 lwstring
+(U) 85.53789814814733 -356.2873438333341 lwstring
+(C) 91.8421574074066 -352.6393438333341 lwstring
+(G) 87.84186111111032 -345.7028623518525 lwstring
+(A) 85.84171296296215 -337.70301050000063 lwstring
+(A) 86.90580370370292 -329.7031586481487 lwstring
+(G) 91.84213703703622 -322.63936235185247 lwstring
+(G) 91.84213703703622 -314.63878827777853 lwstring
+(C) 91.84213703703622 -306.6389364259266 lwstring
+(G) 91.84213703703622 -298.63908457407473 lwstring
+(A) 85.57767407407326 -292.1033438333339 lwstring
+(U) 83.31421111111027 -283.16743642592655 lwstring
+(C) 85.05032222222138 -274.1034919814821 lwstring
+(A) 91.85009999999914 -266.90297346296353 lwstring
+(G) 100.78600740740654 -264.6395105000006 lwstring
+(A) 109.84995185185095 -266.5029364259266 lwstring
+(U) 117.04974814814729 -273.30343642592663 lwstring
+(A) 119.3139333333325 -282.2313808703711 lwstring
+(C) 117.5778222222214 -291.2953253148156 lwstring
+(C) 111.84213703703625 -298.63112161111184 lwstring
+(G) 111.84213703703625 -306.63097346296377 lwstring
+(C) 111.84213703703625 -314.63082531481564 lwstring
+(C) 111.84213703703625 -322.63067716666757 lwstring
+(C) 116.24172962962888 -329.2944549444453 lwstring
+(U) 118.37787777777704 -338.4943993888898 lwstring
+(A) 117.49824814814738 -346.0226030925936 lwstring
+(G) 111.84213703703625 -352.6306771666676 lwstring
+(U) 114.04989629629547 -363.4466586481492 lwstring
+(U) 111.4341555555547 -374.6301030925935 lwstring
+(C) 111.4341555555547 -382.62995494444544 lwstring
+(U) 111.4341555555547 -390.6298067962973 lwstring
+(A) 111.4341555555547 -398.6296586481492 lwstring
+(A) 111.4341555555547 -406.6295105000011 lwstring
+(C) 111.4341555555547 -414.629362351853 lwstring
+(C) 120.37006296296215 -415.69345309259376 lwstring
+(A) 128.36991481481405 -416.8935401296308 lwstring
+(U) 136.23376666666593 -420.3577993888902 lwstring
+(A) 142.63422962962892 -426.2215216111125 lwstring
+(A) 146.76978518518447 -433.686077166668 lwstring
+(A) 148.5058962962956 -442.0859660555568 lwstring
+(C) 147.30580925925852 -450.6218549444457 lwstring
+(G) 143.57027222222143 -458.35766975926043 lwstring
+(A) 137.5698462962955 -464.6221327222233 lwstring
+(U) 129.83403148148068 -468.48570679629734 lwstring
+(G) 125.43443888888805 -477.6856512407417 lwstring
+(C) 133.42633488888805 -477.6856512407417 lwstring
+(C) 141.4261828888881 -477.6856512407417 lwstring
+(A) 151.85007888888813 -477.6856512407417 lwstring
+(G) 161.41821488888812 -477.6856512407417 lwstring
+(C) 169.4101108888881 -477.6856512407417 lwstring
+(U) 179.5699944444436 -474.3494290185195 lwstring
+(A) 189.03397592592506 -471.821947537038 lwstring
+(G) 194.63438333333252 -466.22154012963057 lwstring
+(C) 200.37006851851766 -460.62185494444543 lwstring
+(A) 204.76169814814733 -453.03794753703795 lwstring
+(A) 211.30608055555487 -450.09379012963063 lwstring
+(U) 216.353864814814 -444.5020586481491 lwstring
+(U) 221.95427222222142 -438.90165124074167 lwstring
+(G) 227.68995740740658 -433.30196605555653 lwstring
+(G) 233.290364814814 -427.5655586481491 lwstring
+(G) 239.02604999999915 -421.96587346296394 lwstring
+(U) 243.0502166666658 -415.18202161111213 lwstring
+(G) 249.30599444444363 -411.6779660555565 lwstring
+(U) 249.441989814814 -403.67811420370464 lwstring
+(A) 255.3136564814807 -397.30224383333433 lwstring
+(G) 261.3061379629622 -398.8777642037047 lwstring
+(C) 267.0418231481474 -393.41407901851954 lwstring
+(U) 272.77823055555484 -387.8136716111121 lwstring
+(A) 278.121841666666 -381.29385679629723 lwstring
+(C) 283.1862305555549 -375.5256345740751 lwstring
+(U) 289.57800833333266 -370.61389383333443 lwstring
+(U) 297.84189722222146 -371.94997531481596 lwstring
+(U) 303.706341666666 -378.08567901851956 lwstring
+(U) 304.6423953703697 -386.48556790740844 lwstring
+(A) 299.7943027777771 -391.79010494444555 lwstring
+(U) 292.89832129629553 -397.79777161111224 lwstring
+(G) 286.64180277777706 -402.3499938333345 lwstring
+(G) 280.9061175925919 -407.8136790185196 lwstring
+(C) 275.0416731481474 -413.41408642592705 lwstring
+(U) 271.4103027777771 -420.9820864259271 lwstring
+(C) 263.44228425925854 -425.8135308703715 lwstring
+(U) 260.3780435185178 -433.0379197592603 lwstring
+(C) 253.1623398148141 -436.09347531481586 lwstring
+(U) 247.42593240740666 -441.6938827222233 lwstring
+(C) 241.82624722222153 -447.42956790740845 lwstring
+(A) 236.08983981481407 -453.0299753148159 lwstring
+(G) 230.49015462962893 -458.765660500001 lwstring
+(U) 225.4416361111104 -464.3653456851862 lwstring
+(C) 222.89822870370296 -472.7659567962973 lwstring
+(G) 214.50630277777708 -474.7574197592603 lwstring
+(C) 208.76989537036962 -480.35782716666773 lwstring
+(U) 203.1702101851845 -486.0935123518529 lwstring
+(U) 209.0339324074067 -490.6298271666677 lwstring
+(C) 213.4342472222215 -496.62953087037147 lwstring
+(C) 216.36972870370295 -503.2940308703715 lwstring
+(G) 217.43381944444369 -510.6298271666677 lwstring
+(G) 223.03422685185112 -516.2295123518529 lwstring
+(G) 229.76165277777707 -521.8378827222233 lwstring
+(A) 230.45031018518446 -531.1253456851862 lwstring
+(A) 223.07401388888815 -536.9818271666677 lwstring
+(A) 213.33008796296215 -537.3977697592603 lwstring
+(C) 208.90590277777704 -530.3657882777787 lwstring
+(C) 203.30621759259188 -524.7653808703714 lwstring
+(A) 194.2422731481475 -517.301547537038 lwstring
+(A) 185.30636574074003 -509.9657512407418 lwstring
+(A) 177.4099583333327 -503.80545494444556 lwstring
+(G) 169.4339768518512 -497.7015845740752 lwstring
+(C) 161.42613685185117 -497.7015845740752 lwstring
+(U) 161.2178287037031 -505.0460660555567 lwstring
+(U) 158.84225462962905 -511.4458067962974 lwstring
+(U) 155.17832870370313 -518.7816030925936 lwstring
+(U) 148.77786574074014 -518.4857401296307 lwstring
+(U) 145.03438425925867 -511.44581420370474 lwstring
+(G) 141.9621990740735 -504.62940679629736 lwstring
+(G) 141.43413240740688 -497.6936475370381 lwstring
+(G) 133.42629240740686 -497.6936475370381 lwstring
+(C) 125.41845240740685 -497.6936475370381 lwstring
+(U) 119.01005833333285 -503.69335124074183 lwstring
+(C) 117.43381388888838 -512.6212956851863 lwstring
+(C) 117.43381388888838 -520.6211475370382 lwstring
+(G) 117.43381388888838 -528.6209993888901 lwstring
+(G) 117.43381388888838 -536.620851240742 lwstring
+(G) 134.3702953703698 -555.6847401296309 lwstring
+(G) 142.3621913703698 -555.6847401296309 lwstring
+(G) 150.35408737036983 -555.6847401296309 lwstring
+(A) 151.9621657407402 -548.2129438333346 lwstring
+(A) 157.00990648148093 -542.3730919814828 lwstring
+(G) 161.96216574074018 -539.1489808703717 lwstring
+(U) 168.90588574074013 -539.1489808703717 lwstring
+(A) 174.9142768518513 -542.3730919814828 lwstring
+(U) 179.77827685185127 -548.7409993888901 lwstring
+(G) 180.08199907407354 -555.6767623518533 lwstring
+(G) 187.44175833333279 -555.6847216111124 lwstring
+(U) 195.43365433333278 -555.6847216111124 lwstring
+(U) 203.43350233333283 -555.6847216111124 lwstring
+(G) 212.64212870370315 -554.348640129631 lwstring
+(C) 219.7059249999995 -560.613103092594 lwstring
+(A) 219.7059249999995 -570.0770845740755 lwstring
+(A) 212.64212870370315 -576.3408253148162 lwstring
+(A) 203.44218425925877 -575.6767623518533 lwstring
+(G) 195.43434425925872 -575.6767623518533 lwstring
+(C) 187.4265042592587 -575.6767623518533 lwstring
+(U) 180.08199907407354 -575.6767623518533 lwstring
+(G) 174.92212870370312 -580.8850956851867 lwstring
+(A) 168.9217027777772 -583.5731697592606 lwstring
+(A) 161.96130277777718 -583.5731697592606 lwstring
+(A) 155.95368425925872 -580.8850956851867 lwstring
+(C) 150.3778694444439 -575.6767623518533 lwstring
+(U) 142.37802944444388 -575.6767623518533 lwstring
+(U) 134.37818944444388 -575.6767623518533 lwstring
+(A) 130.21805462962908 -582.260966055557 lwstring
+(A) 134.8100731481476 -590.0691327222237 lwstring
+(A) 141.77838796296246 -595.4850771666681 lwstring
+(G) 149.30586944444394 -598.0769475370384 lwstring
+(G) 156.90570277777726 -600.6131142037051 lwstring
+(A) 164.50625833333285 -603.1492808703717 lwstring
+(A) 173.4421657407403 -605.6767623518533 lwstring
+(U) 183.0421287037033 -607.5488734629644 lwstring
+(U) 192.37807314814773 -607.6848688333348 lwstring
+(G) 200.37792114814778 -607.6848688333348 lwstring
+(A) 210.36996114814775 -607.6848688333348 lwstring
+(C) 218.3618491481477 -607.6848688333348 lwstring
+(G) 226.36169714814775 -607.6848688333348 lwstring
+(G) 231.57807314814772 -601.2851280925942 lwstring
+(A) 236.37842499999962 -607.6848688333348 lwstring
+(A) 244.37031299999958 -607.6848688333348 lwstring
+(G) 252.36220099999954 -607.6848688333348 lwstring
+(G) 260.35409699999957 -607.6848688333348 lwstring
+(G) 268.34599299999957 -607.6848688333348 lwstring
+(C) 276.34584899999953 -607.6848688333348 lwstring
+(A) 284.33774499999953 -607.6848688333348 lwstring
+(C) 287.05842499999966 -600.2608317962978 lwstring
+(C) 293.9225689999996 -600.2608317962978 lwstring
+(A) 297.44181388888853 -607.6848688333348 lwstring
+(C) 305.43370188888855 -607.6848688333348 lwstring
+(C) 313.44223981481446 -607.2848392037051 lwstring
+(A) 321.3060916666663 -605.6847225370385 lwstring
+(G) 328.9059249999996 -603.021241055557 lwstring
+(G) 335.7064249999997 -598.7569262407421 lwstring
+(A) 342.50620277777745 -594.6206484629644 lwstring
+(G) 349.30598055555515 -590.3570558703718 lwstring
+(U) 356.1064805555552 -586.2207780925941 lwstring
+(G) 380.80185092592563 -570.6210929074088 lwstring
+(G) 380.80185092592563 -562.6212410555569 lwstring
+(A) 382.37809537037015 -554.6206669814828 lwstring
+(G) 382.37809537037015 -546.620815129631 lwstring
+(C) 382.37809537037015 -538.6209632777791 lwstring
+(C) 380.80185092592563 -530.6211114259271 lwstring
+(U) 382.37809537037015 -522.6212595740752 lwstring
+(G) 382.37809537037015 -514.6206855000012 lwstring
+(C) 382.37809537037015 -506.62083364814924 lwstring
+(G) 382.37809537037015 -498.6209817962974 lwstring
+(G) 382.37809537037015 -488.62098179629743 lwstring
+(C) 382.37809537037015 -480.6211299444455 lwstring
+(U) 374.51424351851824 -483.28461142592704 lwstring
+(U) 369.5779101851849 -489.54907438889 lwstring
+(A) 362.0337805555553 -490.9647280925937 lwstring
+(A) 354.2342990740738 -488.17320957407514 lwstring
+(U) 347.5618546296294 -485.81282068518624 lwstring
+(U) 340.77800277777754 -491.41322809259367 lwstring
+(U) 335.1783175925924 -497.0129132777788 lwstring
+(G) 329.44191018518495 -502.74859846296397 lwstring
+(A) 328.64185277777756 -511.8125429074084 lwstring
+(C) 322.90616759259245 -518.8770614259269 lwstring
+(U) 314.24224166666653 -521.8132651296306 lwstring
+(C) 305.4423342592591 -519.8131169814825 lwstring
+(A) 299.0418712962961 -513.4126540185194 lwstring
+(A) 296.9057231481479 -504.47674661111205 lwstring
+(C) 299.4418898148146 -494.6127466111121 lwstring
+(A) 306.6424083333331 -490.0771540185194 lwstring
+(C) 315.306334259259 -488.6130336481491 lwstring
+(G) 321.0420194444442 -482.87662624074164 lwstring
+(G) 326.6424268518516 -477.2769410555565 lwstring
+(G) 331.7140379629627 -470.4930892037047 lwstring
+(A) 331.44204722222196 -462.4852743888898 lwstring
+(A) 332.9061675925923 -454.3407373518528 lwstring
+(A) 337.04172314814787 -446.604922537038 lwstring
+(A) 343.44218611111086 -440.4692188333344 lwstring
+(C) 351.44203796296273 -436.6049225370381 lwstring
+(U) 360.10596388888865 -435.5408317962973 lwstring
+(U) 368.21794537037016 -438.5247762407417 lwstring
+(A) 375.0104824074072 -442.6849243888899 lwstring
+(C) 382.37811203703683 -448.60505401851947 lwstring
+(C) 382.37811203703683 -440.6052021666676 lwstring
+(A) 382.37811203703683 -432.6046280925936 lwstring
+(G) 382.37811203703683 -424.6047762407417 lwstring
+(G) 382.37811203703683 -416.6049243888898 lwstring
+(U) 380.8018675925924 -409.1251836481492 lwstring
+(C) 382.37811203703683 -400.6052206851862 lwstring
+(G) 370.9219520370369 -400.6052206851862 lwstring
+(A) 360.9220009259258 -397.6690169814825 lwstring
+(A) 351.4500749999998 -392.60462809259354 lwstring
+(C) 343.8502416666665 -385.1407947592602 lwstring
+(A) 337.71453796296277 -379.941146611112 lwstring
+(U) 331.71411203703684 -374.6047762407417 lwstring
+(A) 325.7144083333331 -369.40512809259354 lwstring
+(A) 318.2505749999998 -367.4288503148158 lwstring
+(G) 309.98596388888865 -364.6047762407418 lwstring
+(U) 301.4500749999998 -360.37299846296395 lwstring
+(G) 293.93053796296283 -355.3968688333344 lwstring
+(U) 287.06638981481467 -348.63688735185286 lwstring
+(G) 280.1060379629628 -341.324961425927 lwstring
+(U) 274.6343898148146 -333.1247392037047 lwstring
+(A) 269.8260935185183 -324.49336883333433 lwstring
+(A) 265.4822101851851 -314.79712068518626 lwstring
+(G) 259.4824824074072 -310.0532577222233 lwstring
+(A) 253.2180194444442 -304.9888688333344 lwstring
+(C) 246.03413055555532 -302.15683179629724 lwstring
+(A) 240.8185564814812 -294.9888688333342 lwstring
+(G) 234.55409351851821 -289.92520216666753 lwstring
+(A) 228.29035277777746 -284.98886883333427 lwstring
+(U) 218.29035277777749 -284.3248058703712 lwstring
+(U) 210.15450092592567 -278.7251206851861 lwstring
+(G) 205.75418611111087 -268.8611206851861 lwstring
+(A) 207.35430277777752 -260.0612132777788 lwstring
+(U) 213.8900435185182 -252.0606392037048 lwstring
+(A) 223.35402499999967 -249.66119475926033 lwstring
+(G) 233.08998796296268 -252.32467624074175 lwstring
+(C) 238.95443240740715 -259.5251947592603 lwstring
+(U) 240.95458055555534 -269.3884725370381 lwstring
+(C) 247.09028425925908 -274.32480587037145 lwstring
+(U) 253.35402499999987 -279.3891947592604 lwstring
+(U) 260.67463611111094 -282.35721327777884 lwstring
+(U) 265.75421018518506 -289.38919475926036 lwstring
+(C) 272.01795092592585 -294.452861425927 lwstring
+(U) 278.01837685185177 -299.1967132777789 lwstring
+(C) 290.8019509259258 -300.1812336481493 lwstring
+(G) 301.442136111111 -305.42067809259373 lwstring
+(A) 311.73800648148136 -312.2211780925938 lwstring
+(A) 321.5701916666665 -321.13321512963086 lwstring
+(U) 329.43404351851837 -331.1332151296308 lwstring
+(C) 335.69850648148133 -343.06897438888996 lwstring
+(U) 338.8980064814814 -354.3406780925937 lwstring
+(A) 344.8984324074073 -359.67704846296397 lwstring
+(U) 350.898136111111 -364.87669661111215 lwstring
+(G) 356.89783981481474 -370.2130669814824 lwstring
+(G) 364.4658398148148 -373.67660401851947 lwstring
+(G) 371.43415462962963 -377.6609743888899 lwstring
+(U) 378.7945435185185 -379.6770299444454 lwstring
+(G) 382.37021018518516 -372.61323364814916 lwstring
+(G) 382.37021018518516 -364.61265957407517 lwstring
+(U) 376.4985435185185 -359.6690855000011 lwstring
+(G) 382.37021018518516 -354.6126595740752 lwstring
+(G) 382.37021018518516 -346.61280772222335 lwstring
+(U) 382.37021018518516 -338.6129558703714 lwstring
+(G) 375.9625064814815 -335.2130669814825 lwstring
+(C) 372.9300990740741 -328.90086327777874 lwstring
+(A) 376.3864138888889 -321.6446410555565 lwstring
+(U) 382.3622472222222 -318.6129558703713 lwstring
+(G) 382.3622472222222 -310.61310401851944 lwstring
+(G) 382.3622472222222 -296.6128077222231 lwstring
+(C) 382.3622472222222 -288.61295587037125 lwstring
+(C) 382.3622472222222 -280.6131040185193 lwstring
+(G) 382.3622472222222 -270.6131040185194 lwstring
+(U) 382.3622472222222 -262.6125299444454 lwstring
+(U) 382.3622472222222 -254.6126780925935 lwstring
+(C) 380.7860027777777 -246.0847521666675 lwstring
+(U) 378.88207685185176 -238.0849003148156 lwstring
+(U) 378.3540101851852 -230.0850484629637 lwstring
+(A) 376.7784898148148 -221.5571225370377 lwstring
+(G) 374.35445277777774 -212.6045855000006 lwstring
+(U) 366.3466927777777 -212.6045855000006 lwstring
+(U) 358.3468527777777 -212.6045855000006 lwstring
+(C) 350.3470127777777 -212.6045855000006 lwstring
+(G) 342.3471727777777 -212.6045855000006 lwstring
+(U) 334.33933277777766 -212.6045855000006 lwstring
+(G) 323.41834166666666 -214.60473364814865 lwstring
+(G) 323.41834166666666 -222.60458550000055 lwstring
+(A) 323.41834166666666 -230.60443735185245 lwstring
+(G) 324.6184287037037 -239.94038179629698 lwstring
+(U) 318.2179657407408 -247.0041780925932 lwstring
+(G) 308.8820457407408 -247.0041780925932 lwstring
+(A) 303.4183361111111 -239.66838179629696 lwstring
+(U) 303.4183361111111 -230.60443735185245 lwstring
+(U) 303.4183361111111 -222.60458550000055 lwstring
+(U) 303.4183361111111 -214.6040114259266 lwstring
+(G) 301.3219842592593 -198.79599290740802 lwstring
+(U) 301.3219842592593 -185.5002706851857 lwstring
+(C) 304.3543916666667 -171.79656698148204 lwstring
+(U) 298.20203981481484 -167.12425216666722 lwstring
+(G) 304.3543916666667 -162.1003817962968 lwstring
+(G) 304.3543916666667 -154.10052994444493 lwstring
+(U) 300.75413240740744 -145.96395587037094 lwstring
+(U) 302.8902805555556 -137.3000299444449 lwstring
+(A) 309.95407685185194 -131.8363447592598 lwstring
+(A) 318.746028851852 -131.8363447592598 lwstring
+(U) 325.81852129629635 -137.3000299444449 lwstring
+(U) 327.95392870370375 -145.96395587037094 lwstring
+(C) 324.3543916666667 -154.10052994444493 lwstring
+(C) 324.3543916666667 -162.1003817962968 lwstring
+(G) 324.3543916666667 -171.6764743888895 lwstring
+(A) 325.40184537037044 -179.6763262407414 lwstring
+(U) 332.1705120370371 -179.2205966111118 lwstring
+(A) 336.38731574074075 -184.95560216666715 lwstring
+(A) 334.3473898148148 -192.61980587037095 lwstring
+(C) 342.33927781481475 -192.61980587037095 lwstring
+(G) 350.3391258148148 -192.61980587037095 lwstring
+(A) 358.3310218148148 -192.61980587037095 lwstring
+(A) 366.3229098148148 -192.61980587037095 lwstring
+(C) 374.31479781481477 -192.61980587037095 lwstring
+(G) 378.7470194444444 -185.2840095740747 lwstring
+(A) 386.3468527777777 -181.14773179629682 lwstring
+(G) 395.0115009259258 -181.41176512963008 lwstring
+(A) 402.34729722222204 -185.9480799444449 lwstring
+(C) 410.34714907407397 -193.68389475925966 lwstring
+(U) 418.346997074074 -193.68389475925966 lwstring
+(C) 426.34684507407405 -193.68389475925966 lwstring
+(A) 434.33874107407405 -193.68389475925966 lwstring
+(A) 442.3385890740741 -193.68389475925966 lwstring
+(A) 451.411223148148 -192.6198040185189 lwstring
+(U) 460.3471305555555 -193.68389475925966 lwstring
+(A) 468.3469785555555 -193.68389475925966 lwstring
+(U) 474.24326018518514 -188.96383920370417 lwstring
+(A) 480.8752046296296 -188.59563920370408 lwstring
+(U) 487.4109453703703 -193.68389846296333 lwstring
+(U) 495.41079337037036 -193.68389846296333 lwstring
+(A) 503.4106413703704 -193.68389846296333 lwstring
+(A) 511.40252937037036 -193.68389846296333 lwstring
+(A) 518.3470564814813 -189.68360216666701 lwstring
+(U) 527.4030324814814 -189.68360216666701 lwstring
+(A) 534.3474824074073 -193.68389846296333 lwstring
+(G) 542.3393704074072 -193.68389846296333 lwstring
+(A) 550.3471861111109 -192.10765401851887 lwstring
+(U) 558.3470379629629 -193.68389846296333 lwstring
+(A) 592.4159499999992 -193.49419929629565 lwstring
+(U) 600.4078379999993 -193.49419929629565 lwstring
+(C) 608.4076859999992 -193.49419929629565 lwstring
+(U) 612.6800981481473 -186.99029188888863 lwstring
+(U) 618.9684314814807 -186.76676781481447 lwstring
+(C) 623.1038574074065 -193.49419929629565 lwstring
+(A) 631.1037054074064 -193.49419929629565 lwstring
+(G) 639.0955934074066 -193.49419929629565 lwstring
+(G) 647.1043759259253 -193.5022185185184 lwstring
+(A) 651.2319499999993 -186.07013633333304 lwstring
+(U) 657.9362277777772 -186.08677407407382 lwstring
+(U) 660.0239870370366 -193.5022185185184 lwstring
+(A) 668.0238350370365 -193.5022185185184 lwstring
+(U) 676.0244129629624 -193.5022185185184 lwstring
+(G) 683.6965796296291 -193.5022185185184 lwstring
+(G) 691.6885156296291 -193.5022185185184 lwstring
+(U) 699.6962833333329 -193.5022185185184 lwstring
+(G) 709.1599814814815 -193.38416111111093 lwstring
+(C) 718.6080370370371 -194.28042777777753 lwstring
+(U) 727.1518703703703 -199.68046481481457 lwstring
+(G) 733.6637407407405 -206.6321499999998 lwstring
+(A) 737.3442962962961 -215.92035370370348 lwstring
+(A) 738.320135185185 -225.75179814814794 lwstring
+(G) 738.0723944444443 -237.00726296296273 lwstring
+(C) 738.0723944444443 -245.00711481481463 lwstring
+(U) 738.0723944444443 -253.00696666666653 lwstring
+(U) 738.2083898148146 -261.0068185185184 lwstring
+(A) 738.2083898148146 -269.00672592592576 lwstring
+(U) 738.2083898148146 -276.815596296296 lwstring
+(G) 738.0721212962964 -285.2157999999997 lwstring
+(U) 738.0721212962964 -293.21565185185165 lwstring
+(A) 738.2081166666666 -301.2162259259256 lwstring
+(G) 738.2081166666666 -309.2161703703701 lwstring
+(C) 738.2081166666666 -319.52800370370346 lwstring
+(C) 738.2081166666666 -329.7204296296294 lwstring
+(U) 738.0721212962964 -339.25579999999974 lwstring
+(U) 738.0721212962964 -347.2556518518516 lwstring
+(C) 738.2082509259259 -355.2473555555553 lwstring
+(A) 738.2081166666666 -363.25617037037006 lwstring
+(U) 744.463899074074 -368.0237999999997 lwstring
+(U) 744.463899074074 -376.0236518518516 lwstring
+(C) 738.0723249999999 -379.9037629629626 lwstring
+(A) 738.0723249999999 -387.9036148148145 lwstring
+(U) 738.2083203703702 -395.9034666666664 lwstring
+(G) 738.0723944444443 -405.36744814814784 lwstring
+(U) 738.2083898148146 -413.3672999999998 lwstring
+(U) 740.360245 -420.88754074074046 lwstring
+(G) 738.20832037037 -428.3577740740739 lwstring
+(G) 738.20832037037 -436.16594074074055 lwstring
+(C) 738.0723944444443 -444.5585777777776 lwstring
+(A) 738.0723944444443 -452.5584296296295 lwstring
+(G) 741.1207277777775 -460.3976999999998 lwstring
+(U) 739.0002092592591 -468.76050370370353 lwstring
+(A) 732.3762277777779 -474.5280037037035 lwstring
+(A) 723.7282277777778 -474.5280037037035 lwstring
+(A) 716.6079870370369 -468.4241314814813 lwstring
+(A) 715.0646166666664 -459.8703555555554 lwstring
+(U) 718.0723944444442 -452.55844074074054 lwstring
+(G) 718.0723944444442 -444.5578666666666 lwstring
+(C) 718.20040037037 -436.16594074074055 lwstring
+(U) 718.20040037037 -428.3577740740739 lwstring
+(U) 715.072325 -420.88754074074046 lwstring
+(A) 718.2083898148146 -413.3672999999998 lwstring
+(U) 718.0724638888887 -405.36744814814784 lwstring
+(U) 711.9205657407407 -399.871985185185 lwstring
+(G) 718.2083203703703 -395.9034666666664 lwstring
+(U) 718.0723944444444 -387.9036148148145 lwstring
+(G) 718.0724638888887 -379.90374444444416 lwstring
+(U) 711.9205657407407 -376.0236518518516 lwstring
+(U) 711.9205657407407 -368.0237999999997 lwstring
+(U) 718.2001166666666 -363.25617037037006 lwstring
+(G) 718.2082509259259 -355.2473555555553 lwstring
+(A) 718.072325 -347.2475037037034 lwstring
+(A) 718.072325 -339.2476518518515 lwstring
+(U) 712.120135185185 -335.2882055555554 lwstring
+(G) 718.2081166666667 -329.7204296296294 lwstring
+(U) 712.120135185185 -324.9684648148146 lwstring
+(G) 718.2081166666667 -319.52800370370346 lwstring
+(U) 712.120135185185 -314.11994629629606 lwstring
+(U) 718.2001966666666 -309.2161703703701 lwstring
+(U) 718.2001166666666 -301.2162259259256 lwstring
+(A) 718.0721907407408 -293.21565185185165 lwstring
+(U) 718.0721907407408 -285.2157999999997 lwstring
+(G) 718.2083898148146 -276.815596296296 lwstring
+(U) 718.2003898148147 -269.00672592592576 lwstring
+(A) 718.2083898148146 -261.0068185185184 lwstring
+(A) 718.0724638888887 -253.00696666666653 lwstring
+(G) 718.0724638888887 -245.00711481481463 lwstring
+(U) 718.0724638888887 -237.00654074074066 lwstring
+(G) 716.7518518518518 -228.0000870370368 lwstring
+(G) 711.5919814814814 -221.52004999999969 lwstring
+(A) 706.1680740740741 -215.75182777777755 lwstring
+(G) 699.6962833333329 -213.5022185185183 lwstring
+(C) 691.696431481481 -213.5022185185183 lwstring
+(C) 683.696591481481 -213.5022185185183 lwstring
+(G) 676.0244129629624 -213.5022185185183 lwstring
+(U) 668.0245611111105 -213.5022185185183 lwstring
+(A) 660.0247211111107 -213.5022185185183 lwstring
+(C) 647.1043759259253 -213.5022185185183 lwstring
+(C) 639.1042833333324 -213.49419929629556 lwstring
+(U) 631.1044433333325 -213.49419929629556 lwstring
+(G) 623.1284433333325 -213.49419929629556 lwstring
+(U) 618.9684314814807 -220.74251411111075 lwstring
+(U) 612.6800981481473 -220.96676225925887 lwstring
+(G) 608.4163759259251 -213.49419929629556 lwstring
+(G) 600.408615925925 -213.49419929629556 lwstring
+(U) 592.424695925925 -213.49419929629556 lwstring
+(U) 592.1043759259252 -223.14269999999985 lwstring
+(U) 589.504338888888 -232.39031040740662 lwstring
+(G) 585.8317462962955 -241.43834744444365 lwstring
+(U) 585.8317462962955 -249.43819929629555 lwstring
+(C) 585.8317462962955 -257.43805114814745 lwstring
+(C) 585.9677416666657 -265.4379029999993 lwstring
+(C) 587.0160240740731 -273.31046596296244 lwstring
+(A) 589.4400981481474 -280.97458077777736 lwstring
+(U) 586.8480953703694 -289.421606703703 lwstring
+(U) 579.8400027777768 -295.0220141111104 lwstring
+(A) 572.3357092592584 -295.02271781481426 lwstring
+(U) 565.5199842592583 -290.38949559259186 lwstring
+(A) 562.8239870370363 -282.11028633333297 lwstring
+(A) 564.9999129629621 -273.06234744444384 lwstring
+(G) 565.9677564814806 -265.4380141111104 lwstring
+(G) 565.8317611111102 -257.4381622592585 lwstring
+(A) 565.8317611111102 -249.43758818518452 lwstring
+(C) 565.8317611111102 -241.43773633333262 lwstring
+(A) 564.5600592592584 -234.23794003703637 lwstring
+(C) 560.480188888888 -228.86973633333272 lwstring
+(U) 558.3470379629629 -221.44352809259289 lwstring
+(A) 558.3470379629629 -213.68384290740764 lwstring
+(G) 550.3471861111109 -215.25936327777796 lwstring
+(C) 542.347334259259 -213.68384290740764 lwstring
+(U) 534.3474942592591 -213.68384290740764 lwstring
+(U) 527.4109824074072 -219.68354661111127 lwstring
+(C) 518.3470624074072 -219.68354661111127 lwstring
+(U) 511.4112787037035 -213.68384290740764 lwstring
+(U) 503.4114387037035 -213.68384290740764 lwstring
+(A) 495.4115987037035 -213.68384290740764 lwstring
+(A) 487.40375870370343 -213.68384290740764 lwstring
+(A) 477.92313055555536 -215.25936327777796 lwstring
+(U) 468.3470379629628 -213.68384290740764 lwstring
+(G) 460.3471979629628 -213.68384290740764 lwstring
+(G) 463.8194083333331 -222.73187994444467 lwstring
+(A) 466.36353796296277 -231.13971327777793 lwstring
+(C) 462.49923444444414 -238.8762688333332 lwstring
+(A) 466.14724722222195 -248.62813920370388 lwstring
+(A) 466.14724722222195 -257.5640466111112 lwstring
+(A) 462.3393768518516 -267.68339846296317 lwstring
+(U) 462.3393768518516 -275.68397253703716 lwstring
+(U) 462.3632483333331 -283.69178735185193 lwstring
+(G) 462.3632483333331 -291.6923614259259 lwstring
+(C) 462.4992437037035 -299.6922132777778 lwstring
+(G) 465.03541037037013 -307.95682438888895 lwstring
+(U) 461.29915111111086 -315.29262068518517 lwstring
+(C) 453.03526222222206 -318.6288429074074 lwstring
+(U) 445.03541037037013 -315.69263920370366 lwstring
+(A) 441.0351140740738 -308.22880587037025 lwstring
+(G) 442.49923444444414 -299.6921947592591 lwstring
+(C) 442.36330851851824 -291.6923799444444 lwstring
+(A) 442.36330851851824 -283.69252809259245 lwstring
+(A) 442.36330851851824 -275.6926762407406 lwstring
+(U) 442.36330851851824 -267.6928243888887 lwstring
+(A) 436.61893814814783 -264.46865772222185 lwstring
+(A) 431.41928999999965 -260.1160836481479 lwstring
+(U) 429.09941962962927 -253.70837994444423 lwstring
+(G) 430.9794751851849 -246.98819475925896 lwstring
+(A) 436.6269011111108 -240.70852809259245 lwstring
+(G) 442.49923444444414 -238.8762688333332 lwstring
+(A) 441.8352344444441 -226.18812068518514 lwstring
+(U) 442.36330111111073 -213.69245401851848 lwstring
+(U) 434.3634611111107 -213.69245401851848 lwstring
+(G) 426.3636211111107 -213.69245401851848 lwstring
+(A) 418.3558611111107 -213.69245401851848 lwstring
+(G) 410.34802111111065 -213.69245401851848 lwstring
+(C) 407.41107888888854 -221.57223179629628 lwstring
+(A) 406.36290111111083 -230.1001577222223 lwstring
+(A) 404.78738074074045 -238.1000095740742 lwstring
+(U) 403.4115122222219 -246.10058364814816 lwstring
+(A) 402.36333444444415 -254.62850957407417 lwstring
+(A) 402.36333444444415 -262.62908364814814 lwstring
+(C) 402.36333444444415 -270.62965772222213 lwstring
+(A) 408.76307518518485 -275.56599105555546 lwstring
+(G) 402.36333444444415 -280.6296577222221 lwstring
+(G) 402.36333444444415 -288.6302317962961 lwstring
+(U) 402.36333444444415 -296.63080587037007 lwstring
+(C) 408.50700111111087 -296.7660779074071 lwstring
+(U) 413.83540851851825 -302.5024853148145 lwstring
+(G) 407.8349825925923 -307.03807790740706 lwstring
+(U) 402.3712974074071 -310.63833716666625 lwstring
+(G) 407.4349640740738 -314.63863346296256 lwstring
+(A) 402.3712974074071 -318.63820753703664 lwstring
+(U) 404.4669270370368 -328.5420038333328 lwstring
+(G) 402.3712974074071 -338.6382075370365 lwstring
+(C) 402.3712974074071 -346.6387816111105 lwstring
+(C) 402.3712974074071 -354.63935568518446 lwstring
+(C) 402.3712974074071 -364.63935568518446 lwstring
+(U) 402.3712974074071 -372.6392075370363 lwstring
+(U) 410.235149259259 -373.97528901851786 lwstring
+(A) 416.23485296296275 -379.17493716666604 lwstring
+(G) 418.3710011111109 -386.7747704999995 lwstring
+(A) 416.1068159259257 -394.375326055555 lwstring
+(U) 410.2430937037035 -399.57497420370316 lwstring
+(G) 402.3792418518516 -400.6390649444439 lwstring
+(U) 403.954762222222 -409.1590279074068 lwstring
+(C) 402.3792418518516 -416.6387686481475 lwstring
+(C) 402.3792418518516 -424.6386204999994 lwstring
+(U) 402.3792418518516 -432.63847235185125 lwstring
+(G) 402.3792418518516 -440.6383242037032 lwstring
+(G) 402.3792418518516 -448.63817605555505 lwstring
+(G) 407.44290851851827 -455.8386945740736 lwstring
+(C) 409.17901962962935 -464.6386019814809 lwstring
+(U) 407.44290851851827 -473.5745093888884 lwstring
+(G) 402.3792418518516 -480.6383056851847 lwstring
+(C) 402.3792418518516 -488.63815753703665 lwstring
+(A) 408.6429825925924 -494.10256494444405 lwstring
+(C) 402.3792418518516 -498.6381575370367 lwstring
+(G) 402.3792418518516 -506.6380093888886 lwstring
+(C) 402.3792418518516 -514.6378612407404 lwstring
+(G) 402.3792418518516 -522.6377130925924 lwstring
+(C) 403.954762222222 -530.6375649444443 lwstring
+(G) 402.3792418518516 -538.6374167962962 lwstring
+(C) 402.3792418518516 -546.637268648148 lwstring
+(U) 402.3792418518516 -554.6371204999999 lwstring
+(A) 403.42741962962936 -562.6369723518519 lwstring
+(C) 403.42741962962936 -570.6368242037038 lwstring
+(A) 410.97877148148115 -570.7171193888889 lwstring
+(A) 417.9709566666663 -572.1089027222222 lwstring
+(U) 424.3793825925923 -575.7011990185185 lwstring
+(G) 430.2431048148145 -578.7654397592593 lwstring
+(A) 436.6428455555552 -573.8291064259259 lwstring
+(A) 443.0433085185182 -569.0287545740741 lwstring
+(A) 449.4430492592588 -564.2291249444445 lwstring
+(G) 455.7067899999996 -559.2927916111112 lwstring
+(U) 462.1072529629626 -554.4931619814816 lwstring
+(A) 467.97891962962933 -547.4611805000001 lwstring
+(U) 468.6270677777775 -538.7733842037037 lwstring
+(C) 471.83525296296267 -530.6288471666667 lwstring
+(A) 478.3709937037034 -523.8290693888889 lwstring
+(A) 486.90688259259224 -519.8287730925925 lwstring
+(C) 495.7147529629626 -518.5006471666667 lwstring
+(G) 504.2593085185182 -519.7246064259259 lwstring
+(U) 511.5791788888885 -516.8932916111111 lwstring
+(G) 520.0752714814811 -510.3806990185185 lwstring
+(U) 518.4751548148145 -500.7807360555555 lwstring
+(A) 521.1393585185182 -491.58079161111107 lwstring
+(U) 527.403099259259 -484.24499531481484 lwstring
+(U) 536.0670251851849 -480.1087175370371 lwstring
+(U) 545.8029851851849 -480.1087175370371 lwstring
+(C) 554.6029511111109 -484.1090138333334 lwstring
+(C) 561.0034140740738 -479.3093842037038 lwstring
+(U) 567.4827103703705 -474.82081938888894 lwstring
+(A) 573.4028585185184 -466.2451434629631 lwstring
+(G) 582.738802962963 -463.980958277778 lwstring
+(A) 589.2752659259257 -459.3173286481483 lwstring
+(C) 595.8110066666666 -454.7810138333335 lwstring
+(C) 602.3467474074074 -450.11738420370375 lwstring
+(G) 609.1472474074075 -444.2529397592594 lwstring
+(A) 618.0831548148147 -445.7170601296297 lwstring
+(G) 623.2668955555555 -453.6048008703704 lwstring
+(A) 621.1546177777777 -461.98081938888896 lwstring
+(G) 613.9548214814815 -466.51713420370373 lwstring
+(G) 607.2910437037037 -471.18076383333334 lwstring
+(U) 600.755302962963 -475.7091156851852 lwstring
+(C) 594.2188400000001 -480.2447082777778 lwstring
+(C) 590.219265925926 -489.0453379074075 lwstring
+(G) 579.3468585185187 -490.9572453148148 lwstring
+(G) 572.8827474074076 -495.4450786481482 lwstring
+(G) 566.3470066666669 -500.117393462963 lwstring
+(U) 565.9549344444446 -510.1007638333334 lwstring
+(A) 561.4273048148149 -518.6294119814817 lwstring
+(A) 553.8672677777779 -524.6450416111113 lwstring
+(A) 543.2429900000001 -527.0690786481483 lwstring
+(C) 532.2107196296298 -526.2530971666669 lwstring
+(C) 531.7311196296298 -534.0612638333336 lwstring
+(G) 523.8433862962964 -532.7649675370373 lwstring
+(C) 518.4911085185188 -538.6127638333335 lwstring
+(U) 517.5709696296299 -547.5573564259262 lwstring
+(G) 513.7153585185188 -556.3572638333336 lwstring
+(A) 508.10698814814845 -563.0289860555558 lwstring
+(A) 499.70709925925956 -567.4293008703706 lwstring
+(C) 490.37115481481516 -568.6293879074077 lwstring
+(C) 481.6913214814818 -567.6615064259263 lwstring
+(A) 474.24341407407445 -570.3655064259262 lwstring
+(C) 467.84295111111146 -575.2931730925928 lwstring
+(U) 461.5792103703707 -580.0935249444448 lwstring
+(U) 455.1787474074077 -584.8931545740743 lwstring
+(U) 448.779006666667 -589.8294879074076 lwstring
+(C) 442.5152659259262 -594.6291175370372 lwstring
+(A) 444.37941407407436 -602.6289693888891 lwstring
+(U) 444.37941407407436 -610.628821240741 lwstring
+(G) 444.37941407407436 -618.6286730925929 lwstring
+(C) 441.44321037037065 -626.6285249444448 lwstring
+(U) 436.3788214814817 -633.6923212407411 lwstring
+(U) 430.37911777777794 -639.692747166667 lwstring
+(G) 421.9792288888891 -643.9563397592597 lwstring
+(G) 426.93076592592615 -650.6208397592598 lwstring
+(G) 432.34671037037054 -657.692599018519 lwstring
+(A) 435.0029696296298 -665.4284138333338 lwstring
+(U) 434.7230214814817 -674.3643212407413 lwstring
+(U) 433.1793288888891 -682.6202471666672 lwstring
+(G) 439.1710881481483 -687.1883953148152 lwstring
+(U) 444.17108814814827 -693.644561981482 lwstring
+(G) 446.0511437037038 -701.2443953148153 lwstring
+(A) 446.95536592592606 -709.5003212407412 lwstring
+(A) 443.70738444444453 -716.8845805000004 lwstring
+(C) 446.95536592592606 -724.8207842037042 lwstring
+(U) 453.07516222222233 -731.3644693888893 lwstring
+(G) 455.8428103703705 -739.4366545740745 lwstring
+(A) 453.7074029629631 -748.3407286481486 lwstring
+(A) 446.4511807407409 -754.2123953148152 lwstring
+(A) 437.75471777777784 -755.8848490185189 lwstring
+(C) 428.3710325925927 -752.6122749444448 lwstring
+(U) 423.43542148148157 -745.6765156851854 lwstring
+(G) 423.43542148148157 -737.6766638333336 lwstring
+(U) 426.63492148148157 -730.2128305000003 lwstring
+(U) 424.4987733333334 -722.4762934629633 lwstring
+(C) 418.57936592592597 -717.1326823518522 lwstring
+(A) 413.30738444444444 -710.5405156851855 lwstring
+(C) 410.5787918518519 -703.7327934629632 lwstring
+(G) 410.3632251851853 -695.6685527222224 lwstring
+(A) 413.96276222222235 -688.0687193888891 lwstring
+(U) 409.07489185185193 -681.5163490185188 lwstring
+(G) 404.38739185185193 -674.0604786481484 lwstring
+(A) 402.2512437037038 -666.3246638333336 lwstring
+(A) 401.5633103703704 -657.6766638333336 lwstring
+(C) 402.7713548148149 -649.4040897592595 lwstring
+(U) 392.3713177777779 -646.604608277778 lwstring
+(U) 383.43468814814827 -640.604182351852 lwstring
+(G) 375.43483629629634 -633.6684230925928 lwstring
+(G) 370.3711696296297 -624.6044786481484 lwstring
+(A) 367.434965925926 -613.6684230925929 lwstring
+(A) 366.6349085185186 -603.1324045740744 lwstring
+(U) 359.83513074074085 -607.3967193888891 lwstring
+(U) 353.0346307407408 -611.5322749444447 lwstring
+(C) 346.23485296296303 -615.7965897592595 lwstring
+(C) 339.43507518518527 -619.9321453148151 lwstring
+(C) 346.4988714814816 -624.1964601296299 lwstring
+(A) 351.963278888889 -630.3321638333337 lwstring
+(G) 355.4268159259261 -637.7959971666669 lwstring
+(U) 356.76289740740754 -646.0606082777781 lwstring
+(A) 355.56281037037047 -654.1964601296298 lwstring
+(A) 351.9632733333334 -661.6602934629632 lwstring
+(G) 356.098828888889 -668.5960527222225 lwstring
+(U) 360.0991251851853 -675.3965527222225 lwstring
+(G) 364.0986992592593 -682.3323119814818 lwstring
+(U) 368.0989955555557 -689.268071240741 lwstring
+(G) 372.099291851852 -696.2045527222226 lwstring
+(A) 376.2348474074076 -703.1403119814819 lwstring
+(G) 380.2351437037039 -709.9400897592596 lwstring
+(U) 387.43494000000027 -714.2044045740744 lwstring
+(C) 391.29923629629656 -721.8042379074077 lwstring
+(A) 390.23514555555585 -731.0041823518521 lwstring
+(U) 383.9706825925928 -737.2686453148151 lwstring
+(U) 375.97083074074095 -738.8687619814817 lwstring
+(A) 367.4349418518521 -735.9325582777781 lwstring
+(A) 362.4986085185188 -728.9960767962965 lwstring
+(C) 362.89863814814845 -720.0601693888891 lwstring
+(U) 358.89906407407443 -713.1244101296298 lwstring
+(C) 354.89876777777806 -706.1886508703705 lwstring
+(G) 350.89919370370404 -699.3881508703705 lwstring
+(C) 346.7629159259263 -692.4523916111111 lwstring
+(A) 342.76261962962997 -685.5245767962964 lwstring
+(U) 338.7630455555559 -678.5880953148148 lwstring
+(U) 334.7627492592596 -671.6523360555556 lwstring
+(G) 327.9629714814818 -668.0520767962963 lwstring
+(A) 321.5632307407411 -663.1164656851852 lwstring
+(U) 316.0988233333337 -657.3800582777777 lwstring
+(U) 311.56323074074106 -650.7162805 lwstring
+(A) 308.22700851851886 -643.3804842037038 lwstring
+(C) 306.2268603703707 -635.6439471666667 lwstring
+(G) 305.4268029629633 -627.6440953148149 lwstring
+(U) 297.4189629629633 -627.6440953148149 lwstring
+(C) 296.6109696296299 -634.6203730925927 lwstring
+(C) 290.96282148148174 -639.0684286481483 lwstring
+(C) 285.03472888888916 -634.7563545740741 lwstring
+(U) 284.36270851851884 -627.6440767962964 lwstring
+(G) 276.36286851851884 -627.6440767962964 lwstring
+(C) 268.3550285185188 -627.6440767962964 lwstring
+(C) 260.3551885185188 -627.6440767962964 lwstring
+(C) 252.35534851851875 -627.6440767962964 lwstring
+(U) 244.34750851851874 -627.6440767962964 lwstring
+(U) 236.36286851851878 -627.6440767962964 lwstring
+(U) 226.3628685185188 -627.6440767962964 lwstring
+(G) 218.3630285185188 -627.6440767962964 lwstring
+(U) 210.3551885185188 -627.6440767962964 lwstring
+(A) 205.5627085185188 -634.0445397592594 lwstring
+(C) 200.36306037037062 -627.6440767962964 lwstring
+(A) 192.3632203703706 -627.6440767962964 lwstring
+(C) 188.09887518518545 -635.6439286481483 lwstring
+(A) 188.09887518518545 -644.5805582777779 lwstring
+(C) 187.45868444444466 -653.6445027222223 lwstring
+(C) 188.50686222222242 -662.5724471666668 lwstring
+(G) 189.43495851851873 -670.5722990185187 lwstring
+(C) 187.3386066666669 -680.6764656851853 lwstring
+(C) 187.42685907407434 -690.0203545740743 lwstring
+(C) 189.43497018518548 -698.5801138333336 lwstring
+(G) 189.43497018518548 -706.5799656851855 lwstring
+(U) 186.37072944444472 -716.5799656851855 lwstring
+(C) 189.43497018518548 -725.6439101296298 lwstring
+(G) 187.65907388888922 -734.5718545740743 lwstring
+(C) 187.3306590740744 -743.6357990185187 lwstring
+(U) 189.42701092592623 -751.6363730925927 lwstring
+(A) 189.42701092592623 -759.6362249444447 lwstring
+(C) 189.42701092592623 -767.6360767962966 lwstring
+(U) 189.42701092592623 -775.6359286481485 lwstring
+(A) 187.82463333333246 -784.3815881851846 lwstring
+(C) 189.40087777777694 -792.3814400370364 lwstring
+(C) 189.40087777777694 -800.3812918888883 lwstring
+(G) 187.3045259259251 -808.3818659629624 lwstring
+(A) 187.3045259259251 -816.3817178148144 lwstring
+(U) 189.42701092592623 -824.1161138333337 lwstring
+(U) 183.56100740740658 -830.4138104074067 lwstring
+(G) 189.42701092592623 -834.7403916111114 lwstring
+(A) 189.42701092592623 -842.7402434629633 lwstring
+(A) 189.42701092592623 -850.7400953148152 lwstring
+(U) 189.42701092592623 -858.7399471666671 lwstring
+(U) 187.3306590740744 -866.7405212407411 lwstring
+(A) 189.42701092592623 -874.7403730925931 lwstring
+(U) 189.42701092592623 -882.740224944445 lwstring
+(U) 189.42701092592623 -890.7400767962969 lwstring
+(U) 187.3306590740744 -898.7399286481487 lwstring
+(A) 189.42701092592623 -906.7405027222229 lwstring
+(G) 189.42701092592623 -914.7403545740748 lwstring
+(U) 189.42701092592623 -922.7402064259267 lwstring
+(G) 187.3283370370362 -930.941958555555 lwstring
+(A) 187.3283370370362 -938.9418104074068 lwstring
+(G) 189.42701092592623 -947.676502722223 lwstring
+(G) 189.42701092592623 -955.6763545740747 lwstring
+(U) 189.42701092592623 -963.6762064259266 lwstring
+(C) 189.42701092592623 -971.6760582777786 lwstring
+(U) 187.3306590740744 -979.6766323518525 lwstring
+(C) 187.3306590740744 -987.6764842037044 lwstring
+(C) 189.42701092592623 -995.6763360555562 lwstring
+(G) 187.3306590740744 -1003.676187907408 lwstring
+(G) 185.7544146296299 -1011.6760397592599 lwstring
+(A) 185.7544146296299 -1019.6758916111118 lwstring
+(C) 187.3306590740744 -1027.6757434629637 lwstring
+(G) 189.42701092592623 -1035.6755953148156 lwstring
+(U) 189.42701092592623 -1043.6754471666673 lwstring
+(G) 189.42701092592623 -1051.6752990185191 lwstring
+(A) 189.42701092592623 -1059.0906693888894 lwstring
+(U) 187.3306590740744 -1068.090965685186 lwstring
+(C) 189.42701092592623 -1077.1390027222228 lwstring
+(A) 189.42701092592623 -1085.1388545740747 lwstring
+(C) 189.30692981481508 -1093.6747434629635 lwstring
+(U) 189.30692981481508 -1101.6745953148154 lwstring
+(G) 189.30692981481508 -1109.6744471666673 lwstring
+(U) 189.30692981481508 -1117.6742990185192 lwstring
+(G) 189.30692981481508 -1125.674150870371 lwstring
+(A) 189.30692981481508 -1133.674002722223 lwstring
+(C) 189.30692981481508 -1141.6738545740745 lwstring
+(G) 189.30692981481508 -1149.6737064259264 lwstring
+(C) 184.3944668518521 -1155.1779101296302 lwstring
+(C) 189.30692981481508 -1160.297261981482 lwstring
+(U) 188.33905944444473 -1170.2256508703708 lwstring
+(U) 195.4744853703707 -1176.8496323518523 lwstring
+(G) 202.8507813703707 -1176.8496323518523 lwstring
+(C) 211.05102240740777 -1169.8892805000005 lwstring
+(G) 209.2989964814818 -1160.297261981482 lwstring
+(U) 209.2989964814818 -1149.6737064259264 lwstring
+(G) 209.2989964814818 -1141.6738545740745 lwstring
+(U) 209.2989964814818 -1133.6732805000004 lwstring
+(U) 209.2989964814818 -1125.6734286481487 lwstring
+(A) 209.2989964814818 -1117.6735767962969 lwstring
+(C) 209.2989964814818 -1109.673724944445 lwstring
+(G) 209.2989964814818 -1101.6738730925933 lwstring
+(G) 209.2989964814818 -1093.673299018519 lwstring
+(U) 216.49879277777816 -1088.2096138333338 lwstring
+(U) 209.4190705555559 -1085.145373092593 lwstring
+(G) 209.4190705555559 -1077.1455212407413 lwstring
+(U) 215.71464462962996 -1070.721187907408 lwstring
+(U) 215.96275574074107 -1063.993761981482 lwstring
+(U) 209.4190705555559 -1059.0972064259263 lwstring
+(C) 209.4190705555559 -1051.681836055556 lwstring
+(G) 209.4190705555559 -1043.681261981482 lwstring
+(C) 209.4190705555559 -1035.6814101296302 lwstring
+(A) 211.51470018518552 -1027.6815582777783 lwstring
+(A) 213.09094462963 -1019.6817064259264 lwstring
+(A) 213.09094462963 -1011.6811323518524 lwstring
+(A) 211.51470018518552 -1003.6812805000005 lwstring
+(G) 209.4190705555559 -995.6814286481487 lwstring
+(U) 211.51470018518552 -987.681576796297 lwstring
+(U) 211.51470018518552 -979.681724944445 lwstring
+(G) 209.4190705555559 -971.6811508703709 lwstring
+(A) 209.4190705555559 -963.681299018519 lwstring
+(C) 209.4190705555559 -955.6814471666673 lwstring
+(C) 209.4190705555559 -947.6815953148154 lwstring
+(G) 211.52033703703614 -938.9418104074068 lwstring
+(A) 211.52907777777693 -930.941958555555 lwstring
+(A) 209.4190705555559 -922.7452990185192 lwstring
+(C) 209.4190705555559 -914.7454471666672 lwstring
+(U) 209.4190705555559 -906.7455953148153 lwstring
+(U) 211.51470018518552 -898.7450212407413 lwstring
+(G) 209.4190705555559 -890.7451693888894 lwstring
+(A) 209.4190705555559 -882.7453175370374 lwstring
+(U) 209.4190705555559 -874.7454656851855 lwstring
+(U) 211.51470018518552 -866.7456138333337 lwstring
+(A) 209.4190705555559 -858.7450397592596 lwstring
+(U) 209.4190705555559 -850.7451879074076 lwstring
+(U) 209.4190705555559 -842.7453360555558 lwstring
+(U) 209.4190705555559 -834.7454842037039 lwstring
+(A) 209.4190705555559 -824.1212064259262 lwstring
+(G) 211.49652592592506 -816.3817178148144 lwstring
+(A) 211.50452592592507 -808.3818659629624 lwstring
+(G) 209.40889629629544 -800.3812918888883 lwstring
+(G) 209.40889629629544 -792.3814400370364 lwstring
+(A) 211.50452592592507 -784.3815881851846 lwstring
+(A) 209.4190705555559 -775.641021240741 lwstring
+(G) 209.4190705555559 -767.641169388889 lwstring
+(U) 209.4190705555559 -759.6413175370371 lwstring
+(A) 209.4190705555559 -751.6414656851853 lwstring
+(A) 214.667181666667 -745.737243462963 lwstring
+(A) 217.51512611111144 -739.2094656851853 lwstring
+(A) 214.89070018518552 -731.7290027222224 lwstring
+(G) 209.41905203703732 -725.6330767962963 lwstring
+(U) 212.35453351851874 -716.569132351852 lwstring
+(C) 209.41905203703732 -706.569132351852 lwstring
+(G) 209.41905203703732 -698.5692805000001 lwstring
+(U) 213.0431816666669 -691.6892249444445 lwstring
+(A) 215.9309224074076 -683.9374842037038 lwstring
+(A) 213.58716314814836 -677.0248730925927 lwstring
+(C) 209.4190520370372 -670.5694286481482 lwstring
+(A) 217.4189038888891 -663.6329471666667 lwstring
+(A) 228.35495944444463 -663.8969805 lwstring
+(G) 236.3548112962965 -677.1290360555556 lwstring
+(G) 236.3548112962965 -696.7369990185186 lwstring
+(U) 236.3548112962965 -713.953443462963 lwstring
+(U) 244.3546631481484 -717.6253138333333 lwstring
+(U) 252.35451114814845 -717.6253138333333 lwstring
+(C) 260.3543591481485 -717.6253138333333 lwstring
+(C) 268.3462551481485 -717.6253138333333 lwstring
+(G) 276.34610314814853 -717.6253138333333 lwstring
+(U) 284.3379991481485 -717.6253138333333 lwstring
+(A) 292.33784714814857 -717.6253138333333 lwstring
+(G) 300.32973514814853 -717.6253138333333 lwstring
+(G) 308.3295911481485 -717.6253138333333 lwstring
+(U) 318.3550335185187 -715.6251656851852 lwstring
+(G) 326.35488537037065 -722.5609249444444 lwstring
+(A) 326.35488537037065 -732.5609249444444 lwstring
+(A) 318.3550335185187 -739.625443462963 lwstring
+(C) 308.3550335185188 -737.6252953148148 lwstring
+(C) 300.3551935185188 -737.6252953148148 lwstring
+(U) 292.35535351851877 -737.6252953148148 lwstring
+(G) 284.3475135185187 -737.6252953148148 lwstring
+(C) 276.3476735185187 -737.6252953148148 lwstring
+(G) 268.33983351851873 -737.6252953148148 lwstring
+(G) 260.3551935185187 -737.6252953148148 lwstring
+(A) 252.34735351851873 -737.6252953148148 lwstring
+(A) 244.3395135185187 -737.6252953148148 lwstring
+(G) 236.35484833333368 -740.7770545740741 lwstring
+(G) 236.49084370370406 -748.9136286481481 lwstring
+(A) 236.49084370370406 -756.5134619814814 lwstring
+(U) 236.49084370370406 -763.9772953148148 lwstring
+(C) 236.49084370370406 -771.577128648148 lwstring
+(A) 236.49084370370406 -779.0496471666667 lwstring
+(U) 236.35484833333368 -786.7854619814815 lwstring
+(U) 236.35484833333368 -794.7853138333334 lwstring
+(A) 236.35484833333368 -802.7851656851852 lwstring
+%END Sequence
+stroke
+grestore
+m4showpage
