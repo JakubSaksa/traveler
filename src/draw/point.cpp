@@ -243,6 +243,8 @@ point orthogonal(const point& p, const point& direction)
         return o;
     else
         return -o;
+    
+    if(distance(o, direction) == distance(-o, direction)) return o;
 }
 
 point move_point(const point& p, const point& move_to, double length)
