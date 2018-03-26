@@ -235,9 +235,7 @@ point orthogonal(const point& p, const point& direction)
     
     point o = orthogonal(p);
     
-    INFO("%s %s %s %s", p.x, p.y, direction.x, direction.y);
-    INFO("%s %s", distance(o, direction), distance(-o, direction));
-    assert(!double_equals(distance(o, direction), distance(-o, direction)));
+    //assert(!double_equals(distance(o, direction), distance(-o, direction)));
     
     if (distance(o, direction) < distance(-o, direction))
         return o;
