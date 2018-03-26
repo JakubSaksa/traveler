@@ -371,6 +371,8 @@ rna_tree::iterator rna_tree::get_rightest_initiated_descendant(const rna_tree::i
 
 void rna_tree::compute_distances()
 {
+    INFO("beg distances");
+    
     int elements;
     double dist;
     
@@ -394,6 +396,8 @@ void rna_tree::compute_distances()
         }
     }
     distances.pairs_distance = dist / (double)elements;
+    
+    INFO("pairs");
     
     // distance between bases in pair (C <-> G)
     elements = 0;
