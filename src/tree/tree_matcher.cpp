@@ -63,7 +63,7 @@ rna_tree& matcher::run(
         throw illegal_state_exception("Uncorrect tree pairing after transforming template to target tree");
     }
     
-    update_ends_in_rna(t1);
+    //update_ends_in_rna(t1);
 
     t1.set_postorder_ids();
     
