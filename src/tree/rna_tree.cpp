@@ -390,9 +390,9 @@ void rna_tree::compute_distances()
             continue;
         
         
-            dist += distance(parent(it)->center(), it->center());
-            DEBUG("dist=%s", dist);
-            ++elements;
+        dist += distance(parent(it)->center(), it->center());
+        DEBUG("dist=%s", dist);
+        ++elements;
         
     }
     distances.pairs_distance = dist / (double)elements;
