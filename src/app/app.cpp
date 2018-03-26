@@ -117,6 +117,8 @@ void app::run(
     vector<rna_tree> matched_branches = args.matched.to_branches();
     vector<mapping> mappings;
     
+     INFO("templated: %s, matched: %s", templated_branches.size(), matched_branches.size());
+    
     match_branches(templated_branches, matched_branches, mappings);
     
     if (args.draw.run)
