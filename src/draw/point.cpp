@@ -135,9 +135,7 @@ point point::operator/(double value) const
 point point::operator*(double value) const
 {
     UNARY(*this);
-    
-    //if(iszero(value)) return {x * 7, y* 7}; //hot fix for debugging
-    
+
     assert(!iszero(value) && !std::isnan(x * value) && !std::isnan(y * value));
     
     return {x * value, y * value};
@@ -237,14 +235,14 @@ point orthogonal(const point& p, const point& direction)
     
     point o = orthogonal(p);
     
-    //assert(!double_equals(distance(o, direction), distance(-o, direction)));
+    assert(!double_equals(distance(o, direction), distance(-o, direction)));
     
     if (distance(o, direction) < distance(-o, direction))
         return o;
     else
         return -o;
     
-    if(distance(o, direction) == distance(-o, direction)) return o;
+    //if(distance(o, direction) == distance(-o, direction)) return o;
 }
 
 point move_point(const point& p, const point& move_to, double length)
