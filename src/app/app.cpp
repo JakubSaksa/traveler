@@ -289,7 +289,6 @@ void app::run_drawing(
         
         rna_tree composed(templated);
         composed.set_postorder_ids();
-        composed.compute_distances();
         compact(composed).run();
         
         save(file, composed, run_overlaps);

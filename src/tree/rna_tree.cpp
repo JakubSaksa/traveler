@@ -72,6 +72,8 @@ rna_tree::rna_tree(const vector<rna_tree>& branches)
         _tree.append_child(begin(), branch.begin());
         _size += branch.size();
     }
+    
+    compute_distances();
 }
 
 vector<rna_tree> rna_tree::to_branches()
@@ -384,9 +386,12 @@ void rna_tree::compute_distances()
             || !rna_tree::is_only_child(it))
             continue;
         
-        dist += distance(parent(it)->center(), it->center());
-        DEBUG("dist=%s", dist);
-        ++elements;
+        if(!(parent(it) -> center()).bad() || (it -> center()).bad())
+        {
+            dist += distance(parent(it)->center(), it->center());
+            DEBUG("dist=%s", dist);
+            ++elements;
+        }
     }
     distances.pairs_distance = dist / (double)elements;
     

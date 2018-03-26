@@ -143,7 +143,7 @@ public:
         return distances.loops_bases_distance;
     }
     
-public:
+private:
     /**
      * Compute distances between pairs and distances between unpaired bases in loops
      * as average distance from rna
