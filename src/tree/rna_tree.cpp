@@ -385,15 +385,15 @@ void rna_tree::compute_distances()
             || is_root(it)
             || is_leaf(it)
             || !is_valid(get_onlyone_branch(parent(it)))
-            || !rna_tree::is_only_child(it))
+            || !rna_tree::is_only_child(it)
+            || (parent(it) -> center()).bad() || (it -> center()).bad())
             continue;
         
-        if(!(parent(it) -> center()).bad() || (it -> center()).bad())
-        {
+        
             dist += distance(parent(it)->center(), it->center());
             DEBUG("dist=%s", dist);
             ++elements;
-        }
+        
     }
     distances.pairs_distance = dist / (double)elements;
     
@@ -405,13 +405,16 @@ void rna_tree::compute_distances()
     for (iterator it = begin(); it != end(); ++it)
     {
         if (!it->initiated_points()
-            || is_leaf(it))
+            || is_leaf(it)
+            || ((it -> at(0).p).bad() || (it -> at(1).p).bad()))
             continue;
         
         dist += distance(it->at(0).p, it->at(1).p);
         ++elements;
     }
     distances.pair_base_distance = dist / (double)elements;
+    
+    INFO("base pairs");
     
     // distance between unpaired bases in loops
     elements = 0;
@@ -429,8 +432,11 @@ void rna_tree::compute_distances()
                    && ch != end
                    && is_leaf(ch))
             {
-                dist += distance(prev->center(), ch->center());
-                ++elements;
+                if(!((prev -> center()).bad() || (ch -> center()).bad()))
+                {
+                    dist += distance(prev->center(), ch->center());
+                    ++elements;
+                }
             }
         }
     }
