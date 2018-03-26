@@ -167,6 +167,10 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
     }
     
     templated = tmp;
+    
+    //add unmatched branches
+    for(auto&& m: matched) mtc.push_back(m);
+    
     matched = mtc;
 }
 
@@ -280,6 +284,7 @@ void app::run_drawing(
             return;
         }
         
+        size_t count = 0;
         for(size_t i = 0; i < mapping.size(); ++i)
         {
             //Based on a mapping, matcher returns structure with deleted and inserted nodes
@@ -287,7 +292,12 @@ void app::run_drawing(
             templated[i] = matcher(templated[i], matched[i]).run(mapping[i]);
             //Compact goes through the structure and computes new coordinates where necessary
             //compact(templated[i]).run();
+            
+            ++count;
         }
+        
+        //unmatched branches
+        for(size_t i = count; i < matched.size(); ++i) templated.push_back(matched[i]);
         
         rna_tree composed(templated);
         composed.set_postorder_ids();
