@@ -239,7 +239,7 @@ void compact::init()
     
     INFO("init_even_branches");
     init_even_branches();
-    
+    INFO("other");
     auto log = logger.debug_stream();
     log << "Points initialization:\n";
     auto f = [&](pre_post_order_iterator it)
