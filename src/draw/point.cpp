@@ -136,7 +136,7 @@ point point::operator*(double value) const
 {
     UNARY(*this);
     
-    if(iszero(value)) return {x, y}; //hot fix for debugging
+    if(iszero(value)) return {x * 7, y* 7}; //hot fix for debugging
     
     assert(!iszero(value) && !std::isnan(x * value) && !std::isnan(y * value));
     
