@@ -188,6 +188,14 @@ void compact::init()
     
     for (iterator it = ++rna.begin(); it != rna.end(); ++it)
     { //traverse the tree pre-order
+        
+        
+        string str;
+        
+        for(auto&& i: it -> labels) str += i.label;
+        
+        INFO("%s", str);
+        
         if (it->initiated_points() || !it->paired())
             continue;
         
