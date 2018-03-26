@@ -702,6 +702,7 @@ void compact::make_branch_even(
     for (size_t i = 1; i < vec.size(); ++i)
     {
         // distances between nodes will be same..
+        INFO("shift");
         shift = normalize(shift) * distance(vec[0]->center(), vec[i]->center());
         
         newpos = p1 + shift;
