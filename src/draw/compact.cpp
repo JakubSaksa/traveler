@@ -212,9 +212,11 @@ void compact::init()
              * an existing branch. In such a case, the whole branch is moved in the desired direction
              * and new items are inserted.
              */
+            INFO("init_branch_recursive");
             if (init_branch_recursive(it).bad())
             {
                 // In case we are adding a brand new branch or we are adding into a branch which is part of a multibranch loop
+                INFO("init_multi_branch");
                 init_multibranch(it, true);
             }
         }
@@ -235,6 +237,7 @@ void compact::init()
         }
     }
     
+    INFO("init_even_branches");
     init_even_branches();
     
     auto log = logger.debug_stream();
