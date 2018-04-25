@@ -166,6 +166,11 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         if(min == numeric_limits<size_t>::max())
         {
             positions.push_back(pos);
+            mtc.push_back(t);
+            tmp.push_back(t);
+            mapping m;
+            distance(t, t, m);
+            mapping.push_back(m);
             ++pos;
             continue;
         }
@@ -181,8 +186,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
     templated = tmp;
     
     //add unmatched branches
-    //
-    //for(auto&& m: matched) mtc.push_back(m);
+    for(auto&& m: matched) mtc.push_back(m);
     
     matched = mtc;
 }
