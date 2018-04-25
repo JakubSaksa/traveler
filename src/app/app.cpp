@@ -170,7 +170,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
             tmp.push_back(t);
             mapping m;
             distance(t, t, m);
-            mapping.push_back(m);
+            mappings.push_back(m);
             ++pos;
             continue;
         }
