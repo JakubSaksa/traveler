@@ -148,6 +148,8 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         
         for(it = matched.begin(); it != matched.end(); ++it)
         {
+            if((t.size() == 1 && it -> size() != 1) || (t.size() != 1 && it -> size() == 1)) continue;
+            
             mapping map;
             size_t dist = distance(t, *it, map);
             
@@ -158,6 +160,8 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
                 min_it = it;
             }
         }
+        
+        if(min == numeric_limits<size_t>::max()) continue;
         
         tmp.push_back(t);
         
