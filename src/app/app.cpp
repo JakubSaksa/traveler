@@ -138,15 +138,18 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
 {
     vector<rna_tree> tmp, mtc;
     vector<size_t> positions;
-    size_t pos = 0;
+    vector<tuple<size_t, size_t, size_t, mapping>> groups;
+    size_t tmp_no = 0;
     
     for(auto&& t: templated)
     {
         size_t min = numeric_limits<size_t>::max();
         mapping min_map;
         vector<rna_tree>::iterator it, min_it;
+        size_t min_mtc = matched.size();
+        size_t mtc_no = 0;
         
-        if(matched.empty()) break;
+        //if( matched.empty()) break;
         
         for(it = matched.begin(); it != matched.end(); ++it)
         {
@@ -160,7 +163,10 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
                 min = dist;
                 min_map = map;
                 min_it = it;
+                min_mtc = mtc_no;
             }
+            
+            ++mtc_no;
         }
         
         if(min == numeric_limits<size_t>::max())
@@ -175,13 +181,61 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
             continue;
         }
         
-        tmp.push_back(t);
+        //tmp.push_back(t);
         
-        mtc.push_back(*min_it);
+        //mtc.push_back(*min_it);
         //matched.erase(min_it);
-        mappings.push_back(min_map);
-        ++pos;
+        //mappings.push_back(min_map);
+        
+        groups.push_back(make_tuple(tmp_no, mtc_no, min, min_map));
+        
+        ++tmp_no;
     }
+    
+    vector<size_t> mapped;
+    
+    for(size_t i = 0; i < groups.size(); ++i)
+    {
+        size_t best_t = get<0>(groups[i]);
+        size_t to_match = get<1>(groups[i]);
+        size_t best_cost = get<2>(groups[i]);
+        mapping best_map = get<3>(groups[i]);
+        
+        for(size_t j = 0; j < groups.size(); ++j)
+        {
+            if(i == j) continue;
+            
+            if(to_match == get<1>(groups[j]))
+            {
+                if(best_map > get<2>(groups[j]))
+                {
+                    best_cost = get<2>(groups[j]);
+                    best_t = get<0>(groups[j])
+                    best_map = get<3>(groups[j]);
+                }
+            }
+        }
+        
+        bool already_in = false;
+        
+        for(auto&& m: mapped)
+        {
+            if(m == to_match)
+            {
+                already_in = true;
+                break;
+            }
+        }
+        
+        if(!already_in)
+        {
+            tmp.push_back(templated[best_t]);
+            mtc.push_back(matched[to_match]);
+            mappings.push_back(best_map);
+            mapped.push_back(to_match);
+        }
+    }
+    
     
     templated = tmp;
     
