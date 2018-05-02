@@ -231,7 +231,9 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         {
             tmp.push_back(templated[best_t]);
             mtc.push_back(matched[to_match]);
-            mappings.push_back(best_map);
+            mapping m;
+            distance(templated[best_t], matched[to_match], m);
+            mappings.push_back(m);
             mapped.push_back(to_match);
         }
     }
