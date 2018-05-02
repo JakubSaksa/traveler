@@ -136,6 +136,7 @@ void app::run(
 
 void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched, vector<mapping>& mappings)
 {
+    /*
     vector<rna_tree> tmp, mtc;
     
     for(auto&& t: templated)
@@ -163,13 +164,13 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         
         if(min == numeric_limits<size_t>::max())
         {
-            /*positions.push_back(pos);
+            positions.push_back(pos);
             mtc.push_back(t);
             tmp.push_back(t);
             mapping m;
             distance(t, t, m);
             mappings.push_back(m);
-            ++pos;*/
+            ++pos;
             continue;
         }
         
@@ -184,6 +185,54 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
     
     //add unmatched branches
     //for(auto&& m: matched) mtc.push_back(m);
+    
+    matched = mtc;*/
+    
+    vector<rna_tree> tmp, mtc, unmatched;
+    
+    for(auto&& to_match: matched)
+    {
+        size_t min = numeric_limits<size_t>::max();
+        mapping min_map;
+        vector<rna_tree>::iterator it, min_it;
+        
+        if(templated.size() == 0)
+        {
+            for(auto&& to_match: matched) unmatched.push_back(t);
+            break;
+        }
+        
+        for(it = templated.begin(); it != templated.end(); ++it)
+        {
+            if((t.size() == 1 && it -> size() != 1) || (t.size() != 1 && it -> size() == 1)) continue;
+            
+            mapping map;
+            size_t dist = distance(*it, t, map);
+            
+            if(dist < min)
+            {
+                min = dist;
+                min_map = map;
+                min_it = it;
+            }
+        }
+        
+        if(min == numeric_limits<size_t>::max())
+        {
+            unmatched.push_back(t);
+            continue;
+        }
+        
+        tmp.push_back(*min_it);
+        
+        mtc.push_back(t);
+        templated.erase(*min_it);
+        mappings.push_back(min_map);
+    }
+    
+    templated = tmp;
+    
+    for(auto&& u: unmatched) mtc.push_back(u);
     
     matched = mtc;
 }
