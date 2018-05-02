@@ -198,7 +198,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         
         if(templated.size() == 0)
         {
-            for(auto&& to_match: matched) unmatched.push_back(to_match);
+            //for(auto&& to_match: matched) unmatched.push_back(to_match);
             break;
         }
         
@@ -232,7 +232,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
     
     templated = tmp;
     
-    for(auto&& u: unmatched) mtc.push_back(u);
+    //for(auto&& u: unmatched) mtc.push_back(u);
     
     matched = mtc;
 }
