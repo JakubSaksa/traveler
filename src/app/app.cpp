@@ -207,7 +207,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
             
             if(to_match == get<1>(groups[j]))
             {
-                if(best_map > get<2>(groups[j]))
+                if(best_cost > get<2>(groups[j]))
                 {
                     best_cost = get<2>(groups[j]);
                     best_t = get<0>(groups[j]);
