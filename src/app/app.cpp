@@ -165,13 +165,13 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         
         if(min == numeric_limits<size_t>::max())
         {
-            positions.push_back(pos);
+            /*positions.push_back(pos);
             mtc.push_back(t);
             tmp.push_back(t);
             mapping m;
             distance(t, t, m);
             mappings.push_back(m);
-            ++pos;
+            ++pos;*/
             continue;
         }
         
