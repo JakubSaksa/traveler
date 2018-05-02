@@ -190,7 +190,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
     
     vector<rna_tree> tmp, mtc, unmatched;
     
-    for(auto&& to_match: matched)
+    for(auto&& t: matched)
     {
         size_t min = numeric_limits<size_t>::max();
         mapping min_map;
@@ -198,7 +198,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         
         if(templated.size() == 0)
         {
-            for(auto&& to_match: matched) unmatched.push_back(t);
+            for(auto&& to_match: matched) unmatched.push_back(to_match);
             break;
         }
         
