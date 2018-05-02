@@ -160,8 +160,6 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
                 min_it = it;
                 min_mtc = mtc_no;
             }
-            
-            ++mtc_no;
         }
         
         if(min == numeric_limits<size_t>::max())
