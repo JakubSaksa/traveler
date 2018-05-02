@@ -178,7 +178,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         tmp.push_back(t);
         
         mtc.push_back(*min_it);
-        matched.erase(min_it);
+        //matched.erase(min_it);
         mappings.push_back(min_map);
         ++pos;
     }
