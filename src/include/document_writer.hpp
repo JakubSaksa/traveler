@@ -46,7 +46,7 @@ public:
     
 protected:
     document_writer() = default;
-    std::vector<std::pair<point, size_t>> pseudoknots;
+    std::vector<std::pair<const point, const size_t>> pseudoknots;
     
 public:
     /**
