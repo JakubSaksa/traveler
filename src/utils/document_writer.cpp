@@ -203,6 +203,11 @@ std::string document_writer::get_rna_background_formatted(
         p1 = tmp;
         
         out << get_line_formatted(p1, p2, RGB::GRAY);
+        
+        for(auto&& l: prev->labels)
+        {
+            if(l.pseudoknot != 0) pseudoknots.push_back(std::make_pair(l.p, l.pseudoknot));
+        }
     }
     
     return out.str();
