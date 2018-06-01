@@ -41,7 +41,7 @@ rna_tree::rna_tree(
                    const std::string& _labels,
                    const std::string& _name)
 : tree_base<rna_pair_label>(
-                            trim(_brackets), convert(trim(_labels), trim(_brackets)), _name(_name)
+                            trim(_brackets), convert(trim(_labels), trim(_brackets)), _name(_name))
 {
     set_postorder_ids();
     distances = {0xBADF00D, 0xBADF00D, 0xBADF00D};
