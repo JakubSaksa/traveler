@@ -46,7 +46,7 @@ public:
     
 protected:
     document_writer() = default;
-    std::vector<std::pair<point, size_t>> pseudoknots;
+    std::vector<rna_label&> pseudoknots;
     
 public:
     /**

@@ -206,7 +206,7 @@ std::string document_writer::get_rna_background_formatted(
         
         for(auto&& l: prev->labels)
         {
-            if(l.pseudoknot != 0) pseudoknots.push_back(std::make_pair(l.p, l.pseudoknot));
+            if(l.pseudoknot != 0) pseudoknots.emplace_back(l);
         }
     }
     
