@@ -1,0 +1,123 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width="465.000000"
+	height="262.959127"
+	style="font-size: 8px; stroke: none; font-family: Helvetica; " >
+<style type="text/css" >
+<!-- create color definitions -->
+<![CDATA[
+text.red {stroke: rgb(255, 0, 0); }
+text.green {stroke: rgb(0, 255, 0); }
+text.blue {stroke: rgb(0, 0, 255); }
+text.black {stroke: rgb(0, 0, 0); }
+text.gray {stroke: rgb(204, 204, 204); }
+text.brown {stroke: rgb(211.65, 104.55, 30.6); }
+text {stroke: rgb(0, 0, 0); fill: none; }
+circle.red {stroke: rgb(255, 0, 0); fill: none; }
+circle.green {stroke: rgb(0, 255, 0); fill: none; }
+circle.blue {stroke: rgb(0, 0, 255); fill: none; }
+circle.black {stroke: rgb(0, 0, 0); fill: none; }
+circle.gray {stroke: rgb(204, 204, 204); fill: none; }
+circle.brown {stroke: rgb(211.65, 104.55, 30.6); fill: none; }
+circle {stroke: rgb(0, 0, 0); fill: none; }
+line.red {stroke: rgb(255, 0, 0); }
+line.green {stroke: rgb(0, 255, 0); }
+line.blue {stroke: rgb(0, 0, 255); }
+line.black {stroke: rgb(0, 0, 0); }
+line.gray {stroke: rgb(204, 204, 204); }
+line.brown {stroke: rgb(211.65, 104.55, 30.6); }
+line {stroke: rgb(0, 0, 0); fill: none; }]]>
+</style>
+<text x="32.500000" y="50.000000" class="black" >5'</text>
+<text x="50.000000" y="50.000000" class="black" >A</text>
+<text x="67.500000" y="50.000000" class="black" >A</text>
+<text x="85.000000" y="50.000000" class="black" >A</text>
+<text x="102.500000" y="50.000000" class="black" >A</text>
+<text x="120.000000" y="50.000000" class="black" >A</text>
+<text x="137.500000" y="50.000000" class="black" >A</text>
+<text x="155.000000" y="50.000000" class="black" >A</text>
+<line x1="162.000000" y1="47.000000" x2="186.500000" y2="47.000000" class="black" />
+<text x="155.000000" y="70.000000" class="black" >G</text>
+<line x1="162.000000" y1="67.000000" x2="186.500000" y2="67.000000" class="black" />
+<text x="155.000000" y="90.000000" class="black" >G</text>
+<line x1="162.000000" y1="87.000000" x2="186.500000" y2="87.000000" class="black" />
+<text x="155.000000" y="110.000000" class="black" >A</text>
+<line x1="162.000000" y1="107.000000" x2="186.500000" y2="107.000000" class="black" />
+<text x="155.000000" y="130.000000" class="black" >U</text>
+<line x1="162.000000" y1="127.000000" x2="186.500000" y2="127.000000" class="black" />
+<text x="155.000000" y="150.000000" class="black" >A</text>
+<line x1="162.000000" y1="147.000000" x2="186.500000" y2="147.000000" class="black" />
+<text x="142.422251" y="162.167567" class="black" >U</text>
+<text x="137.675392" y="179.011463" class="black" >A</text>
+<text x="142.048880" y="195.956139" class="black" >A</text>
+<text x="154.354682" y="208.398675" class="black" >A</text>
+<text x="171.250000" y="212.959127" class="black" >A</text>
+<text x="188.145318" y="208.398675" class="black" >A</text>
+<text x="200.451120" y="195.956139" class="black" >C</text>
+<text x="204.824608" y="179.011463" class="black" >C</text>
+<text x="200.077749" y="162.167567" class="black" >U</text>
+<text x="187.500000" y="150.000000" class="black" >U</text>
+<text x="187.500000" y="130.000000" class="black" >A</text>
+<text x="187.500000" y="110.000000" class="black" >U</text>
+<text x="187.500000" y="90.000000" class="black" >C</text>
+<text x="187.500000" y="70.000000" class="black" >C</text>
+<text x="187.500000" y="50.000000" class="black" >U</text>
+<text x="205.000000" y="50.000000" class="black" >C</text>
+<text x="222.500000" y="50.000000" class="black" >A</text>
+<text x="240.000000" y="50.000000" class="black" >U</text>
+<text x="257.500000" y="50.000000" class="black" >A</text>
+<text x="275.000000" y="50.000000" class="black" >U</text>
+<text x="292.500000" y="50.000000" class="black" >A</text>
+<text x="310.000000" y="50.000000" class="black" >A</text>
+<text x="327.500000" y="50.000000" class="black" >G</text>
+<text x="345.000000" y="50.000000" class="black" >G</text>
+<text x="362.500000" y="50.000000" class="black" >A</text>
+<text x="380.000000" y="50.000000" class="black" >A</text>
+<text x="397.500000" y="50.000000" class="black" >A</text>
+<text x="415.000000" y="50.000000" class="black" >A</text>
+<text x="432.500000" y="50.000000" class="black" >3'</text>
+<line x1="39.500000" y1="47.000000" x2="49.000000" y2="47.000000" class="gray" />
+<line x1="57.000000" y1="47.000000" x2="66.500000" y2="47.000000" class="gray" />
+<line x1="74.500000" y1="47.000000" x2="84.000000" y2="47.000000" class="gray" />
+<line x1="92.000000" y1="47.000000" x2="101.500000" y2="47.000000" class="gray" />
+<line x1="109.500000" y1="47.000000" x2="119.000000" y2="47.000000" class="gray" />
+<line x1="127.000000" y1="47.000000" x2="136.500000" y2="47.000000" class="gray" />
+<line x1="144.500000" y1="47.000000" x2="154.000000" y2="47.000000" class="gray" />
+<line x1="158.000000" y1="51.000000" x2="158.000000" y2="63.000000" class="gray" />
+<line x1="158.000000" y1="71.000000" x2="158.000000" y2="83.000000" class="gray" />
+<line x1="158.000000" y1="91.000000" x2="158.000000" y2="103.000000" class="gray" />
+<line x1="158.000000" y1="111.000000" x2="158.000000" y2="123.000000" class="gray" />
+<line x1="158.000000" y1="131.000000" x2="158.000000" y2="143.000000" class="gray" />
+<line x1="155.125083" y1="149.781161" x2="148.297167" y2="156.386407" class="gray" />
+<line x1="144.337253" y1="163.017604" x2="141.760389" y2="172.161426" class="gray" />
+<line x1="141.675047" y1="179.884535" x2="144.049224" y2="189.083067" class="gray" />
+<line x1="147.861637" y1="195.800150" x2="154.541925" y2="202.554665" class="gray" />
+<line x1="161.216473" y1="206.441065" x2="170.388210" y2="208.916737" class="gray" />
+<line x1="178.111790" y1="208.916737" x2="187.283527" y2="206.441065" class="gray" />
+<line x1="193.958075" y1="202.554665" x2="200.638363" y2="195.800150" class="gray" />
+<line x1="204.450776" y1="189.083067" x2="206.824953" y2="179.884535" class="gray" />
+<line x1="206.739611" y1="172.161426" x2="204.162747" y2="163.017604" class="gray" />
+<line x1="200.202833" y1="156.386407" x2="193.374917" y2="149.781161" class="gray" />
+<line x1="190.500000" y1="143.000000" x2="190.500000" y2="131.000000" class="gray" />
+<line x1="190.500000" y1="123.000000" x2="190.500000" y2="111.000000" class="gray" />
+<line x1="190.500000" y1="103.000000" x2="190.500000" y2="91.000000" class="gray" />
+<line x1="190.500000" y1="83.000000" x2="190.500000" y2="71.000000" class="gray" />
+<line x1="190.500000" y1="63.000000" x2="190.500000" y2="51.000000" class="gray" />
+<line x1="194.500000" y1="47.000000" x2="204.000000" y2="47.000000" class="gray" />
+<line x1="212.000000" y1="47.000000" x2="221.500000" y2="47.000000" class="gray" />
+<line x1="229.500000" y1="47.000000" x2="239.000000" y2="47.000000" class="gray" />
+<line x1="247.000000" y1="47.000000" x2="256.500000" y2="47.000000" class="gray" />
+<line x1="264.500000" y1="47.000000" x2="274.000000" y2="47.000000" class="gray" />
+<line x1="282.000000" y1="47.000000" x2="291.500000" y2="47.000000" class="gray" />
+<line x1="299.500000" y1="47.000000" x2="309.000000" y2="47.000000" class="gray" />
+<line x1="317.000000" y1="47.000000" x2="326.500000" y2="47.000000" class="gray" />
+<line x1="334.500000" y1="47.000000" x2="344.000000" y2="47.000000" class="gray" />
+<line x1="352.000000" y1="47.000000" x2="361.500000" y2="47.000000" class="gray" />
+<line x1="369.500000" y1="47.000000" x2="379.000000" y2="47.000000" class="gray" />
+<line x1="387.000000" y1="47.000000" x2="396.500000" y2="47.000000" class="gray" />
+<line x1="404.500000" y1="47.000000" x2="414.000000" y2="47.000000" class="gray" />
+<line x1="422.000000" y1="47.000000" x2="431.500000" y2="47.000000" class="gray" />
+<line x1="200.451120" y1="195.956139" x2="345.000000" y2="50.000000" class="red" />
+<line x1="204.824608" y1="179.011463" x2="327.500000" y2="50.000000" class="red" />
+<line x1="200.077749" y1="162.167567" x2="310.000000" y2="50.000000" class="red" />
+</svg>
