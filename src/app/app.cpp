@@ -137,6 +137,8 @@ void app::run(
 void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched, vector<mapping>& mappings)
 {
     vector<rna_tree> tmp, mtc;
+    vector<size_t> positions;
+    size_t pos = 0;
     
     for(auto&& t: templated)
     {
@@ -144,7 +146,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         mapping min_map;
         vector<rna_tree>::iterator it, min_it;
         
-        if( matched.empty()) break;
+        if(matched.empty()) break;
         
         for(it = matched.begin(); it != matched.end(); ++it)
         {
@@ -163,21 +165,22 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         
         if(min == numeric_limits<size_t>::max())
         {
-            //positions.push_back(pos);
-            mtc.push_back(t);
-            tmp.push_back(t);
-            mapping m;
-            distance(t, t, m);
-            mappings.push_back(m);
-            //++pos;
+            /*positions.push_back(pos);
+             mtc.push_back(t);
+             tmp.push_back(t);
+             mapping m;
+             distance(t, t, m);
+             mappings.push_back(m);
+             ++pos;*/
             continue;
         }
         
         tmp.push_back(t);
         
         mtc.push_back(*min_it);
-        matched.erase(min_it);
+        //matched.erase(min_it);
         mappings.push_back(min_map);
+        ++pos;
     }
     
     templated = tmp;
