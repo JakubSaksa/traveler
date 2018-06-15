@@ -208,7 +208,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
             if((t.size() == 1 && it -> size() != 1) || (t.size() != 1 && it -> size() == 1)) continue;
             
             mapping map;
-            size_t dist = distance(t, *it, map);
+            size_t dist = distance(*it, t, map);
             
             if(dist < min)
             {
