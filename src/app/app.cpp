@@ -223,7 +223,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         mtc.push_back(t);
         
         tmp.push_back(*min_it);
-        //if(t.size() == 1 && min_it->size() == 1) templated.erase(min_it);
+        if(t.size() == 1 && min_it->size() == 1) templated.erase(min_it);
         mappings.push_back(min_map);
     }
     
