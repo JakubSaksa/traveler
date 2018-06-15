@@ -241,7 +241,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
     templated = tmp;
     
     //add unmatched branches
-    //for(auto&& m: matched) mtc.push_back(m);
+    for(auto&& m: matched) mtc.push_back(m);
     
     matched = mtc;
     
