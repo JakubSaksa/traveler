@@ -947,8 +947,8 @@ double compact::get_length(
             auto pos = prev -> labels[prev->size()].p;
             for(auto&& l: it->labels)
             {
-                pos.x += 10;
-                pos.y += 10;
+                pos.x += 1;
+                pos.y += 1;
                 
                 INFO("x: %s, y: %s", pos.x, pos.y);
                 
