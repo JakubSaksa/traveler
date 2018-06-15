@@ -944,7 +944,7 @@ double compact::get_length(
     {
         if (!it->initiated_points())
         {
-            auto pos = prev -> labels[prev->size()].p;
+            auto pos = prev -> labels[0].p;
             for(auto&& l: it->labels)
             {
                 pos.x += 1;
