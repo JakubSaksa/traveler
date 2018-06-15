@@ -217,6 +217,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         
         if(min == numeric_limits<size_t>::max())
         {
+            unmatched.push_back(t);
             continue;
         }
         
@@ -228,6 +229,9 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
     }
     
     templated = tmp;
+    
+    for(auto&& u: unmatched) mtc.push_back(u);
+    
     matched = mtc;
     
     /*
