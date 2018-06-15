@@ -949,6 +949,9 @@ double compact::get_length(
             {
                 pos.x += 10;
                 pos.y += 10;
+                
+                INFO("x: %s, y: %s", pos.x, pos.y);
+                
                 l.p = pos;
             }
             ERR("Some bases positions were not initialized and therefore not drawn.");
