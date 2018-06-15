@@ -937,13 +937,23 @@ double compact::get_length(
 
 /* inline */ void compact::checks()
 {
+    iterator prev = rna.begin();
+    
     // all but root should be inited
     for (iterator it = ++rna.begin(); it != rna.end(); ++it)
     {
         if (!it->initiated_points())
         {
+            auto pos = prev -> labels[prev->size()].p;
+            for(auto&& l: it->labels)
+            {
+                pos.x += 1;
+                pos.y += 1;
+                l.p = pos;
+            }
             ERR("Some bases positions were not initialized and therefore not drawn.");
         }
+        prev = it;
     }
 }
 
