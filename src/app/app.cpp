@@ -135,63 +135,9 @@ void app::run(
     INFO("END: APP");
 }
 
+//try all pairs and choose best local mapping
 void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched, vector<mapping>& mappings)
 {
-    /*
-    vector<rna_tree> tmp, mtc;
-    vector<size_t> positions;
-    size_t pos = 0;
-    
-    for(auto&& t: templated)
-    {
-        size_t min = numeric_limits<size_t>::max();
-        mapping min_map;
-        vector<rna_tree>::iterator it, min_it;
-        
-        if(matched.empty()) break;
-        
-        for(it = matched.begin(); it != matched.end(); ++it)
-        {
-            if((t.size() == 1 && it -> size() != 1) || (t.size() != 1 && it -> size() == 1)) continue;
-            
-            mapping map;
-            size_t dist = distance(t, *it, map);
-            
-            if(dist < min)
-            {
-                min = dist;
-                min_map = map;
-                min_it = it;
-            }
-        }
-        
-        if(min == numeric_limits<size_t>::max())
-        {
-            /*positions.push_back(pos);
-             mtc.push_back(t);
-             tmp.push_back(t);
-             mapping m;
-             distance(t, t, m);
-             mappings.push_back(m);
-             ++pos;*
-            continue;
-        }
-        
-        tmp.push_back(t);
-        
-        mtc.push_back(*min_it);
-        if(t.size() == 1 && min_it->size() == 1) matched.erase(min_it);
-        mappings.push_back(min_map);
-        ++pos;
-    }
-    
-    templated = tmp;
-    
-    //add unmatched branches
-    //for(auto&& m: matched) mtc.push_back(m);
-    
-    matched = mtc;*/
-
     vector<rna_tree> tmp, mtc, unmatched;
     
     for(auto&& t: matched)
@@ -202,6 +148,7 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         
         for(it = templated.begin(); it != templated.end(); ++it)
         {
+            //subtree cannot map on leaf
             if((t.size() == 1 && it -> size() != 1) || (t.size() != 1 && it -> size() == 1)) continue;
             
             mapping map;
@@ -224,6 +171,8 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
         mtc.push_back(t);
         
         tmp.push_back(*min_it);
+        
+        //remove already used leaf
         if(t.size() == 1 && min_it->size() == 1)
         {
             templated.erase(min_it);
@@ -233,58 +182,10 @@ void app::match_branches(vector<rna_tree>& templated, vector<rna_tree>& matched,
     
     templated = tmp;
     
+    //there were more leaves in target than in template
     for(auto&& u: unmatched) mtc.push_back(u);
     
     matched = mtc;
-    
-    /*
-    vector<rna_tree> tmp, mtc, unmatched;
-    
-    for(auto&& t: matched)
-    {
-        size_t min = numeric_limits<size_t>::max();
-        mapping min_map;
-        vector<rna_tree>::iterator it, min_it;
-        
-        if(templated.size() == 0)
-        {
-            for(auto&& to_match: matched) unmatched.push_back(to_match);
-            break;
-        }
-        
-        for(it = templated.begin(); it != templated.end(); ++it)
-        {
-            if((t.size() == 1 && it -> size() != 1) || (t.size() != 1 && it -> size() == 1)) continue;
-            
-            mapping map;
-            size_t dist = distance(*it, t, map);
-            
-            if(dist < min)
-            {
-                min = dist;
-                min_map = map;
-                min_it = it;
-            }
-        }
-        
-        if(min == numeric_limits<size_t>::max())
-        {
-            unmatched.push_back(t);
-            continue;
-        }
-        
-        tmp.push_back(*min_it);
-        
-        mtc.push_back(t);
-        templated.erase(min_it);
-        mappings.push_back(min_map);
-    }
-    
-    templated = tmp;
-    
-    for(auto&& u: unmatched) mtc.push_back(u);
-    
-    matched = mtc;*/
     
 }
 
@@ -348,37 +249,6 @@ mapping app::run_ted(
     
 }
 
-/*void app::run_drawing(
- rna_tree& templated,
- rna_tree& matched,
- const mapping& mapping,
- bool run,
- bool run_overlaps,
- const std::string& file)
- {
- APP_DEBUG_FNAME;
- 
- try
- {
- if (!run)
- {
- INFO("skipping draw run");
- return;
- }
- 
- //Based on a mapping, matcher returns structure with deleted and inserted nodes
- // which correspond to the target structure
- templated = matcher(templated, matched).run(mapping);
- //Compact goes through the structure and computes new coordinates where necessary
- compact(templated).run();
- 
- save(file, templated, run_overlaps);
- }
- catch (const my_exception& e)
- {
- throw aplication_error("Drawing structure failed: %s", e).with(ERROR_DRAW);
- }
- }*/
 
 void app::run_drawing(
                       vector<rna_tree>& templated,
@@ -405,7 +275,6 @@ void app::run_drawing(
             // which correspond to the target structure
             templated[i] = matcher(templated[i], matched[i]).run(mapping[i]);
             //Compact goes through the structure and computes new coordinates where necessary
-            //compact(templated[i]).run();
             
             ++count;
         }

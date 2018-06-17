@@ -44,11 +44,8 @@ void compact::run()
     INFO("BEG: Computing RNA layout for:\n%s", rna.print_tree(false));
     
     init();
-    INFO("init");
     make();
-    INFO("make");
     update_ends_in_rna(rna);
-    INFO("update");
     //    try_reposition_new_root_branches();
     checks();
     
@@ -190,12 +187,6 @@ void compact::init()
     { //traverse the tree pre-order
         
         
-        string str;
-        
-        for(auto&& i: it -> labels) str += i.label;
-        
-        INFO("%s", str);
-        
         if (it->initiated_points() || !it->paired())
             continue;
         
@@ -212,11 +203,9 @@ void compact::init()
              * an existing branch. In such a case, the whole branch is moved in the desired direction
              * and new items are inserted.
              */
-            INFO("init_branch_recursive");
             if (init_branch_recursive(it).bad())
             {
                 // In case we are adding a brand new branch or we are adding into a branch which is part of a multibranch loop
-                INFO("init_multi_branch");
                 init_multibranch(it, true);
             }
         }
@@ -237,9 +226,7 @@ void compact::init()
         }
     }
     
-    INFO("init_even_branches");
     init_even_branches();
-    INFO("other");
     auto log = logger.debug_stream();
     log << "Points initialization:\n";
     auto f = [&](pre_post_order_iterator it)
@@ -702,9 +689,7 @@ void compact::make_branch_even(
     for (size_t i = 1; i < vec.size(); ++i)
     {
         // distances between nodes will be same..
-        INFO("shift");
         shift = normalize(shift) * distance(vec[0]->center(), vec[i]->center());
-        INFO("eshift");
         
         newpos = p1 + shift;
         p = newpos - vec[i]->at(0).p;
@@ -950,11 +935,9 @@ double compact::get_length(
                 //pos.x += 1;
                 pos.y -= 10;
                 
-                INFO("x: %s, y: %s", pos.x, pos.y);
-                
                 l.p = pos;
             }
-            ERR("Some bases positions were not initialized and therefore not drawn.");
+            ERR("Some bases positions were not initialized and therefore might not be drawn correctly.");
         }
         prev = it;
     }
