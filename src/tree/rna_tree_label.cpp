@@ -245,7 +245,10 @@ void rna_pair_label::set_label_strings(
     
     size_t n = paired() ? 2 : 1;
     for (size_t i = 0; i < n; ++i)
+    {
         (*this)[i].label = other[i].label;
+        (*this)[i].pseudoknot = other[i].pseudoknot;
+    }
 }
 
 void rna_pair_label::set_parent_center(
