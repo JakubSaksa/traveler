@@ -93,6 +93,10 @@ public:
                 rna_tree rna) const;
     std::string get_rna_subtree_formatted(
                 rna_tree::iterator root) const;
+    
+    std::string find_pseudoknots(
+                                 rna_tree::pre_post_order_iterator begin,
+                                 rna_tree::pre_post_order_iterator end) const;
 
 public:
     /**
