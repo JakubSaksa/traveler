@@ -115,9 +115,9 @@ public:
 public:
     status_type status = untouched;
     std::vector<size_t> remake_ids;
+    std::vector<rna_label> labels;
 
 private:
-    std::vector<rna_label> labels;
     point parent_center;
 
 };
