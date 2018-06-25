@@ -273,14 +273,16 @@ void app::run_drawing(
         if (!run)
         {
             INFO("skipping draw run");
-            //Based on a mapping, matcher returns structure with deleted and inserted nodes
-            // which correspond to the target structure
-            templated = matcher(templated, matched).run(mapping);
-            //Compact goes through the structure and computes new coordinates where necessary
-            compact(templated).run();
-            
-            save(file, templated, run_overlaps);
+            return
         }
+        
+        //Based on a mapping, matcher returns structure with deleted and inserted nodes
+        // which correspond to the target structure
+        templated = matcher(templated, matched).run(mapping);
+        //Compact goes through the structure and computes new coordinates where necessary
+        compact(templated).run();
+        
+        save(file, templated, run_overlaps);
     }
     catch (const my_exception& e)
     {
