@@ -273,7 +273,7 @@ void app::run_drawing(
         if (!run)
         {
             INFO("skipping draw run");
-            return
+            return;
         }
         
         //Based on a mapping, matcher returns structure with deleted and inserted nodes
