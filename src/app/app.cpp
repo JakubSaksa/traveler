@@ -281,10 +281,10 @@ void app::run_drawing(
             
             save(file, templated, run_overlaps);
         }
-        catch (const my_exception& e)
-        {
+    }
+    catch (const my_exception& e)
+    {
             throw aplication_error("Drawing structure failed: %s", e).with(ERROR_DRAW);
-        }
     }
 }
 
