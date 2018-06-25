@@ -348,20 +348,20 @@ void app::save(
     
     for (bool colored : {true, false})
     {
+        size_t stop = 0;
         for (auto& writer : document_writer::get_writers(colored))
         {
             string file = colored ? filename + COLORED_FILENAME_EXTENSION : filename;
             writer->init(file, rna.begin());
             writer->print(writer->get_rna_formatted(rna));
             
-            size_t stop = 0;
             for (const auto& p : overlaps)
             {
                 if(stop != 2)
                 writer->print(writer->get_circle_formatted(p.centre, p.radius));
-                
-                ++stop;
             }
+            
+            ++stop;
         }
     }
     
