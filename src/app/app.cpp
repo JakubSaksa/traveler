@@ -114,23 +114,32 @@ void app::run(
     mapping map;
     string img_out = args.all.file;
     
-    vector<rna_tree> templated_branches = args.templated.to_branches();
-    vector<rna_tree> matched_branches = args.matched.to_branches();
-    vector<mapping> mappings;
-    
-     INFO("templated: %s, matched: %s", templated_branches.size(), matched_branches.size());
-    
-    match_branches(templated_branches, matched_branches, mappings);
-    
-    if (args.draw.run)
+    if(args.ted.run || args.draw.run)
     {
-        assert(!args.draw.mapping.empty());
-        map = load_mapping_table(args.draw.mapping);
-        img_out = args.draw.file;
+        map = run_ted(args.templated, args.matched, rted, args.ted.mapping);
+        
+        if (args.draw.run)
+        {
+            assert(!args.draw.mapping.empty());
+            map = load_mapping_table(args.draw.mapping);
+            img_out = args.draw.file;
+        }
+        
+        run_drawing(args.templated, args.matched, map, draw, overlaps, img_out);
     }
+    else
+    {
+        vector<rna_tree> templated_branches = args.templated.to_branches();
+        vector<rna_tree> matched_branches = args.matched.to_branches();
+        vector<mapping> mappings;
     
-    //run_drawing(args.templated, args.matched, map, draw, overlaps, img_out);
-    run_drawing(templated_branches, matched_branches, mappings, draw, overlaps, img_out);
+        INFO("templated: %s, matched: %s", templated_branches.size(), matched_branches.size());
+    
+        match_branches(templated_branches, matched_branches, mappings);
+    
+        run_drawing(templated_branches, matched_branches, mappings, draw, overlaps, img_out);
+    
+    }
     
     INFO("END: APP");
 }
@@ -249,6 +258,36 @@ mapping app::run_ted(
     
 }
 
+void app::run_drawing(
+                      rna_tree& templated,
+                      rna_tree& matched,
+                      const mapping& mapping,
+                      bool run,
+                      bool run_overlaps,
+                      const std::string& file)
+{
+    APP_DEBUG_FNAME;
+    
+    try
+    {
+        if (!run)
+        {
+            INFO("skipping draw run");
+            //Based on a mapping, matcher returns structure with deleted and inserted nodes
+            // which correspond to the target structure
+            templated = matcher(templated, matched).run(mapping);
+            //Compact goes through the structure and computes new coordinates where necessary
+            compact(templated).run();
+            
+            save(file, templated, run_overlaps);
+        }
+        catch (const my_exception& e)
+        {
+            throw aplication_error("Drawing structure failed: %s", e).with(ERROR_DRAW);
+        }
+    }
+}
+
 
 void app::run_drawing(
                       vector<rna_tree>& templated,
@@ -313,8 +352,14 @@ void app::save(
             writer->init(file, rna.begin());
             writer->print(writer->get_rna_formatted(rna));
             
+            size_t stop = 0;
             for (const auto& p : overlaps)
+            {
+                if(stop != 2)
                 writer->print(writer->get_circle_formatted(p.centre, p.radius));
+                
+                ++stop;
+            }
         }
     }
     
